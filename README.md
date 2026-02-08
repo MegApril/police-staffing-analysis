@@ -9,4 +9,4 @@
 4. 2023 Data (169,260 records)
    1. CAD Event Number - starts with - 2023 AND Dispatch Precinct is WEST
   
-All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from csv's to a .paraquet file. This is found [here](Python/CAD Data Pre-processing.ipynb)
+All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from csv's to a .paraquet file. This is found [here.](Python/cad_data_preprocessing.ipynb)
