@@ -1,5 +1,6 @@
+# SQL Queries
+## Distribution of Calls For Service
 -- Determine number of duplicates for cad events
-
 ```SQL
 SELECT
   cad_event_number,
@@ -8,10 +9,9 @@ FROM `police-staffing-spd-west.spd_west.2023`
 GROUP BY cad_event_number
 HAVING COUNT(*) > 1
 ORDER BY record_count DESC;
-
 ```
 
--- Create table with unique cad event times and earliest timestamp. Save as new table named 2023_events_times
+-- Create table with unique cad event times and earliest timestamp.
 ```SQL
 WITH calls AS (
   SELECT
@@ -25,7 +25,7 @@ SELECT *
 FROM calls;
 ```
 
--- Created new table with a new column for timestamps with the appropriate data type.
+-- Create new table with timestamps in pacific time from UTC, and with the appropriate data type for analysis
 ```SQL
 CREATE OR REPLACE TABLE
   `spd_west.2023_events_timestamped` AS
@@ -33,7 +33,7 @@ SELECT
   cad_event_number,
   event_time,
 
-  -- parsed, timezone-aware timestamp
+  -- parsed timestamp
   TIMESTAMP(
     PARSE_DATETIME(
       '%m/%d/%Y %I:%M:%S %p',
@@ -88,4 +88,7 @@ SELECT
 FROM `spd_west.2023_events_timestamped`
 GROUP BY month_num, month_name
 ORDER BY month_num;
+```
+## Estimated Time Consumed By Department
+```SQL
 ```
