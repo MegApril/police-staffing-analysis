@@ -1,5 +1,6 @@
 # SQL Queries
 ## Distribution of Calls For Service
+
 -- Determine number of duplicates for cad events
 ```SQL
 SELECT
@@ -90,5 +91,77 @@ GROUP BY month_num, month_name
 ORDER BY month_num;
 ```
 ## Estimated Time Consumed By Department
+My objective here is to group calls by the total department time spent on the individual CAD event using the CAD event ID, and total service time. Calls will then be categorized based on how much total time the department allocated to the CAD event number in the following categories.
+1. 0-1800 seconds (30 minutes),
+2. 1800-3600 seconds (30 minutes - 1 hour),
+3. 3600-7200 seconds (1-2 hours),
+4. 7200+ seconds (2+ hours)
+With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
+
+-- Create calls base table with unique cad events, total service time and the final call type
 ```SQL
+CREATE OR REPLACE TABLE `spd_west.2023_calls_base` AS
+SELECT
+  cad_event_number,
+  MAX(spd_call_sign_total_service_time_in_seconds)
+    AS total_service_seconds,
+  ANY_VALUE(final_call_type) AS final_call_type
+FROM `spd_west.2023`
+WHERE spd_call_sign_total_service_time_in_seconds IS NOT NULL
+GROUP BY cad_event_number;
+```
+This returned 97,732 records which is 7 fewer than the unique cad table from Distribution of Calls for Service
+
+### Troubleshooting Side Quest
+```SQL
+SELECT
+  COUNT(DISTINCT cad_event_number) AS total_calls,
+  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NOT NULL,
+                    cad_event_number,
+                    NULL)) AS calls_with_service_time,
+  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NULL,
+                    cad_event_number,
+                    NULL)) AS calls_missing_service_time
+FROM `spd_west.2023`;
+```
+|Total Calls| Calls with Service Time| Calls Missing Service Time|
+|---|---|---|
+|97739|97732|152|
+
+_While working on this, I discovered that total service time is a string. When casting it as an INT, I ended up with nulls for every record that included a comma which became apparent when I was only getting data returned that had 0-999 seconds._
+
+-- Adressing service time data type issue, trimming white space, stripping commas, returning true NULL's only if the string is empty... while retaining one unique CAD event.
+```SQL
+CREATE OR REPLACE TABLE `spd_west.2023_calls_base` AS
+SELECT
+  cad_event_number,
+
+  MAX(
+    SAFE_CAST(
+      NULLIF(
+        REGEXP_REPLACE(
+          TRIM(spd_call_sign_total_service_time_in_seconds),
+          r',',
+          ''
+        ),
+        ''
+      ) AS INT64
+    )
+  ) AS total_service_seconds,
+
+  ANY_VALUE(final_call_type) AS final_call_type
+
+FROM `spd_west.2023`
+WHERE spd_call_sign_total_service_time_in_seconds IS NOT NULL
+GROUP BY cad_event_number;
+```
+-- Validating the data cleaning worked
+```SQL
+SELECT
+  COUNT(*) AS total_calls,
+  COUNT(total_service_seconds) AS parsed_calls,
+  COUNT(*) - COUNT(total_service_seconds) AS still_null,
+  MIN(total_service_seconds) AS min_sec,
+  MAX(total_service_seconds) AS max_sec
+FROM `spd_west.2023_calls_base`;
 ```
