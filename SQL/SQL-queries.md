@@ -98,39 +98,8 @@ My objective here is to group calls by the total department time spent on the in
 4. 7200+ seconds (2+ hours)
 With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
 
--- Create calls base table with unique cad events, total service time and the final call type
-```SQL
-CREATE OR REPLACE TABLE `spd_west.2023_calls_base` AS
-SELECT
-  cad_event_number,
-  MAX(spd_call_sign_total_service_time_in_seconds)
-    AS total_service_seconds,
-  ANY_VALUE(final_call_type) AS final_call_type
-FROM `spd_west.2023`
-WHERE spd_call_sign_total_service_time_in_seconds IS NOT NULL
-GROUP BY cad_event_number;
-```
-This returned 97,732 records which is 7 fewer than the unique cad table from Distribution of Calls for Service
-
-### Troubleshooting Side Quest
-```SQL
-SELECT
-  COUNT(DISTINCT cad_event_number) AS total_calls,
-  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NOT NULL,
-                    cad_event_number,
-                    NULL)) AS calls_with_service_time,
-  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NULL,
-                    cad_event_number,
-                    NULL)) AS calls_missing_service_time
-FROM `spd_west.2023`;
-```
-|Total Calls| Calls with Service Time| Calls Missing Service Time|
-|---|---|---|
-|97739|97732|152|
-
-_While working on this, I discovered that total service time is a string. When casting it as an INT, I ended up with nulls for every record that included a comma which became apparent when I was only getting data returned that had 0-999 seconds._
-
--- Adressing service time data type issue, trimming white space, stripping commas, returning true NULL's only if the string is empty... while retaining one unique CAD event.
+-- Create calls base table with unique cad events, total service time and the final call type. 
+-- Adressing service time data type issue, trimming white space, stripping commas, returning true NULL's only if the string is empty... while retaining unique CAD event.
 ```SQL
 CREATE OR REPLACE TABLE `spd_west.2023_calls_base` AS
 SELECT
@@ -155,6 +124,8 @@ FROM `spd_west.2023`
 WHERE spd_call_sign_total_service_time_in_seconds IS NOT NULL
 GROUP BY cad_event_number;
 ```
+This returned 97,732 records which is 7 fewer than the unique cad table from Distribution of Calls for Service
+
 -- Validating the data cleaning worked
 ```SQL
 SELECT
@@ -165,3 +136,42 @@ SELECT
   MAX(total_service_seconds) AS max_sec
 FROM `spd_west.2023_calls_base`;
 ```
+### Troubleshooting Side Quest
+```SQL
+SELECT
+  COUNT(DISTINCT cad_event_number) AS total_calls,
+  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NOT NULL,
+                    cad_event_number,
+                    NULL)) AS calls_with_service_time,
+  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NULL,
+                    cad_event_number,
+                    NULL)) AS calls_missing_service_time
+FROM `spd_west.2023`;
+```
+|Total Calls| Calls with Service Time| Calls Missing Service Time|
+|---|---|---|
+|97739|97732|152|
+
+-- Isolating the 7 calls to determine if they are important to the analysis
+```SQL
+-- Set A: calls-for-service universe
+WITH calls_dist AS (
+  SELECT DISTINCT cad_event_number
+  FROM `spd_west.2023`
+),
+
+-- Set B: time-analysis universe
+calls_time AS (
+  SELECT DISTINCT cad_event_number
+  FROM `spd_west.2023_calls_base`
+)
+
+SELECT
+  cad_event_number
+FROM calls_dist
+EXCEPT DISTINCT
+SELECT
+  cad_event_number
+FROM calls_time;
+```
+
