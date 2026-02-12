@@ -174,4 +174,25 @@ SELECT
   cad_event_number
 FROM calls_time;
 ```
+-- Explain seven_missing_spd_time screenshot here
+
+### End of side quest, back to main quest
+-- Creating call buckets
+```SQL
+CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
+SELECT
+  cad_event_number,
+  final_call_type,
+  total_service_seconds,
+
+  CASE
+    WHEN total_service_seconds < 1800 THEN '0–30 min'
+    WHEN total_service_seconds < 3600 THEN '30–60 min'
+    WHEN total_service_seconds < 7200 THEN '1–2 hours'
+    ELSE '2+ hours'
+  END AS duration_bucket
+
+FROM `spd_west.2023_calls_base`
+WHERE total_service_seconds >= 0;
+```
 
