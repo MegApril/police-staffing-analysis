@@ -169,6 +169,7 @@ FROM `spd_west.2023_calls_base`;
 CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
 SELECT
   cad_event_number,
+  cad_event_original_timestamp, 'America/Los_Angeles'
   final_call_type,
   final_service_seconds,
 
@@ -180,6 +181,6 @@ SELECT
   END AS duration_bucket
 
 FROM `spd_west.2023_calls_base`
-WHERE total_service_seconds >= 0;
+WHERE final_service_seconds >= 0;
 ```
 
