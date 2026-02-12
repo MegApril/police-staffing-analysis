@@ -169,7 +169,9 @@ FROM `spd_west.2023_calls_base`;
 CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
 SELECT
   cad_event_number,
-  cad_event_original_timestamp, 'America/Los_Angeles'
+    DATETIME(cad_event_original_timestamp, 'America/Los_Angeles')
+  AS cad_event_original_pacific,
+  cad_event_original_timestamp,
   final_call_type,
   final_service_seconds,
 
@@ -183,4 +185,24 @@ SELECT
 FROM `spd_west.2023_calls_base`
 WHERE final_service_seconds >= 0;
 ```
-
+-- Determine number of calls per time bucket category, and total time spent in each bucket by month.
+```SQL
+SELECT
+  FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
+  duration_bucket,
+  COUNT(*) AS call_count,
+  SUM(final_service_seconds) AS total_service_seconds
+FROM `spd_west.2023_calls_buckets`
+GROUP BY year_month, duration_bucket
+ORDER BY year_month, duration_bucket;
+```
+Determine total time spent on calls by month
+```SQL
+SELECT
+  FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
+  COUNT(*) AS total_calls,
+  SUM(final_service_seconds) AS total_service_seconds
+FROM `spd_west.2023_calls_buckets`
+GROUP BY year_month
+ORDER BY year_month;
+```
