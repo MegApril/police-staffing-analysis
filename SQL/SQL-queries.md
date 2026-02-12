@@ -174,6 +174,28 @@ SELECT
   cad_event_number
 FROM calls_time;
 ```
+-- View 7 calls
+```SQL
+SELECT
+  cad_event_number,
+  final_call_type,
+  initial_call_type,
+  call_sign_total_service_time_in_seconds,
+  cad_event_original_time_queued,
+  cad_event_arrived_time,
+  spd_call_sign_total_service_time_in_seconds
+FROM `spd_west.2023`
+WHERE cad_event_number IN (
+  '2023000318525',
+  '2023000340976',
+  '2023000310719',
+  '2023000353342',
+  '2023000351758',
+  '2023000314617',
+  '2023000338452'
+)
+ORDER BY cad_event_number;
+```
 -- Explain seven_missing_spd_time screenshot here
 
 ### End of side quest, back to main quest
