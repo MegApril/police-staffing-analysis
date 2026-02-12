@@ -101,11 +101,20 @@ With all calls categorized into times, we can then determine the top call types 
 -- Create calls base table with unique cad events, total service time and the final call type. 
 -- Adressing service time data type issue, trimming white space, stripping commas, returning true NULL's only if the string is empty... while retaining unique CAD event.
 ```SQL
-CREATE OR REPLACE TABLE `spd_west.2023_calls_base` AS
-SELECT
-  cad_event_number,
+CREATE OR REPLACE TABLE `police-staffing-spd-west.spd_west.2023_calls_base` AS
 
-  MAX(
+WITH cleaned AS (
+  SELECT
+    cad_event_number,
+    final_call_type,
+
+    -- parse original queued time as Pacific timestamp
+    PARSE_TIMESTAMP(
+      '%m/%d/%Y %I:%M:%S %p',
+      cad_event_original_time_queued,
+      'America/Los_Angeles'
+    ) AS cad_event_original_timestamp,
+
     SAFE_CAST(
       NULLIF(
         REGEXP_REPLACE(
@@ -115,102 +124,58 @@ SELECT
         ),
         ''
       ) AS INT64
-    )
-  ) AS total_service_seconds,
+    ) AS spd_total_service_seconds,
 
-  ANY_VALUE(final_call_type) AS final_call_type
+    SAFE_CAST(
+      NULLIF(
+        REGEXP_REPLACE(
+          TRIM(call_sign_total_service_time_in_seconds),
+          r',',
+          ''
+        ),
+        ''
+      ) AS INT64
+    ) AS call_sign_service_seconds
 
-FROM `spd_west.2023`
-WHERE spd_call_sign_total_service_time_in_seconds IS NOT NULL
+  FROM `spd_west.2023`
+)
+
+SELECT
+  cad_event_number,
+  ANY_VALUE(final_call_type) AS final_call_type,
+  ANY_VALUE(cad_event_original_timestamp) AS cad_event_original_timestamp,
+
+  COALESCE(
+    MAX(spd_total_service_seconds),
+    SUM(call_sign_service_seconds)
+  ) AS final_service_seconds
+
+FROM cleaned
 GROUP BY cad_event_number;
 ```
-This returned 97,732 records which is 7 fewer than the unique cad table from Distribution of Calls for Service
 
 -- Validating the data cleaning worked
 ```SQL
 SELECT
   COUNT(*) AS total_calls,
-  COUNT(total_service_seconds) AS parsed_calls,
-  COUNT(*) - COUNT(total_service_seconds) AS still_null,
-  MIN(total_service_seconds) AS min_sec,
-  MAX(total_service_seconds) AS max_sec
+  COUNT(final_service_seconds) AS parsed_calls,
+  COUNT(*) - COUNT(final_service_seconds) AS still_null,
+  MIN(final_service_seconds) AS min_sec,
+  MAX(final_service_seconds) AS max_sec
 FROM `spd_west.2023_calls_base`;
 ```
-### Troubleshooting Side Quest
-```SQL
-SELECT
-  COUNT(DISTINCT cad_event_number) AS total_calls,
-  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NOT NULL,
-                    cad_event_number,
-                    NULL)) AS calls_with_service_time,
-  COUNT(DISTINCT IF(spd_call_sign_total_service_time_in_seconds IS NULL,
-                    cad_event_number,
-                    NULL)) AS calls_missing_service_time
-FROM `spd_west.2023`;
-```
-|Total Calls| Calls with Service Time| Calls Missing Service Time|
-|---|---|---|
-|97739|97732|152|
-
--- Isolating the 7 calls to determine if they are important to the analysis
-```SQL
--- Set A: calls-for-service universe
-WITH calls_dist AS (
-  SELECT DISTINCT cad_event_number
-  FROM `spd_west.2023`
-),
-
--- Set B: time-analysis universe
-calls_time AS (
-  SELECT DISTINCT cad_event_number
-  FROM `spd_west.2023_calls_base`
-)
-
-SELECT
-  cad_event_number
-FROM calls_dist
-EXCEPT DISTINCT
-SELECT
-  cad_event_number
-FROM calls_time;
-```
--- View 7 calls
-```SQL
-SELECT
-  cad_event_number,
-  final_call_type,
-  initial_call_type,
-  call_sign_total_service_time_in_seconds,
-  cad_event_original_time_queued,
-  cad_event_arrived_time,
-  spd_call_sign_total_service_time_in_seconds
-FROM `spd_west.2023`
-WHERE cad_event_number IN (
-  '2023000318525',
-  '2023000340976',
-  '2023000310719',
-  '2023000353342',
-  '2023000351758',
-  '2023000314617',
-  '2023000338452'
-)
-ORDER BY cad_event_number;
-```
--- Explain seven_missing_spd_time screenshot here
-
-### End of side quest, back to main quest
 -- Creating call buckets
 ```SQL
 CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
 SELECT
   cad_event_number,
   final_call_type,
-  total_service_seconds,
+  final_service_seconds,
 
   CASE
-    WHEN total_service_seconds < 1800 THEN '0–30 min'
-    WHEN total_service_seconds < 3600 THEN '30–60 min'
-    WHEN total_service_seconds < 7200 THEN '1–2 hours'
+    WHEN final_service_seconds < 1800 THEN '0–30 min'
+    WHEN final_service_seconds < 3600 THEN '30–60 min'
+    WHEN final_service_seconds < 7200 THEN '1–2 hours'
     ELSE '2+ hours'
   END AS duration_bucket
 
