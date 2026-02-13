@@ -26,7 +26,7 @@ This project aims to inform future officer staffing needs based on historical da
 - There is very little seasonal variability. All months are within 10% of the yearly average. Saturdays and Sundays have the fewest number of calls, while Fridays have the highest numbers of calls.
 ### Time Spent on Calls
 SPD West spends between 14,000 - 17,000 hours on labor per month with the highest number of hours being worked in May.
-### Establishing Performance Pbjectives
+### Establishing Performance Objectives
 ### Determining Agency Shift Relief Metric
 ## Future Analyses and Opportunities for Fine Tuning
 - Run similar analysis using 2024 and 2025 data to explore change on a year over year basis. Use this percentage change to model 2026 staffing needs.
