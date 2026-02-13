@@ -1,7 +1,7 @@
 # SQL Queries
 ## Distribution of Calls For Service
 
--- Determine number of duplicates for cad events
+### Address duplicates for cad events
 ```SQL
 SELECT
   cad_event_number,
@@ -12,7 +12,7 @@ HAVING COUNT(*) > 1
 ORDER BY record_count DESC;
 ```
 
--- Create table with unique cad event times and earliest timestamp.
+### Create table with unique cad event times and earliest timestamp.
 ```SQL
 WITH calls AS (
   SELECT
@@ -26,7 +26,7 @@ SELECT *
 FROM calls;
 ```
 
--- Create new table with timestamps in pacific time from UTC, and with the appropriate data type for analysis
+### Create table with cleaned data types and pacific datetime
 ```SQL
 CREATE OR REPLACE TABLE
   `spd_west.2023_events_timestamped` AS
@@ -47,7 +47,7 @@ FROM `spd_west.2023_events_times`
 WHERE event_time IS NOT NULL;
 ```
 
--- Number of calls grouped by hour
+### Number of calls grouped by hour
 ``` SQL
 SELECT
   EXTRACT(
@@ -59,7 +59,7 @@ GROUP BY hour_of_day
 ORDER BY hour_of_day;
 ```
 
--- Number of calls grouped by day of the week
+### Number of calls grouped by day of the week
 ```SQL
 SELECT
   EXTRACT(
@@ -75,7 +75,7 @@ GROUP BY day_num, day_name
 ORDER BY day_num;
 ```
 
--- Number of calls grouped by Month
+### Number of calls grouped by Month
 ```SQL
 SELECT
   EXTRACT(
@@ -98,8 +98,9 @@ My objective here is to group calls by the total department time spent on the in
 4. 7200+ seconds (2+ hours)
 With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
 
+### Base Table and Data Cleaning
 -- Create calls base table with unique cad events, total service time and the final call type. 
--- Adressing service time data type issue, trimming white space, stripping commas, returning true NULL's only if the string is empty... while retaining unique CAD event.
+-- Adressing service time data type issue, trimming white space, stripping commas, while retaining unique CAD event.
 ```SQL
 CREATE OR REPLACE TABLE `police-staffing-spd-west.spd_west.2023_calls_base` AS
 
@@ -107,6 +108,7 @@ WITH cleaned AS (
   SELECT
     cad_event_number,
     final_call_type,
+    priority,
 
     -- parse original queued time as Pacific timestamp
     PARSE_TIMESTAMP(
@@ -142,6 +144,7 @@ WITH cleaned AS (
 
 SELECT
   cad_event_number,
+  MIN(priority) AS priority,
   ANY_VALUE(final_call_type) AS final_call_type,
   ANY_VALUE(cad_event_original_timestamp) AS cad_event_original_timestamp,
 
@@ -154,7 +157,7 @@ FROM cleaned
 GROUP BY cad_event_number;
 ```
 
--- Validating the data cleaning worked
+### Validating the data cleaning worked
 ```SQL
 SELECT
   COUNT(*) AS total_calls,
@@ -164,7 +167,7 @@ SELECT
   MAX(final_service_seconds) AS max_sec
 FROM `spd_west.2023_calls_base`;
 ```
--- Creating call buckets
+### Creating call buckets
 ```SQL
 CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
 SELECT
@@ -178,14 +181,15 @@ SELECT
   CASE
     WHEN final_service_seconds < 1800 THEN '0–30 min'
     WHEN final_service_seconds < 3600 THEN '30–60 min'
-    WHEN final_service_seconds < 7200 THEN '1–2 hours'
-    ELSE '2+ hours'
+    WHEN final_service_seconds < 10800 THEN '1–3 hours'
+    WHEN final_service_seconds < 21600 THEN '3-6 hours'
+    ELSE '6+ hours'
   END AS duration_bucket
 
 FROM `spd_west.2023_calls_base`
 WHERE final_service_seconds >= 0;
 ```
--- Determine number of calls per time bucket category, and total time spent in each bucket by month.
+### Number of calls per time bucket, and total time spent in each bucket by month.
 ```SQL
 SELECT
   FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
@@ -196,7 +200,7 @@ FROM `spd_west.2023_calls_buckets`
 GROUP BY year_month, duration_bucket
 ORDER BY year_month, duration_bucket;
 ```
-Determine total time spent on calls by month
+### Total time spent on calls by month
 ```SQL
 SELECT
   FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
@@ -206,3 +210,66 @@ FROM `spd_west.2023_calls_buckets`
 GROUP BY year_month
 ORDER BY year_month;
 ```
+### Quantiles
+```SQL
+SELECT
+  APPROX_QUANTILES(final_service_seconds, 5) AS quintiles
+FROM `spd_west.2023_calls_buckets`;
+```
+|Quintiles| Value in Seconds | Description|
+|--|--|--|
+|Min|0| The minimum time for a call iss 0 seconds|
+|25th perecentile | 650| 25% of calls are under 11 minutes  |
+|Median|1,877|The median of all calls is approx 31 min |
+|75th percentile|3,886| 75% of calls are under 65 minutes|
+|95th percentile|9,049| 95% of calls are under 151 minutes (about 2.5 hours)|
+|Max|1,381,795| The maximum is driving up the average of all calls with a whopping 383 hours or 16 days of labor|
+
+### Average time per bucket
+```SQL
+SELECT
+  duration_bucket,
+  COUNT(*) AS calls,
+  ROUND(AVG(final_service_seconds)/60,1) AS avg_minutes
+FROM `spd_west.2023_calls_buckets`
+GROUP BY duration_bucket;
+```
+| Row|	duration_bucket|	calls	|avg_minutes|
+|--|--|--|--|
+|1	|0–30 min|	37994	|11.7|
+|2	|30–60 min	|18555	|43.6|
+|3|	1–3 hours|	25094	|105.9|
+|4	|3-6 hours|	9556	|249.0|
+|5	|6+ hours|	6540	|772.7|
+
+### Top 50 Calls
+```SQL
+SELECT
+  cad_event_number,
+  final_call_type,
+  cad_event_original_pacific,
+  final_service_seconds/3600 AS hours
+FROM `spd_west.2023_calls_buckets`
+ORDER BY final_service_seconds DESC
+LIMIT 50;
+```
+### What percentage of labor is spent on the top 10% of calls?
+-- Break calls into 10 equal categories (NILE) using window functions.
+```SQL
+WITH ranked AS (
+  SELECT
+    final_service_seconds,
+    NTILE(10) OVER (ORDER BY final_service_seconds DESC) AS decile
+  FROM `spd_west.2023_calls_buckets`
+)
+
+SELECT
+  ROUND(
+    SUM(CASE WHEN decile = 1 THEN final_service_seconds ELSE 0 END)
+    /
+    SUM(final_service_seconds),
+    4
+  ) AS top_10_percent_labor_share
+FROM ranked;
+```
+**53% of labor is consumed by the top 10% of calls.**
