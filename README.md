@@ -8,8 +8,12 @@ This project aims to inform future officer staffing needs based on historical da
 - Determine staffing hours based on average number of calls from year(s) prior, and average time per call. This number is shockingly uniform across months despite the following statistics. 
     1. The top 10% of calls account for *53%* of total labor.
     2. 95% of calls fall under 2.5 hours total department labor time.
-    3. Median time spent per call is 31 minutes.
-- Using number of calls and average time spent per call to estimate labor allows time for planned events which consume a lot of department time (Crowd management, Security needs, Concerts, etc), Violent Crime which consumes a lot of active and administrative time (homocides, assaults, robbery), responding to the community, and officer initiated calls.
+    3. Median time spent per call is 31 minutes, average time spent per call is 116 minutes.
+- Using number of calls and average time spent per call to estimate labor allows time for multiple policing methods.
+    1. Planned events which consume a lot of department time (crowd management, security needs, concerts, etc),
+    2. Violent crime which consumes a lot of active and administrative time (homocides, assaults, robbery),
+    3. Responding to the community, and
+    4. Officer initiated calls.
 - Distribute staffing hours based on percentage of calls within each shift.
     1. 40% of allotted hours should be assigned to 6AM - 2PM shift.
     2. 38% of alloted hours should be assigned to the 2PM - 10PM shift.
