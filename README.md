@@ -4,21 +4,19 @@
 This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. Deliverables will include a slide deck with findings and statistics, this repository containing documented code with explanations, and visualizations.
 ## Executive Summary
 2023 brought 97,739 unique calls to Seattle Police Department's WEST precinct. There is a total of 169,260 records associated with these calls for service.
+### Project Goals
+This analysis will provide a methodical system for assessing workload based on:
+- Distribution of Calls For Service (Time, Day, Month)
+- Time spent on calls categorized by final call type
+- Nature of calls
+- Volume of workload by geographic beat
+
+Staffing reccomendations will be based on:
+- Agency Shift Relief Calculations for 8 hour, and 10 hour staffing models
+- Performance Objectives from the department
+- Metrics from workload analysis
 ### Reccomendations
-- Determine staffing hours based on average number of calls from year(s) prior, and average time per call. This number is shockingly uniform across months despite the following statistics. 
-    1. The top 10% of calls account for *53%* of total labor.
-    2. 95% of calls fall under 2.5 hours total department labor time.
-    3. Median time spent per call is 31 minutes, average time spent per call is 116 minutes.
-- Using number of calls and average time spent per call to estimate labor allows time for multiple policing methods.
-    1. Planned events which consume a lot of department time (crowd management, security needs, concerts, etc),
-    2. Violent crime which consumes a lot of active and administrative time (homocides, assaults, robbery),
-    3. Responding to the community, and
-    4. Officer initiated calls.
-- Distribute staffing hours based on percentage of calls within each shift.
-    1. 40% of allotted hours should be assigned to 6AM - 2PM shift.
-    2. 38% of alloted hours should be assigned to the 2PM - 10PM shift.
-    3. 22% of allotted hours should be assigned to the 10PM - 6AM shift.
- 
+
 ### Number of Calls
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
