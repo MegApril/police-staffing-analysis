@@ -36,7 +36,7 @@ Staffing reccomendations will be based on:
 ### Time Spent on Calls
 SPD West spends between 14,000 - 17,000 hours on labor per month with the highest number of hours being worked in May.
 ### Establishing Performance Objectives
-The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours [^2]. 
+The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
 
 ### Determining Agency Shift Relief Metric
 ## Staffing Reccomendations
@@ -55,6 +55,6 @@ The way which agencies are directed to allocate their time determines how worklo
   
 All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from csv's to a .paraquet file. This is found [here.](Python/cad_data_preprocessing.ipynb)
 ## Bibliography
-[^1]: Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/
-[^2]: Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf
+[^1]: Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
+[^2]: Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
 
