@@ -7,6 +7,7 @@ This project aims to inform future officer staffing needs based on historical da
    - [Findings](#findings)
    - [Reccomendations](#reccomendations)
 2. [Workload Assessment](#workload-assessment)
+3. [Staffing Reccomendations](#staffing-reccomendations)
 ## Executive Summary
 This analysis aims to link workload of the police department and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with active and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
 
@@ -26,6 +27,7 @@ Staffing reccomendations will be based on:
 ### Reccomendations
 
 ## Workload Assessment
+
 ### Number of Calls
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
@@ -37,9 +39,11 @@ SPD West spends between 14,000 - 17,000 hours on labor per month with the highes
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours [^2]. 
 
 ### Determining Agency Shift Relief Metric
+## Staffing Reccomendations
 ## Future Analyses and Opportunities for Fine Tuning
 - Run similar analysis using 2024 and 2025 data to explore change on a year over year basis. Use this percentage change to model 2026 staffing needs.
-## Data Gathering
+## Process
+### Data Gathering
 1. 2025 Data (147,776 records)
    1. CAD Event Number - starts with - 2025 AND Dispatch Precinct is WEST
    2. VALIDATION: To ensure data was accurately captured, I ran the following query with a result of 147,778 records. I felt comfortable leaving the query as it was, going off of the CAD event number.
