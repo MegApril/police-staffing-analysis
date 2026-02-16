@@ -51,7 +51,10 @@ Staffing reccomendations will be based on:
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 #### Officer Initiated vs. Community Initiated
+<img src="visuals/department-time-by-month-call-type.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+
 #### Proactive Policing vs. Reactive Policing vs. Administrative
+
 ### Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
 
