@@ -306,3 +306,27 @@ FROM monthly
 GROUP BY year_month, call_type_indicator
 ORDER BY year_month, call_type_indicator;
 ```
+### Determining if admin duties associated with cad events are logged with the same cad event number, or as a different cad event number.
+They are logged under a different cad event number
+```SQL
+WITH multi_row_events AS (
+  SELECT
+    cad_event_number
+  FROM `spd_west.2023`
+  GROUP BY cad_event_number
+  HAVING COUNT(*) > 1
+)
+
+SELECT
+  cad_event_number,
+  final_call_type,
+  priority,
+  call_type_indicator,
+  spd_call_sign_total_service_time_in_seconds,
+  call_sign_total_service_time_in_seconds
+FROM `spd_west.2023`
+WHERE cad_event_number IN (
+  SELECT cad_event_number FROM multi_row_events
+)
+ORDER BY cad_event_number;
+```
