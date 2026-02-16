@@ -109,6 +109,10 @@ WITH cleaned AS (
     cad_event_number,
     final_call_type,
     priority,
+    call_type_indicator
+    dispatch_beat,
+    dispatch_sector,
+    count_of_officers,
 
     -- parse original queued time as Pacific timestamp
     PARSE_TIMESTAMP(
@@ -147,6 +151,10 @@ SELECT
   MIN(priority) AS priority,
   ANY_VALUE(final_call_type) AS final_call_type,
   ANY_VALUE(cad_event_original_timestamp) AS cad_event_original_timestamp,
+  ANY_VALUE(call_type_indicator) AS call_type_indicator,
+  ANY_VALUE(dispatch_beat) AS dispatch_beat,
+  ANY_VALUE(dispatch_sector) AS dispatch_sector,
+  MAX(count_of_officers) AS count_of_officers,
 
   COALESCE(
     MAX(spd_total_service_seconds),
@@ -273,3 +281,28 @@ SELECT
 FROM ranked;
 ```
 **53% of labor is consumed by the top 10% of calls.**
+
+### Onview vs. Dispatch
+```SQL
+WITH monthly AS (
+  SELECT
+    FORMAT_TIMESTAMP(
+      '%Y-%m',
+      cad_event_original_timestamp,
+      'America/Los_Angeles'
+    ) AS year_month,
+    call_type_indicator,
+    final_service_seconds
+  FROM `police-staffing-spd-west.spd_west.2023_calls_base`
+)
+
+SELECT
+  year_month,
+  call_type_indicator,
+  COUNT(*) AS total_events,
+  SUM(final_service_seconds) AS total_service_seconds,
+  ROUND(SUM(final_service_seconds)/3600, 2) AS total_service_hours
+FROM monthly
+GROUP BY year_month, call_type_indicator
+ORDER BY year_month, call_type_indicator;
+```
