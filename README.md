@@ -33,17 +33,17 @@ Staffing reccomendations will be based on:
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:50%; height:auto;"> 
+<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 #### By Day
 
 - Saturdays and Sundays have the fewest number of calls, while Fridays have the highest numbers of calls.
-<img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:50%; height:auto;"> 
+<img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 #### By Month
 
 - There is very little seasonal variability. All months are within 10% of the yearly average.
-<img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:50%; height:auto;"> 
+<img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 
 ### Time Spent on Calls
