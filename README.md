@@ -9,7 +9,7 @@ This project aims to inform future officer staffing needs based on historical da
 2. [Workload Assessment](#workload-assessment)
 3. [Staffing Reccomendations](#staffing-reccomendations)
 ## Executive Summary
-This analysis aims to link workload of the police department and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with active and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
+This analysis aims to link workload of the police department and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with reactive, proactive, and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
 
 2023 brought 97,739 unique calls to Seattle Police Department's WEST precinct. There is a total of 169,260 records associated with these calls for service.
 ### Purpose
@@ -28,11 +28,17 @@ Staffing reccomendations will be based on:
 
 ## Workload Assessment
 
-### Number of Calls
+### Distribution of Calls for Service
+#### By Hour
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
-- 10PM - 6AM contains 22% of calls  
-- There is very little seasonal variability. All months are within 10% of the yearly average. Saturdays and Sundays have the fewest number of calls, while Fridays have the highest numbers of calls.
+- 10PM - 6AM contains 22% of calls
+
+#### By Day
+- Saturdays and Sundays have the fewest number of calls, while Fridays have the highest numbers of calls.
+
+#### By Month
+- There is very little seasonal variability. All months are within 10% of the yearly average.
 ### Time Spent on Calls
 SPD West spends between 14,000 - 17,000 hours on labor per month with the highest number of hours being worked in May.
 ### Establishing Performance Objectives
