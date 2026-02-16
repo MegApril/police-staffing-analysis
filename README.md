@@ -45,9 +45,9 @@ Staffing reccomendations will be based on:
 - There is very little seasonal variability. All months are within 10% of the yearly average.
 <img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
-
 ### Time Spent on Calls
 SPD West spends between 14,000 - 17,000 hours on labor per month with the highest number of hours being worked in May.
+<img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 ### Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
 
