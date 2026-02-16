@@ -46,10 +46,12 @@ Staffing reccomendations will be based on:
 <img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 ### Time Spent on Calls
-
+#### By Month
 - SPD West spends between 14,411 - 17,363 hours on labor per month with the highest number of hours being worked in May.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
+#### Officer Initiated vs. Community Initiated
+#### Proactive Policing vs. Reactive Policing vs. Administrative
 ### Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
 
