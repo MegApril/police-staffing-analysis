@@ -330,15 +330,18 @@ WHERE cad_event_number IN (
 )
 ORDER BY cad_event_number;
 ```
-### Mapping Dispatch vs Onview vs Admin
-Determining which  `final_call_type` are mostly onview vs dispatch to seperate out the admin needs.
+### Creating policing type based on onview, dispatch, and non-patrol work.
+-- Created mapping csv, joined with calls_base table to show policing type
 ```SQL
 SELECT
-  final_call_type,
-  call_type_indicator,
-  COUNT(*) AS event_count,
-  ROUND(SUM(final_service_seconds)/3600, 2) AS total_hours
-FROM `police-staffing-spd-west.spd_west.2023_calls_base`
-GROUP BY final_call_type, call_type_indicator
-ORDER BY final_call_type, call_type_indicator;
+  c.*,
+  CASE
+    WHEN m.admin_tag = 'Non-Patrol' THEN 'Non-Patrol'
+    WHEN c.call_type_indicator = 'ONVIEW' THEN 'Onview'
+    WHEN c.call_type_indicator = 'DISPATCH' THEN 'Dispatch'
+    ELSE 'Unknown'
+  END AS policing_type
+FROM `police-staffing-spd-west.spd_west.2023_calls_base` c
+LEFT JOIN `police-staffing-spd-west.spd_west.call_type_mapping_clean` m
+  ON c.final_call_type = m.final_call_type;
 ```
