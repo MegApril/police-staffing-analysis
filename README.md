@@ -93,11 +93,13 @@ Officers needed:
 
 ### Time Spent on Calls
 #### Hours Worked Distributed by Time of Day
+Given the similar distribution of hours worked, and number of calls - going off of either number will result in similar staffing models.
 - 6AM - 2PM contains 39% of hours worked  
 - 2PM - 10PM contains 38% of hours worked  
 - 10PM - 6AM contains 23% of hours worked
 
-<img src="" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/hours-worked-houly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+
 #### By Month
 - SPD West spends between 14,411 - 17,363 hours on labor per month with the highest number of hours being worked in May. The median amount of time spent per call is 31 minutes, whereas the average amount of time spent per call is 120 minutes. The difference between these numbers can be explained by taking into consideration that the top 10% of calls consume 53% of labor. When there is a small amount of calls that have significantly larger amounts of time spent on them, the average is much higher than the median.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
