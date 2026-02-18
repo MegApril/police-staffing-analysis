@@ -357,3 +357,30 @@ FROM (
 GROUP BY policing_type
 ORDER BY total_hours DESC;
 ```
+### Nature of Calls - Top 25 by Call Counts
+```SQL
+SELECT
+  final_call_type,
+  COUNT(*) AS total_calls,
+  SUM(final_service_seconds)/3600 AS total_service_hours,
+FROM `police-staffing-spd-west.spd_west.2023_calls_base`
+WHERE final_call_type IS NOT NULL
+GROUP BY final_call_type
+ORDER BY total_calls DESC
+LIMIT 25;
+```
+### Nature of Calls - Top 25 by Aggregated Hours per Final Call Typee category
+```SQL
+SELECT
+  final_call_type,
+  COUNT(*) AS total_calls,
+  SUM(final_service_seconds) AS total_service_seconds,
+  SUM(final_service_seconds)/3600 AS total_service_hours,
+  AVG(final_service_seconds) AS avg_service_seconds
+FROM `police-staffing-spd-west.spd_west.2023_calls_base`
+WHERE final_call_type IS NOT NULL
+  AND final_service_seconds IS NOT NULL
+GROUP BY final_call_type
+ORDER BY total_service_seconds DESC
+LIMIT 25;
+```
