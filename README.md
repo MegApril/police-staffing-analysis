@@ -34,28 +34,28 @@ Staffing reccomendations will be based on:
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### By Day
 
 - Saturdays and Sundays have the fewest number of calls, while Fridays have the highest numbers of calls.
-<img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### By Month
 
 - There is very little seasonal variability. All months are within 10% of the yearly average.
-<img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### Time Spent on Calls
 #### By Month
 - SPD West spends between 14,411 - 17,363 hours on labor per month with the highest number of hours being worked in May.
-<img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### Officer Initiated vs. Community Initiated
-<img src="visuals/department-time-by-month-call-type.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/department-time-by-month-call-type.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### Onview vs. Dispatch vs. Non-Patrol
-<img src="visuals/onview_dispatch_nonpatrol.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
+<img src="visuals/onview_dispatch_nonpatrol.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
