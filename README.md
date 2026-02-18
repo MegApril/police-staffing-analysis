@@ -30,14 +30,23 @@ This means, on average, there were 3649.92 hours worked on a weekly basis. Assum
 # This does not yet reflect agency relief factor - update
 ### Reccomendations
 *These reccomendations are currently based on one year of data. In order to feel comfortable giving 2026 forecasting estimates for staffing, metrics from 2025 and 2026 need to be pulled.*
-1. Answering the following questions in further analyses using the percent change adjustment would provide a logical basis for budget requests, staffing forecasts, tracking department objectives and goals, and other agency needs.
+Answering the following questions in further analyses using the percent change adjustment would provide a logical basis for budget requests, staffing forecasts, tracking department objectives and goals, and other agency needs.
    - How does the number of CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
    - How does the hours spent on CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
    - What is the population change year over year?
    - Does population change correlate to a change in hours spent on CFS?
    - Does population change correlate to number of CFS?
-  
-  
+
+  1. Determine monthly allotment of hours based on monthly average number of calls, and monthly average time spent on calls.
+
+$$
+H_m = \frac{\bar{t}_m \times \bar{n}_m}{3600}
+$$
+
+Where:
+- $H_m$ = monthly allotted hours
+- $\bar{t}_m$ = average time per call in month $m$
+- $\bar{n}_m$ = average number of calls in month $m$
 
 ## Workload Assessment
 
