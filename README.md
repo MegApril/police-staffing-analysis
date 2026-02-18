@@ -1,5 +1,5 @@
 # Police Staffing Analysis
-This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. Deliverables will include a document with findings and statistics, this repository containing documented code with explanations, and visualizations.
+This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. Deliverables will include a document with findings and statistics, this repository containing documented code with explanations, and visualizations. Additionally, a spreadsheet with all equations can be provided which will only require data entry to determine staffing forecasts when scheduling.
 
 ## Table of Contents
 1. [Executive Summary](#executive-summary)
@@ -26,7 +26,6 @@ Staffing reccomendations will be based on:
 - Metrics from workload analysis
 ### Findings
 In 2023, there were 97,739 unique calls for service to Seattle Police Department's WEST precinct. Servicing these calls created 189,795.88 hours of labor.
-This means, on average, there were 3649.92 hours worked on a weekly basis. Assuming every full time employee worked 40 hours, we can see that 91.25 full time officers were needed to keep up with demand. 
 # This does not yet reflect agency relief factor - update
 ### Reccomendations
 *These reccomendations are currently based on one year of data. In order to feel comfortable giving 2026 forecasting estimates for staffing, metrics from 2025 and 2026 need to be pulled.*
