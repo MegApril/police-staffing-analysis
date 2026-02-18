@@ -1,4 +1,4 @@
-# Police Staffing Analysis
+# Seattle Police Department West Precinct Staffing Analysis
 This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. 
 
 ## Table of Contents
@@ -9,23 +9,21 @@ This project aims to inform future officer staffing needs based on historical da
 2. [Workload Assessment](#workload-assessment)
 3. [Staffing Reccomendations](#staffing-reccomendations)
 ## Executive Summary
-This analysis aims to link workload of the Seattle Police Departments West Precinct and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with reactive, proactive, and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
-
-2023 brought 97,739 unique calls to Seattle Police Department's WEST precinct. There is a total of 169,260 records associated with these calls for service.
+This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions.
+In 2023, SPD West responded to 97,739 unique calls for service, requiring 189,795.88 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity.
 
 ### Purpose
-This analysis will provide a methodical system for assessing workload based on:
-- Distribution of Calls For Service (Time, Day, Month)
-- Time spent on calls categorized by final call type
+This analysis establishes a systematic method for evaluating operational demand based on:
+- Temporal distribution of Calls for Service (hour, day, month)
+- Time spent by final call type
 - Nature of calls
-- Volume of workload by geographic beat
+- Geographic distribution of workload by beat
 
-Staffing reccomendations will be based on:
-- Agency Shift Relief Calculations for 8 hour, and 10 hour staffing models
-- Performance Objectives from the department
-- Metrics from workload analysis
-### Findings
-In 2023, there were 97,739 unique calls for service to Seattle Police Department's WEST precinct. Servicing these calls needed 189,795.88 hours of labor.
+Staffing recommendations are derived from:
+- Workload-based hour calculations
+- Agency shift relief assumptions (8-hour and 10-hour staffing models)
+- Department performance objectives
+- Empirical workload metrics
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
