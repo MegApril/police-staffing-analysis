@@ -36,7 +36,7 @@ Answering the following questions in further analyses using the percent change a
    - What is the population change year over year?
    - Does population change correlate to a change in hours spent on CFS?
    - Does population change correlate to number of CFS?
-
+#### Determine staffing needs based on the following process
   1. Determine monthly allotment of hours based on monthly average number of calls, and monthly average time spent on calls. This will change based on how the number of calls change year over year and how hours spent on calls change year over year.
 
 $$
