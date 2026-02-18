@@ -9,9 +9,10 @@ This project aims to inform future officer staffing needs based on historical da
 2. [Workload Assessment](#workload-assessment)
 3. [Staffing Reccomendations](#staffing-reccomendations)
 ## Executive Summary
-This analysis aims to link workload of the police department and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with reactive, proactive, and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
+This analysis aims to link workload of the Seattle Police Departments West Precinct and worforce numbers to ensure there is enough officer coverage where and when they are needed to keep up with reactive, proactive, and administrative duties. The first goal is to quantify the workload of Seattle Police Department's West precinct, then give staffing reccomendations based on number of hours needed.
 
 2023 brought 97,739 unique calls to Seattle Police Department's WEST precinct. There is a total of 169,260 records associated with these calls for service.
+
 ### Purpose
 This analysis will provide a methodical system for assessing workload based on:
 - Distribution of Calls For Service (Time, Day, Month)
@@ -53,7 +54,8 @@ Staffing reccomendations will be based on:
 #### Officer Initiated vs. Community Initiated
 <img src="visuals/department-time-by-month-call-type.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
-#### Proactive Policing vs. Reactive Policing vs. Administrative
+#### Onview vs. Dispatch vs. Non-Patrol
+<img src="visuals/onview_dispatch_nonpatrol.png" alt="Right aligned" style="float: right; width:75%; height:auto;"> 
 
 ### Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
