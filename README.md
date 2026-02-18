@@ -38,7 +38,7 @@ Answering the following questions in further analyses using the percent change a
    - Does population change correlate to a change in hours spent on CFS?
    - Does population change correlate to number of CFS?
 
-  1. Determine monthly allotment of hours based on monthly average number of calls, and monthly average time spent on calls.
+  1. Determine monthly allotment of hours based on monthly average number of calls, and monthly average time spent on calls. This will change based on how the number of calls change year over year and how hours spent on calls change year over year.
 
 $$
 H_m = \frac{\bar{t}_m \times \bar{n}_m}{3600}
@@ -49,6 +49,30 @@ Where:
 - $\bar{t}_m$ = average time per call in month $m$
 - $\bar{n}_m$ = average number of calls in month $m$
 
+2. Determine number of hours to be scheduled by shift using Distribution of Calls for Service perecentages.
+3. Divide that number by the number of days in the month.
+4. Divide daily hours by 8 to find how many officers are needed.
+5. Scheduled officers accordingly by sector and beat based on geographic distributions of workload, preplanned events, and station needs. 
+
+
+As an example, in January 2023 there was 15,378.82 hours spent on labor. If we find the year over year requires an increase of 5% for number of hours, this gives an adjusted number of hours of 16,147.76. Finding hours that should be allocated to each shift, we multiply 16,147.76 by .4, .38, and .22. Doing this gives monthly allottments of hours.
+
+Monthly values for January:
+- 6,459.10 hours to be scheduled 6AM-2PM
+- 6,136.15 hours to be scheduled 2PM-10PM
+- 3,552.51 hours to be scheduled 10PM-6AM
+
+Daily values:
+- 208.36 to be scheduled 6AM-2PM
+- 197.94 hours to be scheduled 2PM-10PM
+- 114.6 hours to be scheduled 10PM-6AM
+
+Officers needed:
+- 26 to be scheduled 6AM-2PM
+- 25 to be scheduled 2PM-10PM
+- 15 to be scheduled 10PM-6AM
+
+*This can be further refined based on day of the week.*
 ## Workload Assessment
 
 ### Distribution of Calls for Service
