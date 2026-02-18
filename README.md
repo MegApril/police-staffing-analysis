@@ -57,10 +57,11 @@ Staffing reccomendations will be based on:
 #### Onview vs. Dispatch vs. Non-Patrol
 According to Wilson & Grammich, it is common for departments to plan for officers to spend one-third to one-half of their time on proactive policing or onview calls (2024).
 
-For this analysis the following definitions were used. 
-Onview - defined as officer initiated events. 
-Dispatch - defined by 911 calls, alarm calls, and telephone (not 911) calls.
-Non-Patrol - all administrative categories, assigned duties, court time, meetings with supervisors, and other events. These events were subtracted from onview and dispatch based on their final call type. The full list of final call types included in non-patrol can be found in the accompanying document in appendix A.
+For this analysis the following definitions were used:  
+
+- Onview - defined as officer initiated events. 
+- Dispatch - defined by 911 calls, alarm calls, and telephone (not 911) calls.
+- Non-Patrol - all administrative categories, assigned duties, court time, meetings with supervisors, and other events. These events were subtracted from onview and dispatch based on their final call type. The full list of final call types included in non-patrol can be found in the accompanying document in Appendix A.
 
 In 2023, SPD West spent 32% of officer hours on onview calls. 56% of time on dispatch calls, and 12% of time on non-patrol calls.
 
