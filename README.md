@@ -51,9 +51,6 @@ Staffing reccomendations will be based on:
 - SPD West spends between 14,411 - 17,363 hours on labor per month with the highest number of hours being worked in May.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
-#### Officer Initiated vs. Community Initiated
-<img src="visuals/department-time-by-month-call-type.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
-
 #### Onview vs. Dispatch vs. Non-Patrol
 According to Wilson & Grammich, it is common for departments to plan for officers to spend one-third to one-half of their time on proactive policing or onview calls (2024).
 
