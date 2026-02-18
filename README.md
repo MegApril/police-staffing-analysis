@@ -1,5 +1,5 @@
 # Police Staffing Analysis
-This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. Deliverables will include a slide deck with findings and statistics, this repository containing documented code with explanations, and visualizations.
+This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. Deliverables will include a document with findings and statistics, this repository containing documented code with explanations, and visualizations.
 
 ## Table of Contents
 1. [Executive Summary](#executive-summary)
