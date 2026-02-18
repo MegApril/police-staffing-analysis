@@ -36,8 +36,10 @@ Answering the following questions in further analyses using the percent change a
    - What is the population change year over year?
    - Does population change correlate to a change in hours spent on CFS?
    - Does population change correlate to number of CFS?
-#### Determine staffing needs based on the following process
-  1. Determine monthly allotment of hours based on monthly average number of calls, and monthly average time spent on calls. This will change based on how the number of calls change year over year and how hours spent on calls change year over year.
+### Recommended Staffing Framework
+**1. Forecast Monthly Workload Hours**
+  
+Determine total monthly workload hours using projected call volume and projected average service time:
 
 $$
 H_m = \frac{\bar{t}_m \times \bar{n}_m}{3600}
@@ -48,29 +50,42 @@ Where:
 - $\bar{t}_m$ = average time per call in month $m$
 - $\bar{n}_m$ = average number of calls in month $m$
 
-2. Determine number of hours to be scheduled by shift using Distribution of Calls for Service perecentages.
-3. Divide that number by the number of days in the month.
-4. Divide daily hours by 8 to find how many officers are needed.
-5. Scheduled officers accordingly by sector and beat based on geographic distributions of workload, preplanned events, and station needs. 
+Year-over-year percent change adjustments can be applied to call volume, average service time, or total workload hours depending on forecasting strategy.
+Because administrative activities, court, training, proactive policing, and other internal obligations are recorded as CAD events, this calculation reflects total documented workload demand, not solely dispatched CFS.
 
-As an example, in January 2023 there was 15,378.82 hours spent on labor. If we find the year over year adjustment requires an increase of 5% for number of hours, this gives an adjusted number of hours of 16,147.76. Finding hours that should be allocated to each shift, we multiply 16,147.76 by .4, .38, and .22. 
+**2. Allocate Workload Hours by Shift**  
+Distribute total projected monthly hours using historical percentages of workload by shift.
+Example (January 2024 projection at 5% increase in workload hours):
+Total projected hours: 16,147.76
+- 6AM–2PM (40%): 6,459.10 hours
+- 2PM–10PM (38%): 6,136.15 hours
+- 10PM–6AM (22%): 3,552.51 hours
 
-Monthly values for January:
-- 6,459.10 hours to be scheduled 6AM-2PM
-- 6,136.15 hours to be scheduled 2PM-10PM
-- 3,552.51 hours to be scheduled 10PM-6AM
+**3. Convert Monthly Shift Hours to Daily Requirements**  
+Divide monthly shift hours by the number of days in the month to determine average daily workload demand.
+Example (31 days in January):
+- 6AM–2PM: 208.36 hours/day
+- 2PM–10PM: 197.94 hours/day
+- 10PM–6AM: 114.60 hours/day
 
-Daily values:
-- 208.36 to be scheduled 6AM-2PM
-- 197.94 hours to be scheduled 2PM-10PM
-- 114.6 hours to be scheduled 10PM-6AM
+**4. Determine Required Officers per Shift**  
+Divide daily shift workload hours by 8 scheduled hours per officer.
+Because total workload calculations include administrative, court, training, and proactive CAD events, the full 8-hour shift is used rather than applying a separate availability factor.
+Example:
+- 6AM–2PM: 26 officers
+- 2PM–10PM: 25 officers
+- 10PM–6AM: 15 officers
 
-Officers needed:
-- 26 to be scheduled 6AM-2PM
-- 25 to be scheduled 2PM-10PM
-- 15 to be scheduled 10PM-6AM
+**5. Determine Required Officers per Shift**  
+Schedule officers by sector and beat based on:
+- Geographic workload distribution
+- Day-of-week variation
+- Seasonal patterns
+- Preplanned events
+- Station-specific operational requirements
 
-*This can be further refined based on day of the week. Additionally, if we instead find that going off of number of calls * average time spent on calls is a better adjustment that would change thesee numbers. Running these numbers with a 5% increase in call valume and the same average time spent on calls gave a monthly allottment of 16,131.5 for January, which is remarkably close to the numbers above.*
+*This can be further refined based on day of the week. Additionally, if we instead find that going off of (number of calls * average time) spent on calls is a better adjustment that would change these numbers. Running numbers with a 5% increase in call volume (vs hours shown in the example) and the same average time spent on calls, gave a monthly allottment of 16,131.5 for January, which is remarkably close to the numbers above.*
+
 ## Workload Assessment
 
 ### Distribution of Calls for Service
