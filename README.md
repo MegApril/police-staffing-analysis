@@ -25,6 +25,9 @@ Staffing reccomendations will be based on:
 - Performance Objectives from the department
 - Metrics from workload analysis
 ### Findings
+In 2023, there were 97,739 unique calls for service to Seattle Police Department's WEST precinct. Servicing these calls created 189,795.88 hours of labor.
+This means, on average, there were 3649.92 hours worked on a weekly basis. Assuming every full time employee worked 40 hours, we can see that 91.25 full time officers were needed to keep up with demand. 
+# This does not yet reflect agency relief factor - update
 ### Reccomendations
 
 ## Workload Assessment
