@@ -97,12 +97,12 @@ Schedule officers by sector and beat based on:
 
 #### By Day
 
-- Demand is highest on Fridays; accounting for 15% of calls for the week. Demand is lowest on the weekends; with Sundays representing 12% of calls for the week, and Saturdays representing 13% of the calls for the week.
+Demand is highest on Fridays; accounting for 15% of calls for the week. Demand is lowest on the weekends; with Sundays representing 12% of calls for the week, and Saturdays representing 13% of the calls for the week.
 <img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### By Month
 
-- There is not a significant amount of seasonal variability in this market. All months are within 10% of the monthly average which is 8,145 calls. The highest volume of calls occurs in May at 9,037, and the lowest number of calls occurs in November at 7,501.
+There is not a significant amount of seasonal variability in this market. All months are within 10% of the monthly average which is 8,145 calls. The highest volume of calls occurs in May at 9,037, and the lowest number of calls occurs in November at 7,501.
 
 <img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
@@ -116,7 +116,11 @@ Given the similar distribution of hours worked, and number of calls - going off 
 <img src="visuals/hours-worked-houly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### By Month
-- SPD West spends between 14,411 - 17,363 hours on labor per month with the highest number of hours being worked in May. The median amount of time spent per call is 31 minutes, whereas the average amount of time spent per call is 120 minutes. The difference between these numbers can be explained by taking into consideration that the top 10% of calls consume 53% of labor. When there is a small amount of calls that have significantly larger amounts of time spent on them, the average is much higher than the median.
+SPD West averages between 14,411 and 17,363 labor hours per month, with May representing the peak workload period.  
+
+The median service time per call is 31 minutes, while the mean service time is 120 minutes. This substantial gap reflects a highly skewed workload distribution: the top 10% of calls account for 53% of total labor hours. A relatively small number of highly time-intensive events significantly elevate the mean, while the median more accurately reflects a typical call.
+
+For staffing projections, the mean service time is recommended for calculating monthly workload allotments. Although it overstates the duration of a typical call, it more accurately captures total labor demand and provides a buffer for high-duration events that disproportionately consume resources. Using the median in this context would risk systematically underestimating required staffing levels.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### Onview vs. Dispatch vs. Non-Patrol
