@@ -54,7 +54,7 @@ Year-over-year percent change adjustments can be applied to call volume, average
 Because administrative activities, court, training, proactive policing, and other internal obligations are recorded as CAD events, this calculation reflects total documented workload demand, not solely dispatched CFS.
 
 **2. Allocate Workload Hours by Shift**  
-Distribute total projected monthly hours using historical percentages of workload by shift.
+Distribute total projected monthly hours using historical percentages of workload by shift.  
 Example (January 2024 projection at 5% increase in workload hours):
 Total projected hours: 16,147.76
 - 6AM–2PM (40%): 6,459.10 hours
@@ -62,7 +62,7 @@ Total projected hours: 16,147.76
 - 10PM–6AM (22%): 3,552.51 hours
 
 **3. Convert Monthly Shift Hours to Daily Requirements**  
-Divide monthly shift hours by the number of days in the month to determine average daily workload demand.
+Divide monthly shift hours by the number of days in the month to determine average daily workload demand.  
 Example (31 days in January):
 - 6AM–2PM: 208.36 hours/day
 - 2PM–10PM: 197.94 hours/day
@@ -70,7 +70,7 @@ Example (31 days in January):
 
 **4. Determine Required Officers per Shift**  
 Divide daily shift workload hours by 8 scheduled hours per officer.
-Because total workload calculations include administrative, court, training, and proactive CAD events, the full 8-hour shift is used rather than applying a separate availability factor.
+Because total workload calculations include administrative, court, training, and proactive CAD events, the full 8-hour shift is used rather than applying a separate availability factor.  
 Example:
 - 6AM–2PM: 26 officers
 - 2PM–10PM: 25 officers
