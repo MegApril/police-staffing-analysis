@@ -30,9 +30,10 @@ This means, on average, there were 3649.92 hours worked on a weekly basis. Assum
 # This does not yet reflect agency relief factor - update
 ### Reccomendations
 *These reccomendations are currently based on one year of data. In order to feel comfortable giving 2026 forecasting estimates for staffing, metrics from 2025 and 2026 need to be pulled.*
+
 Answering the following questions in further analyses using the percent change adjustment would provide a logical basis for budget requests, staffing forecasts, tracking department objectives and goals, and other agency needs.
-   - How does the number of CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
-   - How does the hours spent on CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
+   - How do the number of CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
+   - How do the hours spent on CFS change year over year? Is this change consistent from 2023-2024? 2024-2025?
    - What is the population change year over year?
    - Does population change correlate to a change in hours spent on CFS?
    - Does population change correlate to number of CFS?
