@@ -1,15 +1,8 @@
 # Seattle Police Department West Precinct Staffing Analysis
 This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. 
 
-## Table of Contents
-1. [Executive Summary](#executive-summary)
-   - [Purpose](#purpose)
-   - [Findings](#findings)
-   - [Reccomendations](#reccomendations)
-2. [Workload Assessment](#workload-assessment)
-3. [Staffing Reccomendations](#staffing-reccomendations)
 ## Executive Summary
-This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions.
+This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.]()
 In 2023, SPD West responded to 97,739 unique calls for service, requiring 189,795.88 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity.
 
 ### Purpose
