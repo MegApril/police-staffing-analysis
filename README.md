@@ -54,8 +54,7 @@ Where:
 4. Divide daily hours by 8 to find how many officers are needed.
 5. Scheduled officers accordingly by sector and beat based on geographic distributions of workload, preplanned events, and station needs. 
 
-
-As an example, in January 2023 there was 15,378.82 hours spent on labor. If we find the year over year requires an increase of 5% for number of hours, this gives an adjusted number of hours of 16,147.76. Finding hours that should be allocated to each shift, we multiply 16,147.76 by .4, .38, and .22. Doing this gives monthly allottments of hours.
+As an example, in January 2023 there was 15,378.82 hours spent on labor. If we find the year over year adjustment requires an increase of 5% for number of hours, this gives an adjusted number of hours of 16,147.76. Finding hours that should be allocated to each shift, we multiply 16,147.76 by .4, .38, and .22. 
 
 Monthly values for January:
 - 6,459.10 hours to be scheduled 6AM-2PM
@@ -72,7 +71,7 @@ Officers needed:
 - 25 to be scheduled 2PM-10PM
 - 15 to be scheduled 10PM-6AM
 
-*This can be further refined based on day of the week.*
+*This can be further refined based on day of the week. Additionally, if we instead find that going off of number of calls * average time spent on calls is a better adjustment that would change thesee numbers. Running these numbers with a 5% increase in call valume and the same average time spent on calls gave a monthly allottment of 16,131.5 for January, which is remarkably close to the numbers above.*
 ## Workload Assessment
 
 ### Distribution of Calls for Service
