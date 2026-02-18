@@ -218,6 +218,16 @@ FROM `spd_west.2023_calls_buckets`
 GROUP BY year_month
 ORDER BY year_month;
 ```
+### Total Hours Worked distributed by time of day
+```SQL
+SELECT
+  EXTRACT(HOUR FROM DATETIME(cad_event_original_timestamp, "America/Los_Angeles")) AS hour_of_day,
+  COUNT(*) AS total_calls,
+  SUM(final_service_seconds) / 3600 AS total_hours
+FROM `police-staffing-spd-west.spd_west.2023_calls_base`
+GROUP BY hour_of_day
+ORDER BY hour_of_day;
+```
 ### Quantiles
 ```SQL
 SELECT
