@@ -20,8 +20,8 @@ Staffing recommendations are derived from:
 - Empirical workload metrics
 
 This is based on the recommended framework set forth in two primary publications by Professor Jeremy M. Wilson, School of Criminal Justice, Michigan State University. 
-1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [^3]
-2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [^2]
+1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [[3]](#3)
+2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [[2]](#2)
 ### Reccomendations for 'Rule of 60' Adherence
 **Currently Underway**
 
@@ -94,7 +94,7 @@ Evaluating these factors using percent change adjustments will provide a stronge
 
 # Workload Assessment
 ## Defining Workload
-Following guidelines set forth by the ICMA [^4] for a principle called the "Rule of 60", one part dictates that, "60% of available officers should be assigned to patrol." This allows for other police activity such as community involvement, specialized training speicific to the community, retention planning, and other duties the department must have resources to complete[^3]. 
+Following guidelines set forth by the ICMA [[4]](#4) for a principle called the "Rule of 60", one part dictates that, "60% of available officers should be assigned to patrol." This allows for other police activity such as community involvement, specialized training speicific to the community, retention planning, and other duties the department must have resources to complete[[3]](#3). 
 In order to properly assess time, manpower, and resources, we must clearly define what is included in workload.
 Patrol - 
 
@@ -147,7 +147,7 @@ In 2023, SPD West spent 32% of officer hours on onview calls. 56% of time on dis
 <img src="visuals/onview_dispatch_nonpatrol.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ## Establishing Performance Objectives
-The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[^2]. 
+The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
 
 ## Determining Agency Shift Relief Metric
 
@@ -164,10 +164,14 @@ The way which agencies are directed to allocate their time determines how worklo
   
 All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from csv's to a .paraquet file. This is found [here.](Python/cad_data_preprocessing.ipynb)
 ## Bibliography
-[^1]: Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
-[^2]: Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
-[^3]: Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. Policing: A Journal of Policy and Practice, 18. https://doi.org/10.1093/police/paae005
-[4^]: Center for Public Safety Management, McCabe, J., & International City/County Managemenet Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
+### 1
+Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
+### 2
+Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
+### 3
+Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. Policing: A Journal of Policy and Practice, 18. https://doi.org/10.1093/police/paae005
+### 4
+Center for Public Safety Management, McCabe, J., & International City/County Managemenet Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
 
 
 
