@@ -88,7 +88,7 @@ Evaluating these factors using percent change adjustments will provide a stronge
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="police-staffing-analysis/visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Day
 
