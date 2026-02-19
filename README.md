@@ -101,6 +101,8 @@ Following guidance from the International City/County Management Association (IC
 |Reactive Patrol Demand |Demand-driven and time-sensitive calls. |Crime, Alarms, Warrants, Non-Officer initiated Calls, Dispatch Events||
 |Proactive / Community Patrol Activity |Officer initiated or capacity based calls.|Directed patrol activity, Officer Initiated Calls, School Visits, Special Events||
 |Organizational / Out-of-Service Workload|Work that removes officers from patrol availability.|Court, Training, Out At Range, Reports, Maintenance of Vehichles, Follow Up's||
+The `final_call_type` 'Off Duty Employment' is excluded from this analysis.
+
 ## Distribution of Calls for Service
 ### By Hour
 - 6AM - 2PM contains 40% of calls  
