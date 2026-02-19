@@ -1,7 +1,7 @@
 # SQL Queries
 ## Distribution of Calls For Service
 
-### Address duplicates for cad events
+### Find duplicates for cad events
 ```SQL
 SELECT
   cad_event_number,
@@ -94,8 +94,9 @@ ORDER BY month_num;
 My objective here is to group calls by the total department time spent on the individual CAD event using the CAD event ID, and total service time. Calls will then be categorized based on how much total time the department allocated to the CAD event number in the following categories.
 1. 0-1800 seconds (30 minutes),
 2. 1800-3600 seconds (30 minutes - 1 hour),
-3. 3600-7200 seconds (1-2 hours),
-4. 7200+ seconds (2+ hours)
+3. 3600-10800 seconds (1-3 hours),
+4. 10800-21600 seconds (3-6 hours),
+5. 21600+ seconds (6+ hours)
 With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
 
 ### Base Table and Data Cleaning
@@ -317,7 +318,7 @@ GROUP BY year_month, call_type_indicator
 ORDER BY year_month, call_type_indicator;
 ```
 ### Determining if admin duties associated with cad events are logged with the same cad event number, or as a different cad event number.
-They are logged under a different cad event number
+They are logged under a different cad event number, meaning they are included in reported time. This negates the need to add a percentage to workload hours based on perecieved need since it is accounted for in this CAD system.
 ```SQL
 WITH multi_row_events AS (
   SELECT
