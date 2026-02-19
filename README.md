@@ -23,6 +23,8 @@ This is based on the recommended framework set forth in two primary publications
 1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [^3]
 2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [^2]
 ### Reccomendations for 'Rule of 60' Adherence
+**Currently Underway**
+
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
   
@@ -63,7 +65,11 @@ Example:
 - 2PM–10PM: 25 officers
 - 10PM–6AM: 15 officers
 
-**5. Determine Required Officers per Shift**  
+
+**5. Convert Required Officers Needed in Accordance with the 'Rule of 60' Guidelines**  
+**Currently Underway**
+
+**6. Determine Required Officers per Shift**  
 Schedule officers by sector and beat based on:
 - Geographic workload distribution
 - Day-of-week variation
