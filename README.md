@@ -7,7 +7,11 @@ This analysis quantifies the workload of the Seattle Police Department’s West 
 In 2023, SPD West responded to 97,739 unique calls for service, requiring 189,795.88 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity.
 
 ### Purpose
-This analysis establishes a systematic method for evaluating operational demand based on:
+This report has two purposes.
+1. Complete Workload Analysis
+2. Make Reccomendations to align workload with sustainable staffing practices.
+
+The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
 - Temporal distribution of Calls for Service (hour, day, month)
 - Time spent by final call type
 - Nature of calls
@@ -15,15 +19,12 @@ This analysis establishes a systematic method for evaluating operational demand 
 
 Staffing recommendations are derived from:
 - Workload-based hour calculations
-- Agency shift relief assumptions (8-hour and 10-hour staffing models)
+- Agency shift relief assumptions 
 - Department performance objectives
-- Empirical workload metrics
+- Rule of 60 principles
 
-This is based on the recommended framework set forth in two primary publications by Professor Jeremy M. Wilson, School of Criminal Justice, Michigan State University. 
-1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [[3]](#3)
-2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [[2]](#2)
 ### Reccomendations for 'Rule of 60' Adherence
-**Currently Underway**
+*Currently Underway*
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
@@ -67,7 +68,7 @@ Example:
 
 
 **5. Convert Required Officers Needed in Accordance with the 'Rule of 60' Guidelines**  
-**Currently Underway**
+*Currently Underway*
 
 **6. Determine Required Officers per Shift**  
 Schedule officers by sector and beat based on:
@@ -94,10 +95,10 @@ Evaluating these factors using percent change adjustments will provide a stronge
 
 # Workload Assessment
 ## Defining Workload
-Following guidelines set forth by the ICMA [[4]](#4) for a principle called the "Rule of 60", one part dictates that, "60% of available officers should be assigned to patrol." This allows for other police activity such as community involvement, specialized training speicific to the community, retention planning, and other duties the department must have resources to complete[[3]](#3). 
-In order to properly assess time, manpower, and resources, we must clearly define what is included in workload.
-Patrol - 
-
+Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions.
+|Term |Definition|Call Types Included|Example|
+|--|--|--|--|
+|Workload|The number of hours needed to complete CFS including administrative time related to these calls and clearing time.|Onview Calls, Dispatch Calls||
 ## Distribution of Calls for Service
 ### By Hour
 - 6AM - 2PM contains 40% of calls  
