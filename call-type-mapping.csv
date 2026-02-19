@@ -1,0 +1,309 @@
+workload_type,final_call_type
+Reactive Patrol Demand,ALARM - AUDIBLE AUTOMOBILE (UNOCC/ANTI-THEFT)
+Reactive Patrol Demand,ALARM - COMM  HOLD-UP/PANIC (EXCEPT BANKS)
+Reactive Patrol Demand,ALARM - COMM  SILENT/AUD BURG (INCL BANKS)
+Reactive Patrol Demand,ALARM - RESIDENTIAL - BURGLARY  SILENT/AUDIBLE
+Reactive Patrol Demand,ALARM - RESIDENTIAL - SILENT/AUD PANIC/DURESS
+Reactive Patrol Demand,ALARM-COMM (INC BANK  ATM  SCHOOLS  BSN)
+Reactive Patrol Demand,ALARM-COMM ROBB (BANK  PANIC  DURESS)
+Reactive Patrol Demand,ALARM-OTHER (VARDA PDT FIRE LOCAL METRO ETC))
+Reactive Patrol Demand,ALARM-RESIDENTIAL BURG
+Reactive Patrol Demand,ALARM-RESIDENTIAL PANIC OR DURESS
+Reactive Patrol Demand,ALARM-VEHICLE ALARMS
+Reactive Patrol Demand,ANIMAL - DANGEROUS
+Reactive Patrol Demand,ANIMAL - INJURED  DEAD HAZARD  OTHER
+Reactive Patrol Demand,ANIMAL COMPLAINT - INJURED DEAD DANGEROUS
+Reactive Patrol Demand,ANIMAL COMPLAINT - NOISE STRAY BITE
+Reactive Patrol Demand,ARSON - REPORT
+Reactive Patrol Demand,ARSON  BOMBS  EXPLO - ARSON
+Reactive Patrol Demand,ARSON  BOMBS  EXPLO - RECKLESS BURNING
+Reactive Patrol Demand,ARSON BOMBS EXPLO - BOMBS  EXPLO LARGE FIREWORKS
+Reactive Patrol Demand,ASLT - CRITICAL (NO SHOOTINGS)
+Reactive Patrol Demand,ASLT - DV
+Reactive Patrol Demand,ASLT - DV CRITICAL
+Reactive Patrol Demand,ASLT - MOLESTED ADULT (GROPED  FONDLED  ETC.)
+Reactive Patrol Demand,ASLT - PERSON SHOT OR SHOT AT
+Reactive Patrol Demand,ASLT - WITH OR W/O WPNS (NO SHOOTINGS)
+Reactive Patrol Demand,ASSAULTS - FIREARM INVOLVED
+Reactive Patrol Demand,ASSAULTS - GANG RELATED
+Reactive Patrol Demand,ASSAULTS - HARASSMENT  THREATS
+Reactive Patrol Demand,ASSAULTS - TELEPHONE  WRITING
+Reactive Patrol Demand,ASSAULTS  OTHER
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - CENTURYLINK STADIUM
+Proactive / Community Patrol Activity,ASSIGNED DUTY - COMMUNITY SCHOOL SPECIAL EVENT
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - COURT
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - DETAIL BY SUPERVISOR
+Proactive / Community Patrol Activity,ASSIGNED DUTY - FOOT BEAT (FROM ASSIGNED CAR)
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - HOSPITAL GUARD
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - IN-SERVICE TRAINING
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - MEET W/ SUPERVISOR (OUT OF SVC)
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - OTHER ESCORT
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - REPORTS
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - SEATTLE CENTER EVENT
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - STAKEOUT
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - STATION DUTY (CLERK MAIL ETC)
+Organizational / Out-of-Service Workload,ASSIGNED DUTY - TRANSPORT EVIDENCE EQUIPMENT
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - CITY AGENCY
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - COUNTY AGENCY
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - EMERGENCY SERVICE
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - FEDERAL AGENCY
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - ROUTINE SERVICE
+Organizational / Out-of-Service Workload,ASSIST OTHER AGENCY - STATE AGENCY
+Proactive / Community Patrol Activity,ASSIST PUBLIC - 911 HANG UP  OPEN LINE
+Proactive / Community Patrol Activity,ASSIST PUBLIC - NO WELFARE CHK OR DV ORDER SERVICE
+Proactive / Community Patrol Activity,ASSIST PUBLIC - OTHER (NON-SPECIFIED)
+Proactive / Community Patrol Activity,ASSIST SPD
+Reactive Patrol Demand,AUTO - THEFT/LOSS OF PLATES
+Reactive Patrol Demand,AUTO RECOVERY
+Reactive Patrol Demand,AUTO THEFT - VEH THEFT OR THEFT AND RECOVERY
+Reactive Patrol Demand,AUTOMOBILES - ABANDONED CAR
+Reactive Patrol Demand,AUTOMOBILES - AUTO THEFT
+Reactive Patrol Demand,AUTOMOBILES - AUTO THEFT & RECOVERY
+Reactive Patrol Demand,AUTOMOBILES - LICENSE PLATE(S) THEFT OR LOSS
+Reactive Patrol Demand,AUTOMOBILES - RECOVERY (THEFT)
+Reactive Patrol Demand,AWOL - ADULT OR JUVENILE
+Reactive Patrol Demand,BIAS
+Reactive Patrol Demand,BOMB - THREATS
+Reactive Patrol Demand,BROADCAST AND CLEAR BY RADIO
+Reactive Patrol Demand,BURG - COMM BURGLARY
+Reactive Patrol Demand,BURG - OCCUPIED RESD
+Reactive Patrol Demand,BURG - RESD (INCL UNOCC STRUCTURES ON PROP)
+Reactive Patrol Demand,BURGLARY - NON RESIDENTIAL/COMMERCIAL
+Reactive Patrol Demand,BURGLARY - RESIDENTIAL OCCUPIED
+Reactive Patrol Demand,BURGLARY - RESIDENTIAL  UNOCCUPIED
+Reactive Patrol Demand,BURGLARY - UNOCC STRUC ON RESN PROP
+Reactive Patrol Demand,BURN - RECKLESS BURNING
+Reactive Patrol Demand,CASUALTY NON-TRAF NON-CRIM - DRUG RELATED (OD)
+Reactive Patrol Demand,CASUALTY NON-TRAF NON-CRIM - NON-DRUG RELATED
+Reactive Patrol Demand,CHILD - ABANDONED  ABUSED AND NEGLECTED
+Reactive Patrol Demand,CHILD - CHILD ENDANGERMENT
+Reactive Patrol Demand,CHILD - CRITICAL ABAND  ABUSE  MOLEST  NEGLECT
+Reactive Patrol Demand,CRISIS COMPLAINT - GENERAL
+Reactive Patrol Demand,CRISIS COMPLAINT - PICK-UP OR TRANSPORT
+Organizational / Out-of-Service Workload,CROWD MGMNT (STAND BY ONLY)
+Reactive Patrol Demand,DEMO MGMNT (CONTROL TACTICS USED)
+Organizational / Out-of-Service Workload,DEMONSTRATIONS
+Proactive / Community Patrol Activity,DETOX - REQUEST FOR
+Reactive Patrol Demand,DIRECTED PATROL ACTIVITY
+Reactive Patrol Demand,DISTURBANCE
+Reactive Patrol Demand,DISTURBANCE - DV - NO ASLT
+Reactive Patrol Demand,DISTURBANCE - DV CRITICAL
+Reactive Patrol Demand,DISTURBANCE - FIGHT
+Reactive Patrol Demand,DISTURBANCE - JUVENILE
+Reactive Patrol Demand,DISTURBANCE - NOISE
+Reactive Patrol Demand,DISTURBANCE - NOISE RESIDENTIAL
+Reactive Patrol Demand,DISTURBANCE - OTHER
+Reactive Patrol Demand,DOMESTIC SEX TRAFFICKING
+Reactive Patrol Demand,DOWN - CHECK FOR DOWN PERSON
+Organizational / Out-of-Service Workload,DOWN TIME - OUT OF SERVICE
+Reactive Patrol Demand,DRIVE BY SHOOTING - NO INJURIES
+Reactive Patrol Demand,DUI - DRIVING UNDER INFLUENCE
+Reactive Patrol Demand,DV - ARGUMENTS  DISTURBANCE (NO ARREST)
+Reactive Patrol Demand,DV - ASSIST VICTIM BY COURT ORDER
+Reactive Patrol Demand,DV - DOMESTIC THREATS BY PHONE OR WRITING
+Reactive Patrol Demand,DV - DOMESTIC VIOL/ASLT (ARREST MANDATORY)
+Reactive Patrol Demand,DV - DOMESTIC VIOLENCE (ARREST DISCRETIONARY)
+Reactive Patrol Demand,DV - ENFORCE COURT ORDER (ARREST MANDATED)
+Reactive Patrol Demand,DV - SERVICE OF COURT ORDER
+Reactive Patrol Demand,DV - STANDBY TO ASSURE PEACE
+Reactive Patrol Demand,DV -VULNERABLE ADULT  FINANCIAL EXPLOITATION
+Reactive Patrol Demand,DV -VULNERABLE ADULT  NEGLECT
+Reactive Patrol Demand,E.R.T./HOSTAGE
+Proactive / Community Patrol Activity,ELEMENTARY SCHOOL VISIT
+Reactive Patrol Demand,FIGHT - CRITICAL WITH WEAPONS
+Reactive Patrol Demand,FIREWORKS (NO HAZARD)
+Organizational / Out-of-Service Workload,FOLLOW UP
+Reactive Patrol Demand,FOOT - ELUDING POLICE
+Reactive Patrol Demand,FOUND PERSON
+Reactive Patrol Demand,FRAUD
+Reactive Patrol Demand,FRAUD - FORGERY  BAD CHECKS
+Reactive Patrol Demand,FRAUD - FRAUD  INCLUDING BUNCO
+Organizational / Out-of-Service Workload,GAS/MAINTENANCE/WASH/GARAGE
+Reactive Patrol Demand,HARAS - NO BIAS OR THREATS
+Reactive Patrol Demand,HARBOR - ASSIST BOATER (NON EMERG)
+Reactive Patrol Demand,HARBOR - BOAT ACCIDENT
+Reactive Patrol Demand,HARBOR - DEBRIS  NAVIGATIONAL HAZ
+Reactive Patrol Demand,HARBOR - HARBOR CODE VIOLATION
+Reactive Patrol Demand,HARBOR - MARINE FIRE
+Reactive Patrol Demand,HARBOR - PERSON IN WATER
+Reactive Patrol Demand,HARBOR - VESSEL  ABANDONED
+Reactive Patrol Demand,HARBOR - VESSEL  THEFT AND RECOVERY
+Reactive Patrol Demand,HARBOR - WATER DEBRIS  NAVIGATIONAL HAZARDS
+Reactive Patrol Demand,HARBOR - WATER EMERGENCIES
+Reactive Patrol Demand,HAZ - CRITICAL
+Reactive Patrol Demand,HAZ - POTENTIAL THRT TO PHYS SAFETY
+Reactive Patrol Demand,HAZARDS - HAZARDS
+Reactive Patrol Demand,HELP THE OFFICER
+Reactive Patrol Demand,HELP THE OFFICER -ASSIST THE OFFICER (NON EMERG)
+Reactive Patrol Demand,HOMICIDE
+Organizational / Out-of-Service Workload,HOSPITAL GUARD ASSIGNMENT
+Reactive Patrol Demand,ILLEGAL DUMPING
+Organizational / Out-of-Service Workload,INFORMATIONAL BROADCASTS
+Reactive Patrol Demand,INJURED -  PERSON/INDUSTRIAL ACCIDENT
+Reactive Patrol Demand,INTOX & LIQ VIOLS - ADULTS (VIOLATIONS)
+Reactive Patrol Demand,INTOX & LIQ VIOLS - INTOXICATED PERSON
+Reactive Patrol Demand,INTOX & LIQ VIOLS - MINORS (VIOLATIONS)
+Reactive Patrol Demand,JUVENILE - RUNAWAY PICKUP
+Reactive Patrol Demand,KIDNAP - CUSTODIAL INTERFERENCE
+Reactive Patrol Demand,KIDNAP - GENERAL
+Reactive Patrol Demand,LEWD -  (EXPOSING  FLASHING)
+Reactive Patrol Demand,LIQUOR VIOLATIONS - ADULT
+Reactive Patrol Demand,MISC MISD AND VIOLS - PARKS EXCLUSION
+Reactive Patrol Demand,MISC MISD AND VIOLS - RECKLESS ENDANGERMENT
+Reactive Patrol Demand,MISCHIEF OR NUISANCE - GENERAL
+Reactive Patrol Demand,MISSING - (ALZHEIMER  ENDANGERED  ELDERLY)
+Reactive Patrol Demand,MISSING - ADULT
+Reactive Patrol Demand,MISSING - CHILD
+Reactive Patrol Demand,MVC - HIT AND RUN
+Reactive Patrol Demand,NARCOTICS - DRUG TRAFFIC LOITERING
+Reactive Patrol Demand,NARCOTICS - FOUND
+Reactive Patrol Demand,NARCOTICS - FOUND   RECOVERED NARCOTICS
+Reactive Patrol Demand,NARCOTICS - MARIJUANA PUBLIC USE(NOT DISPENSARY)
+Reactive Patrol Demand,NARCOTICS - NARCOTICS WARRANT SERVICE
+Reactive Patrol Demand,NARCOTICS - NARS REPORT
+Reactive Patrol Demand,NARCOTICS - OTHER
+Reactive Patrol Demand,NARCOTICS - VIOLATIONS (LOITER  USE  SELL  NARS)
+Reactive Patrol Demand,NO ANSWER WHEN CALLED
+Reactive Patrol Demand,NOISE - ANIMAL (INCLUDES BARKING DOGS)
+Reactive Patrol Demand,NOISE - GENERAL
+Reactive Patrol Demand,NUISANCE
+Reactive Patrol Demand,OBS - ANIMAL - ASSIST ANIMAL CONTROL OFCR
+Reactive Patrol Demand,OBS - ANIMAL - IP/JO - BITE
+Reactive Patrol Demand,OBS - AUTO THEFT-IP/JO - VEHICLE  PLATES  TABS
+Reactive Patrol Demand,OBS - BURG - IP/JO - COMM BURG (INCLUDES SCHOOLS)
+Reactive Patrol Demand,OBS - DOA - CASUALTY  DEAD BODY
+Reactive Patrol Demand,OBS - DOWN - CHECK FOR PERSON DOWN
+Reactive Patrol Demand,OBS - EXPLOSION - IP/JO
+Reactive Patrol Demand,OBS - FIGHT - IP - PHYSICAL (NO WEAPONS)
+Reactive Patrol Demand,OBS - FIGHT - VERBAL/ORAL (NO WEAPONS)
+Reactive Patrol Demand,OBS - INJURED - IP/JO - PERSON/INDUSTRIAL ACCIDENT
+Reactive Patrol Demand,OBS - IP/JO - RACIAL  POLITICAL  SEXUAL MOTIVATION
+Reactive Patrol Demand,OBS - MVC - NON INJURY  BLOCKING
+Reactive Patrol Demand,OBS - MVC - UNK INJURIES
+Reactive Patrol Demand,OBS - MVC - WITH INJURIES (INCLUDES HIT AND RUN)
+Reactive Patrol Demand,OBS - NOISE - DISTURBANCE (PARTY  ETC)
+Reactive Patrol Demand,OBS - PROWLER
+Reactive Patrol Demand,OBS - RAPE - IP/JO
+Reactive Patrol Demand,OBS - REPORT  NON INJ/NON BLKG OR AFTER FACT INJ
+Reactive Patrol Demand,OBS - SAMPLE / TEST CALL ONLY
+Reactive Patrol Demand,OBS - SUSPICIOUS PACKAGE
+Reactive Patrol Demand,OBS - UNKNOWN - ANI/ALI - PAY PHN (INCL OPEN LINE)
+Reactive Patrol Demand,OBS WEAPN-IP/JO-GUN DEADLY WPN (NO THRT/ASLT/DIST)
+,OFF DUTY EMPLOYMENT
+Reactive Patrol Demand,ORDER  - SERVICE OF DV COURT ORDER
+Reactive Patrol Demand,ORDER - ASSIST DV VIC W/SRVC OF COURT ORDER
+Reactive Patrol Demand,ORDER - CRITICAL VIOLATION OF DV COURT ORDER
+Reactive Patrol Demand,ORDER - VIOLATING DV COURT ORDER
+Reactive Patrol Demand,ORDER - VIOLATION OF COURT ORDER (NON DV)
+Organizational / Out-of-Service Workload,OUT AT RANGE
+Organizational / Out-of-Service Workload,OUT OF CAR/NO REASON GIVEN
+Organizational / Out-of-Service Workload,OUT TO PRECINCT/STATION
+Reactive Patrol Demand,OVERDOSE
+Reactive Patrol Demand,PANHANDLING  AGGRESSIVE
+Reactive Patrol Demand,PARKING VIOLATION (EXCEPT ABANDONED CAR)
+Reactive Patrol Demand,PEACE-STANDBY TO ASSURE (NO COURT ORDR SVC)
+Reactive Patrol Demand,PEDESTRIAN VIOLATIONS
+Reactive Patrol Demand,PERSON - FOUND PERSON
+Reactive Patrol Demand,PERSON - LOST PERSON
+Reactive Patrol Demand,PERSON - MISSING PERSON
+Reactive Patrol Demand,PERSON - RUNAWAY
+Reactive Patrol Demand,PERSON IN BEHAVIORAL/EMOTIONAL CRISIS
+Reactive Patrol Demand,PHONE - OBSCENE OR NUISANCE PHONE CALLS
+Proactive / Community Patrol Activity,PREMISE CHECK  OFFICER INITIATED ONVIEW ONLY
+Reactive Patrol Demand,PREMISE CHECKS - BUSINESS CHECK
+Reactive Patrol Demand,PREMISE CHECKS - CRIME PREVENTION
+Reactive Patrol Demand,PREMISE CHECKS - HOMELESS ENCAMPMENT
+Reactive Patrol Demand,PREMISE CHECKS - LICENSE INSPECTIONS
+Reactive Patrol Demand,PREMISE CHECKS - REQUEST TO WATCH
+Organizational / Out-of-Service Workload,PREPLANNED EVENT
+Organizational / Out-of-Service Workload,PRISONER ESCORT - BUSY CODE
+Reactive Patrol Demand,PROPERTY - DAMAGE
+Reactive Patrol Demand,PROPERTY - DAMAGE (GUN RELATED)
+Reactive Patrol Demand,PROPERTY - FOUND
+Reactive Patrol Demand,PROPERTY - FOUND GUN  SHELLCASINGS
+Reactive Patrol Demand,PROPERTY - FOUND PROPERTY
+Reactive Patrol Demand,PROPERTY - FOUND PROPERTY (NON-SPD SIN)
+Reactive Patrol Demand,PROPERTY - LOST OR MISSING
+Reactive Patrol Demand,PROPERTY - MISSING PROPERTY
+Reactive Patrol Demand,PROPERTY DEST (DAMG)
+Reactive Patrol Demand,PROPERTY DEST (DAMG) - GRAFFITI (INCLUDES GANG)
+Reactive Patrol Demand,PROWLER - GENERAL
+Reactive Patrol Demand,PROWLER - TRESPASS
+Reactive Patrol Demand,PROWLER - TRESPASS  PARKS EXCLUSION
+Reactive Patrol Demand,RAPE
+Reactive Patrol Demand,RAPE - KNOWN SUSPECT (ACQUAINTANCE)
+Reactive Patrol Demand,RAPE - UNKNOWN SUSPECT (STRANGER)
+Reactive Patrol Demand,REQUEST TO WATCH
+Reactive Patrol Demand,ROBBERY (INCL STRONG ARM)
+Reactive Patrol Demand,ROBBERY - ARMED
+Reactive Patrol Demand,ROBBERY - CRITICAL (INCLUDES STRONG ARM)
+Reactive Patrol Demand,ROBBERY - STRONG ARM
+Reactive Patrol Demand,SERVICE - WELFARE CHECK
+Reactive Patrol Demand,SEX IN PUBLIC PLACE (INCL MASTURBATION)
+Reactive Patrol Demand,SEX OFFENDER - FAILURE TO REGISTER
+Reactive Patrol Demand,SEX OFFENSES (NON-RAPE) - FAILURE TO REGISTER
+Reactive Patrol Demand,SEX OFFENSES (NON-RAPE) - LEWD CONDUCT
+Reactive Patrol Demand,SEX OFFENSES (RAPE) - MOLESTING
+Reactive Patrol Demand,SFD - ASSIST ON CRITICAL FIRE OR MEDIC RESPONSE
+Reactive Patrol Demand,SFD - ASSIST ON FIRE OR MEDIC RESPONSE
+Reactive Patrol Demand,SHOPLIFT - THEFT
+Reactive Patrol Demand,SHOTS HEARD - DELAY
+Reactive Patrol Demand,SHOTS HEARD - IN PROGRESS
+Organizational / Out-of-Service Workload,STADIUM EVENT ASSIGNMENT
+Reactive Patrol Demand,SUICIDE - CRITICAL
+Reactive Patrol Demand,SUICIDE - SUICIDAL PERSON AND ATTEMPTS
+Reactive Patrol Demand,SUSPICIOUS CIRCUM. - BUILDING (OPEN DOOR  ETC)
+Reactive Patrol Demand,SUSPICIOUS CIRCUM. - SUSPICIOUS PERSON
+Reactive Patrol Demand,SUSPICIOUS CIRCUM. - SUSPICIOUS VEHICLE
+Reactive Patrol Demand,SUSPICIOUS PERSON  VEHICLE  OR INCIDENT
+Reactive Patrol Demand,SUSPICIOUS STOP - OFFICER INITIATED ONVIEW
+Reactive Patrol Demand,SWATTING
+Organizational / Out-of-Service Workload,TEST CALL ONLY
+Reactive Patrol Demand,THEFT (DOES NOT INCLUDE SHOPLIFT OR SVCS)
+Reactive Patrol Demand,THEFT - ALL OTHER
+Reactive Patrol Demand,THEFT - AUTO ACCESSORIES
+Reactive Patrol Demand,THEFT - BICYCLE
+Reactive Patrol Demand,THEFT - CAR PROWL
+Reactive Patrol Demand,THEFT - SHOPLIFT
+Reactive Patrol Demand,THEFT OF SERVICES
+Reactive Patrol Demand,THREATS (INCLS IN-PERSON/BY PHONE/IN WRITING)
+Reactive Patrol Demand,TRAF - ELUDING POLICE
+Reactive Patrol Demand,TRAFFIC - ASSIST MOTORIST
+Reactive Patrol Demand,TRAFFIC - BICYCLE VIOLATION
+Reactive Patrol Demand,TRAFFIC - BLOCKING ROADWAY
+Reactive Patrol Demand,TRAFFIC - BLOCKING TRAFFIC
+Reactive Patrol Demand,TRAFFIC - BO SIGNALS AND DOWN SIGNS
+Reactive Patrol Demand,TRAFFIC - COMMUNITY TRAFFIC COMPLAINT (CTC)
+Reactive Patrol Demand,TRAFFIC - D.U.I.
+Reactive Patrol Demand,TRAFFIC - MOVING VIOLATION
+Reactive Patrol Demand,TRAFFIC - MV COLLISION INVESTIGATION
+Reactive Patrol Demand,TRAFFIC - PARKING VIOL (EXCEPT ABANDONED CAR)
+Reactive Patrol Demand,TRAFFIC - PEDESTRIAN VIOLATION
+Reactive Patrol Demand,TRAFFIC - REFUSE TO STOP (PURSUIT)
+Reactive Patrol Demand,TRAFFIC - ROAD RAGE
+Reactive Patrol Demand,TRAFFIC - SCHOOL ZONE ENFORCEMENT
+Reactive Patrol Demand,TRAFFIC - TRAFFIC CONTROL (SPECIAL EVENTS)
+Proactive / Community Patrol Activity,TRAFFIC STOP - OFFICER INITIATED ONVIEW
+Reactive Patrol Demand,TREES DOWN  OBSTRUCTING PUBLIC PROP (NO HAZ)
+Reactive Patrol Demand,TRESPASS
+Reactive Patrol Demand,TRU - FRAUD
+Reactive Patrol Demand,TRU - SUSPICIOUS CIRCUMSTANCES
+Reactive Patrol Demand,TRU - THREATS
+Reactive Patrol Demand,UNKNOWN - ANI/ALI - LANDLINE (INCLUDES OPEN LINE)
+Reactive Patrol Demand,UNKNOWN - ANI/ALI - WRLS PHNS (INCL OPEN LINE)
+Reactive Patrol Demand,UNKNOWN - COMPLAINT OF UNKNOWN NATURE
+Reactive Patrol Demand,VICE - GAMBLING
+Reactive Patrol Demand,VICE - LIQUOR (BUSINESS ESTABLISHMENT)
+Reactive Patrol Demand,VICE - OTHER
+Reactive Patrol Demand,VICE - PROSTITUTION
+Reactive Patrol Demand,WARRANT - FELONY PICKUP
+Reactive Patrol Demand,WARRANT - MISD PICKUP
+Reactive Patrol Demand,WARRANT - SEARCH. CAUTION (EXCL NARCOTICS)
+Reactive Patrol Demand,WARRANT - SEARCH. EXECUTED  SECURED
+Reactive Patrol Demand,WARRANT PICKUP - FROM OTHER AGENCY
+Reactive Patrol Demand,WARRANT SERVICES - FELONY
+Reactive Patrol Demand,WARRANT SERVICES - MISDEMEANOR
+Reactive Patrol Demand,WEAPN - GUN DEADLY WPN (NO THRTS/ASLT/DIST)
+Reactive Patrol Demand,WEAPON  PERSON WITH - GUN
+Reactive Patrol Demand,WEAPON PERSON WITH - OTHER WEAPON
+Reactive Patrol Demand,WIRES DOWN (PHONE  ELECTRICAL ETC.)
