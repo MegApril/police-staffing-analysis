@@ -95,7 +95,7 @@ Evaluating these factors using percent change adjustments will provide a stronge
 
 # Workload Assessment
 ## Defining Workload
-Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions. For a complete list of how call types are mapped, refer [here](data/call-type-mapping.csv)
+Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions. For a complete list of how call types are mapped, refer [here.](data/call-type-mapping.csv)
 |Term |Definition|Call Types Included|Example|
 |--|--|--|--|
 |Reactive Patrol Demand |Demand-driven and time-sensitive calls. |Crime, Alarms, Warrants, Non-Officer initiated Calls, Dispatch Events||
@@ -136,18 +136,7 @@ The median service time per call is 31 minutes, while the mean service time is 1
 For staffing projections, the mean service time is recommended for calculating monthly workload allotments. Although it overstates the duration of a typical call, it more accurately captures total labor demand and provides a buffer for high-duration events that disproportionately consume resources. Using the median in this context would risk systematically underestimating required staffing levels.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
-### Onview vs. Dispatch vs. Non-Patrol
-According to Wilson & Grammich, it is common for departments to plan for officers to spend one-third to one-half of their time on proactive policing or onview calls (2024).
-
-For this analysis the following definitions were used:  
-
-- Onview - defined as officer initiated events. 
-- Dispatch - defined by 911 calls, alarm calls, and telephone (not 911) calls.
-- Non-Patrol - all administrative categories, assigned duties, court time, meetings with supervisors, and other events. These events were subtracted from onview and dispatch based on their final call type. The full list of final call types included in non-patrol can be found in the accompanying document in Appendix A.
-
-In 2023, SPD West spent 32% of officer hours on onview calls. 56% of time on dispatch calls, and 12% of time on non-patrol calls.
-
-<img src="visuals/onview_dispatch_nonpatrol.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+### Proactive vs. Reactive vs. Organizational Workload
 
 ## Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
