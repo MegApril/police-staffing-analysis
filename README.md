@@ -94,7 +94,9 @@ Evaluating these factors using percent change adjustments will provide a stronge
 
 # Workload Assessment
 ## Defining Workload
-In order to properly assess time, manpower, and resources
+Following guidelines set forth by the ICMA [^4] for a principle called the "Rule of 60", one part dictates that, "60% of available officers should be assigned to patrol." This allows for other police activity such as community involvement, specialized training speicific to the community, retention planning, and other duties the department must have resources to complete[^3]. 
+In order to properly assess time, manpower, and resources, we must clearly define what is included in workload.
+Patrol - 
 
 ## Distribution of Calls for Service
 ### By Hour
@@ -165,5 +167,7 @@ All CSV's had to be pre-processed to load appropriately into BigQuery. This invo
 [^1]: Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
 [^2]: Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
 [^3]: Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. Policing: A Journal of Policy and Practice, 18. https://doi.org/10.1093/police/paae005
+[4^]: Center for Public Safety Management, McCabe, J., & International City/County Managemenet Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
+
 
 
