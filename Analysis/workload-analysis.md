@@ -5,7 +5,7 @@
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="police-staffing-analysis/visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 #### By Day
 
@@ -53,17 +53,6 @@ The way which agencies are directed to allocate their time determines how worklo
 
 ### Determining Agency Shift Relief Metric
 ## Staffing Reccomendations
-## Future Analyses and Opportunities for Fine Tuning
-The current staffing framework is based on one year of data. To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
-
-Further analysis should evaluate year-over-year trends in workload drivers to determine whether observed changes represent stable patterns or short-term variability. Specifically:  
-- How does total call volume change year over year?
-- How does total labor time spent on CFS change year over year?
-- Are changes in call volume and labor hours consistent across multiple years?
-- What is the year-over-year population change within the service area?
-- Does population growth correlate with changes in call volume?
-- Does population growth correlate with changes in total labor hours?  
-Evaluating these factors using percent change adjustments will provide a stronger empirical foundation for budget planning, staffing projections, and performance benchmarking.
 ## Process
 ### Data Gathering
 1. 2025 Data (147,776 records)
