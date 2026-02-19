@@ -22,7 +22,7 @@ Staffing recommendations are derived from:
 This is based on the recommended framework set forth in two primary publications by Professor Jeremy M. Wilson, School of Criminal Justice, Michigan State University. 
 1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [^3]
 2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [^2]
-
+### Reccomendations for 'Rule of 60' Adherence
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
   
@@ -87,6 +87,9 @@ Evaluating these factors using percent change adjustments will provide a stronge
 
 
 # Workload Assessment
+## Defining Workload
+In order to properly assess time, manpower, and resources
+
 ## Distribution of Calls for Service
 ### By Hour
 - 6AM - 2PM contains 40% of calls  
