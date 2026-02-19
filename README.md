@@ -19,6 +19,10 @@ Staffing recommendations are derived from:
 - Department performance objectives
 - Empirical workload metrics
 
+This is based on the recommended framework set forth in two primary publications by Professor Jeremy M. Wilson, School of Criminal Justice, Michigan State University. 
+1. Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. [^3]
+2. A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. [^2]
+
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
   
@@ -151,4 +155,6 @@ All CSV's had to be pre-processed to load appropriately into BigQuery. This invo
 ## Bibliography
 [^1]: Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
 [^2]: Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
+[^3]: Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. Policing: A Journal of Policy and Practice, 18. https://doi.org/10.1093/police/paae005
+
 
