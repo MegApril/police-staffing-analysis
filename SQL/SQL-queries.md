@@ -6,7 +6,7 @@ CREATE OR REPLACE TABLE spd_west.2023_clean AS
 SELECT
   cad_event_number,
 
-  -- Pacific time
+  -- Pacific local time (wall clock)
   MIN(
     PARSE_DATETIME(
       '%m/%d/%Y %I:%M:%S %p',
@@ -14,7 +14,7 @@ SELECT
     )
   ) AS pacific_event_datetime,
 
-  -- Original Fields
+  -- Original fields (event-level)
   MIN(priority) AS priority,
   ANY_VALUE(final_call_type) AS final_call_type,
   ANY_VALUE(call_type_indicator) AS call_type_indicator,
@@ -42,18 +42,46 @@ SELECT
     )
   ) AS final_service_seconds,
 
-  -- Clean String Fields
-  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9 ]', ' ')))
-    AS final_call_type_key,
+  -- Cleaned string fields
+  UPPER(
+    TRIM(
+      REGEXP_REPLACE(
+        REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9]', ' '),
+        r'\s+',
+        ' '
+      )
+    )
+  ) AS final_call_type_key,
 
-  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(call_type_indicator), r'[^A-Z0-9 ]', '')))
-    AS call_type_indicator_key,
+  UPPER(
+    TRIM(
+      REGEXP_REPLACE(
+        REGEXP_REPLACE(ANY_VALUE(call_type_indicator), r'[^A-Z0-9]', ' '),
+        r'\s+',
+        ' '
+      )
+    )
+  ) AS call_type_indicator_key,
 
-  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(dispatch_sector), r'[^A-Z0-9 ]', '')))
-    AS dispatch_sector_key,
+  UPPER(
+    TRIM(
+      REGEXP_REPLACE(
+        REGEXP_REPLACE(ANY_VALUE(dispatch_sector), r'[^A-Z0-9]', ' '),
+        r'\s+',
+        ' '
+      )
+    )
+  ) AS dispatch_sector_key,
 
-  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(dispatch_beat), r'[^A-Z0-9 ]', '')))
-    AS dispatch_beat_key
+  UPPER(
+    TRIM(
+      REGEXP_REPLACE(
+        REGEXP_REPLACE(ANY_VALUE(dispatch_beat), r'[^A-Z0-9]', ' '),
+        r'\s+',
+        ' '
+      )
+    )
+  ) AS dispatch_beat_key
 
 FROM spd_west.2023
 GROUP BY cad_event_number;
@@ -65,9 +93,13 @@ SELECT
   final_call_type,
   workload_type,
 
-  -- Cleaning string fields
-  UPPER(TRIM(REGEXP_REPLACE(final_call_type, r'[^A-Z0-9 ]', ' ')))
-    AS final_call_type_key
+  UPPER(
+    TRIM(
+      REGEXP_REPLACE(
+        REGEXP_REPLACE(final_call_type, r'[^A-Z0-9]', ' '), r'\s+', ' '
+      )
+    )
+  ) AS final_call_type_key
 
 FROM spd_west.call_type_mapping;
 ```
