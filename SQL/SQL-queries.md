@@ -43,7 +43,7 @@ SELECT
   ) AS final_service_seconds,
 
   -- Clean String Fields
-  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9 ]', '')))
+  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9 ]', ' ')))
     AS final_call_type_key,
 
   UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(call_type_indicator), r'[^A-Z0-9 ]', '')))
@@ -57,6 +57,19 @@ SELECT
 
 FROM spd_west.2023
 GROUP BY cad_event_number;
+```
+### Cleaning Call Type Mapping
+```SQL
+CREATE OR REPLACE TABLE spd_west.call_type_mapping_clean AS
+SELECT
+  final_call_type,
+  workload_type,
+
+  -- Normalized join key (must match 2023_clean logic exactly)
+  UPPER(TRIM(REGEXP_REPLACE(final_call_type, r'[^A-Z0-9 ]', ' ')))
+    AS final_call_type_key
+
+FROM spd_west.call_type_mapping;
 ```
 ## Distribution of Calls For Service
 ### Number of calls grouped by hour
