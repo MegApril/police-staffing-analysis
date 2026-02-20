@@ -109,18 +109,21 @@ The `final_call_type` titled 'Off Duty Employment' is excluded from this analysi
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs-hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Day
 
-Demand is highest on Fridays; accounting for 15% of calls for the week. Demand is lowest on the weekends; with Sundays representing 12% of calls for the week, and Saturdays representing 13% of the calls for the week.
-<img src="visuals/cfs-day.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+Analysis of total service hours by day of week shows significant variation. Fridays account for 16.5% of the total annual service hours, which is 30% more workload than Sundays (12.7%), the lowest demand day.
+
+Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
+These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
+<img src="visuals/cfs_counts_day.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Month
 
-There is not a significant amount of seasonal variability in this market. All months are within 10% of the monthly average which is 8,145 calls. The highest volume of calls occurs in May at 9,037, and the lowest number of calls occurs in November at 7,501.
+There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring ot summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
 
-<img src="visuals/cfs-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ## Time Spent on Calls
 ### Hours Worked Distributed by Time of Day
