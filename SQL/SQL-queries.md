@@ -339,116 +339,30 @@ ORDER BY hour_of_day;
 ```
 ### Quantiles
 ```SQL
-SELECT
-  APPROX_QUANTILES(final_service_seconds, 5) AS quintiles
-FROM `spd_west.2023_calls_buckets`;
+
 ```
-|Quintiles| Value in Seconds | Description|
-|--|--|--|
-|Min|0| The minimum time for a call iss 0 seconds|
-|25th perecentile | 650| 25% of calls are under 11 minutes  |
-|Median|1,877|The median of all calls is approx 31 min |
-|75th percentile|3,886| 75% of calls are under 65 minutes|
-|95th percentile|9,049| 95% of calls are under 151 minutes (about 2.5 hours)|
-|Max|1,381,795| The maximum is driving up the average of all calls with a whopping 383 hours or 16 days of labor|
 
 ### Average time per bucket
 ```SQL
-SELECT
-  duration_bucket,
-  COUNT(*) AS calls,
-  ROUND(AVG(final_service_seconds)/60,1) AS avg_minutes
-FROM `spd_west.2023_calls_buckets`
-GROUP BY duration_bucket;
 ```
-| Row|	duration_bucket|	calls	|avg_minutes|
-|--|--|--|--|
-|1	|0–30 min|	37994	|11.7|
-|2	|30–60 min	|18555	|43.6|
-|3|	1–3 hours|	25094	|105.9|
-|4	|3-6 hours|	9556	|249.0|
-|5	|6+ hours|	6540	|772.7|
 
 ### Top 50 Calls
 ```SQL
-SELECT
-  cad_event_number,
-  final_call_type,
-  cad_event_original_pacific,
-  final_service_seconds/3600 AS hours
-FROM `spd_west.2023_calls_buckets`
-ORDER BY final_service_seconds DESC
-LIMIT 50;
+
 ```
 ### What percentage of labor is spent on the top 10% of calls?
 -- Break calls into 10 equal categories (NILE) using window functions.
 ```SQL
-WITH ranked AS (
-  SELECT
-    final_service_seconds,
-    NTILE(10) OVER (ORDER BY final_service_seconds DESC) AS decile
-  FROM `spd_west.2023_calls_buckets`
-)
 
-SELECT
-  ROUND(
-    SUM(CASE WHEN decile = 1 THEN final_service_seconds ELSE 0 END)
-    /
-    SUM(final_service_seconds),
-    4
-  ) AS top_10_percent_labor_share
-FROM ranked;
+
+
 ```
-**53% of labor is consumed by the top 10% of calls.**
 
 ### Onview vs. Dispatch
 ```SQL
-WITH monthly AS (
-  SELECT
-    FORMAT_TIMESTAMP(
-      '%Y-%m',
-      cad_event_original_timestamp,
-      'America/Los_Angeles'
-    ) AS year_month,
-    call_type_indicator,
-    final_service_seconds
-  FROM `police-staffing-spd-west.spd_west.2023_calls_base`
-)
 
-SELECT
-  year_month,
-  call_type_indicator,
-  COUNT(*) AS total_events,
-  SUM(final_service_seconds) AS total_service_seconds,
-  ROUND(SUM(final_service_seconds)/3600, 2) AS total_service_hours
-FROM monthly
-GROUP BY year_month, call_type_indicator
-ORDER BY year_month, call_type_indicator;
 ```
-### Determining if admin duties associated with cad events are logged with the same cad event number, or as a different cad event number.
-They are logged under a different cad event number, meaning they are included in reported time. This negates the need to add a percentage to workload hours based on perecieved need since it is accounted for in this CAD system.
-```SQL
-WITH multi_row_events AS (
-  SELECT
-    cad_event_number
-  FROM `spd_west.2023`
-  GROUP BY cad_event_number
-  HAVING COUNT(*) > 1
-)
 
-SELECT
-  cad_event_number,
-  final_call_type,
-  priority,
-  call_type_indicator,
-  spd_call_sign_total_service_time_in_seconds,
-  call_sign_total_service_time_in_seconds
-FROM `spd_west.2023`
-WHERE cad_event_number IN (
-  SELECT cad_event_number FROM multi_row_events
-)
-ORDER BY cad_event_number;
-```
 ### Creating policing type based on onview, dispatch, and non-patrol work.
 -- Created mapping csv, joined with calls_base table to show policing type
 -- Determining hours spent in each category
