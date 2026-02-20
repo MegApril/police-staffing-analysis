@@ -226,17 +226,37 @@ Proactive: 6.8%
 ## Distribution of Calls For Service
 ### Number of calls grouped by hour
 ``` SQL
-
+SELECT
+  EXTRACT(HOUR FROM pacific_event_datetime) AS hour_of_day,
+  COUNT(*) AS call_count
+FROM spd_west.2023_clean
+WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
+GROUP BY hour_of_day
+ORDER BY hour_of_day;
 ```
 
 ### Number of calls grouped by day of the week
 ```SQL
-
+SELECT
+  FORMAT_TIMESTAMP('%A', pacific_event_datetime) AS day_of_week,
+  EXTRACT(DAYOFWEEK FROM pacific_event_datetime) AS day_number,
+  COUNT(*) AS call_count
+FROM spd_west.2023_clean
+WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
+GROUP BY day_of_week, day_number
+ORDER BY day_number;
 ```
 
 ### Number of calls grouped by Month
 ```SQL
-
+SELECT
+  EXTRACT(MONTH FROM pacific_event_datetime) AS month_number,
+  FORMAT_TIMESTAMP('%B', pacific_event_datetime) AS month_name,
+  COUNT(*) AS call_count
+FROM spd_west.2023_clean
+WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
+GROUP BY month_number, month_name
+ORDER BY month_number;
 ```
 ## Estimated Time Consumed By Department
 My objective here is to group calls by the total department time spent on the individual CAD event using the CAD event ID, and total service time. Calls will then be categorized based on how much total time the department allocated to the CAD event number in the following categories.
