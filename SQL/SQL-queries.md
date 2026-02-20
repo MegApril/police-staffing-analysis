@@ -61,46 +61,17 @@ GROUP BY cad_event_number;
 ## Distribution of Calls For Service
 ### Number of calls grouped by hour
 ``` SQL
-SELECT
-  EXTRACT(
-    HOUR FROM DATETIME(event_timestamp, 'America/Los_Angeles')
-  ) AS hour_of_day,
-  COUNT(*) AS call_count
-FROM `spd_west.2023_events_timestamped`
-GROUP BY hour_of_day
-ORDER BY hour_of_day;
+
 ```
 
 ### Number of calls grouped by day of the week
 ```SQL
-SELECT
-  EXTRACT(
-    DAYOFWEEK FROM DATETIME(event_timestamp, 'America/Los_Angeles')
-  ) AS day_num,
-  FORMAT_DATETIME(
-    '%A',
-    DATETIME(event_timestamp, 'America/Los_Angeles')
-  ) AS day_name,
-  COUNT(*) AS call_count
-FROM `spd_west.2023_events_timestamped`
-GROUP BY day_num, day_name
-ORDER BY day_num;
+
 ```
 
 ### Number of calls grouped by Month
 ```SQL
-SELECT
-  EXTRACT(
-    MONTH FROM DATETIME(event_timestamp, 'America/Los_Angeles')
-  ) AS month_num,
-  FORMAT_DATETIME(
-    '%B',
-    DATETIME(event_timestamp, 'America/Los_Angeles')
-  ) AS month_name,
-  COUNT(*) AS call_count
-FROM `spd_west.2023_events_timestamped`
-GROUP BY month_num, month_name
-ORDER BY month_num;
+
 ```
 ## Estimated Time Consumed By Department
 My objective here is to group calls by the total department time spent on the individual CAD event using the CAD event ID, and total service time. Calls will then be categorized based on how much total time the department allocated to the CAD event number in the following categories.
@@ -115,78 +86,7 @@ With all calls categorized into times, we can then determine the top call types 
 -- Create calls base table with unique cad events, total service time and the final call type. 
 -- Adressing service time data type issue, trimming white space, stripping commas, while retaining unique CAD event.
 ```SQL
-CREATE OR REPLACE TABLE `police-staffing-spd-west.spd_west.2023_calls_base` AS
 
-WITH cleaned AS (
-  SELECT
-    cad_event_number,
-    final_call_type,
-    priority,
-    call_type_indicator
-    dispatch_beat,
-    dispatch_sector,
-    count_of_officers,
-
-    -- parse original queued time as Pacific timestamp
-    PARSE_TIMESTAMP(
-      '%m/%d/%Y %I:%M:%S %p',
-      cad_event_original_time_queued,
-      'America/Los_Angeles'
-    ) AS cad_event_original_timestamp,
-
-    SAFE_CAST(
-      NULLIF(
-        REGEXP_REPLACE(
-          TRIM(spd_call_sign_total_service_time_in_seconds),
-          r',',
-          ''
-        ),
-        ''
-      ) AS INT64
-    ) AS spd_total_service_seconds,
-
-    SAFE_CAST(
-      NULLIF(
-        REGEXP_REPLACE(
-          TRIM(call_sign_total_service_time_in_seconds),
-          r',',
-          ''
-        ),
-        ''
-      ) AS INT64
-    ) AS call_sign_service_seconds
-
-  FROM `spd_west.2023`
-)
-
-SELECT
-  cad_event_number,
-  MIN(priority) AS priority,
-  ANY_VALUE(final_call_type) AS final_call_type,
-  ANY_VALUE(cad_event_original_timestamp) AS cad_event_original_timestamp,
-  ANY_VALUE(call_type_indicator) AS call_type_indicator,
-  ANY_VALUE(dispatch_beat) AS dispatch_beat,
-  ANY_VALUE(dispatch_sector) AS dispatch_sector,
-  MAX(count_of_officers) AS count_of_officers,
-
-  COALESCE(
-    MAX(spd_total_service_seconds),
-    SUM(call_sign_service_seconds)
-  ) AS final_service_seconds
-
-FROM cleaned
-GROUP BY cad_event_number;
-```
-
-### Validating the data cleaning worked
-```SQL
-SELECT
-  COUNT(*) AS total_calls,
-  COUNT(final_service_seconds) AS parsed_calls,
-  COUNT(*) - COUNT(final_service_seconds) AS still_null,
-  MIN(final_service_seconds) AS min_sec,
-  MAX(final_service_seconds) AS max_sec
-FROM `spd_west.2023_calls_base`;
 ```
 ### Creating call buckets
 ```SQL
