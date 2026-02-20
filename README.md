@@ -4,7 +4,7 @@ This project aims to inform future officer staffing needs based on historical da
 ## Executive Summary
 This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
 
-In 2023, SPD West responded to 97,739 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
+In 2023, SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
 
 ### Purpose
 This report has two purposes.
