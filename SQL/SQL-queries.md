@@ -185,6 +185,9 @@ JOIN spd_west.call_type_mapping_clean m
 GROUP BY m.workload_type
 ORDER BY hours DESC;
 ```
+Reactive: 85.1%
+Organizational: 8.1%
+Proactive: 6.8%
 
 ### Validation 
 ```SQL
