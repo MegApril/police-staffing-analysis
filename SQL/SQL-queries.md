@@ -103,7 +103,8 @@ SELECT
 
 FROM spd_west.call_type_mapping;
 ```
-### Validation - Final Call Types Match
+### Validation 1.0 - Final Call Types Match
+1.0 and 1.1 should return the same number of records
 ```SQL
 SELECT
   c.final_call_type,
@@ -115,6 +116,109 @@ WHERE m.final_call_type_key IS NULL
 GROUP BY c.final_call_type
 ORDER BY events DESC;
 ```
+### Validation 1.1 - Final Call Types Match
+```SQL
+SELECT COUNT(*)
+FROM spd_west.2023_clean c
+JOIN spd_west.call_type_mapping_clean m
+  ON c.final_call_type_key = m.final_call_type_key;
+```
+### Validation 2.0 - Distinct CAD numbers and Cleaned Events
+Distinct CAD numbers and Cleaned events should match
+```SQL
+SELECT 
+  COUNT(*) AS raw_rows,
+  COUNT(DISTINCT cad_event_number) AS distinct_events
+FROM spd_west.2023;
+```
+### Validation 2.1 - Distinct CAD numbers and Cleaned Events
+```SQL
+SELECT COUNT(*) AS clean_rows
+FROM spd_west.2023_clean;
+```
+### Validation 3.0 - Null Service Time
+Verify no record has zero service time
+```SQL
+SELECT COUNT(*) AS null_service_time_events
+FROM spd_west.2023_clean
+WHERE final_service_seconds IS NULL;
+```
+### Validation 4.0 - Pacific DATETIME NULL
+This should return 0 records
+```SQL
+SELECT COUNT(*) 
+FROM spd_west.2023_clean
+WHERE pacific_event_datetime IS NULL;
+```
+### Validation 4.1 - Hour Distribution Checks
+This should theoretically be lowest around 0300 - 0630, and peak between 1400 - 1600. This ensures there are not timezone parsing issues.
+```SQL
+SELECT
+  EXTRACT(HOUR FROM pacific_event_datetime) AS hour,
+  COUNT(*) AS events
+FROM spd_west.2023_clean
+GROUP BY hour
+ORDER BY hour;
+```
+### Validation 5.0 - Erroneous Values - Service Time
+Check for negatives
+```SQL
+SELECT
+  MIN(final_service_seconds) AS min_seconds,
+  MAX(final_service_seconds) AS max_seconds,
+  AVG(final_service_seconds) AS avg_seconds
+FROM spd_west.2023_clean;
+```
+### Validation 6.0 - Workload Logic
+```SQL
+SELECT
+  m.workload_type,
+  ROUND(SUM(c.final_service_seconds)/3600,2) AS hours,
+  ROUND(
+    SUM(c.final_service_seconds) /
+    SUM(SUM(c.final_service_seconds)) OVER(),
+    3
+  ) AS pct_of_total
+FROM spd_west.2023_clean c
+JOIN spd_west.call_type_mapping_clean m
+  ON c.final_call_type_key = m.final_call_type_key
+GROUP BY m.workload_type
+ORDER BY hours DESC;
+```
+
+### Validation 
+```SQL
+
+```
+### Validation 
+```SQL
+
+```
+### Validation 
+```SQL
+
+```
+### Validation 
+```SQL
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Distribution of Calls For Service
 ### Number of calls grouped by hour
