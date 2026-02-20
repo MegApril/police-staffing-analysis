@@ -65,7 +65,7 @@ SELECT
   final_call_type,
   workload_type,
 
-  -- Normalized join key (must match 2023_clean logic exactly)
+  -- Cleaning string fields
   UPPER(TRIM(REGEXP_REPLACE(final_call_type, r'[^A-Z0-9 ]', ' ')))
     AS final_call_type_key
 
