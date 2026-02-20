@@ -6,7 +6,7 @@ CREATE OR REPLACE TABLE spd_west.2023_clean AS
 SELECT
   cad_event_number,
 
-  -- Pacific local time (wall clock)
+  -- Pacific local time
   MIN(
     PARSE_DATETIME(
       '%m/%d/%Y %I:%M:%S %p',
@@ -14,7 +14,7 @@ SELECT
     )
   ) AS pacific_event_datetime,
 
-  -- Original fields (event-level)
+  -- Original fields
   MIN(priority) AS priority,
   ANY_VALUE(final_call_type) AS final_call_type,
   ANY_VALUE(call_type_indicator) AS call_type_indicator,
