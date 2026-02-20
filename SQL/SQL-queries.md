@@ -1,6 +1,6 @@
 # SQL Queries
 ## 2023 Data Cleaning
-This query removes `OFF DUTY EMPLOYMENT` from downstream queries, cleans string columns, corrects data type issues, combines service time, and puts the analysis in pacific time.
+This query cleans string columns, corrects data type issues, combines service time, and puts the analysis in pacific time.
 ```SQL
 CREATE OR REPLACE TABLE spd_west.2023_clean AS
 SELECT
