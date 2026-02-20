@@ -1,52 +1,63 @@
 # SQL Queries
-## Distribution of Calls For Service
-
-### Find duplicates for cad events
+## 2023 Data Cleaning
 ```SQL
+CREATE OR REPLACE TABLE spd_west.2023_clean AS
 SELECT
   cad_event_number,
-    COUNT(*) AS record_count
-FROM `police-staffing-spd-west.spd_west.2023`
-GROUP BY cad_event_number
-HAVING COUNT(*) > 1
-ORDER BY record_count DESC;
-```
 
-### Create table with unique cad event times and earliest timestamp.
-```SQL
-WITH calls AS (
-  SELECT
-    cad_event_number,
-    MIN(cad_event_original_time_queued) AS event_time
-  FROM `police-staffing-spd-west.spd_west.2023`
-  GROUP BY cad_event_number
-)
-
-SELECT *
-FROM calls;
-```
-
-### Create table with cleaned data types and pacific datetime
-```SQL
-CREATE OR REPLACE TABLE
-  `spd_west.2023_events_timestamped` AS
-SELECT
-  cad_event_number,
-  event_time,
-
-  -- parsed timestamp
-  TIMESTAMP(
+  -- Pacific time
+  MIN(
     PARSE_DATETIME(
       '%m/%d/%Y %I:%M:%S %p',
-      event_time
+      cad_event_original_time_queued
+    )
+  ) AS event_datetime,
+
+  -- Original Fields
+  MIN(priority) AS priority,
+  ANY_VALUE(final_call_type) AS final_call_type,
+  ANY_VALUE(call_type_indicator) AS call_type_indicator,
+  ANY_VALUE(dispatch_beat) AS dispatch_beat,
+  ANY_VALUE(dispatch_sector) AS dispatch_sector,
+  MAX(count_of_officers) AS count_of_officers,
+
+  -- Clean and compute service time
+  COALESCE(
+    MAX(
+      SAFE_CAST(
+        NULLIF(
+          REGEXP_REPLACE(TRIM(spd_call_sign_total_service_time_in_seconds), r',', ''),
+          ''
+        ) AS INT64
+      )
     ),
-    'America/Los_Angeles'
-  ) AS event_timestamp
+    SUM(
+      SAFE_CAST(
+        NULLIF(
+          REGEXP_REPLACE(TRIM(call_sign_total_service_time_in_seconds), r',', ''),
+          ''
+        ) AS INT64
+      )
+    )
+  ) AS final_service_seconds,
 
-FROM `spd_west.2023_events_times`
-WHERE event_time IS NOT NULL;
+  -- Clean String Fields
+  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9 ]', '')))
+    AS final_call_type_key,
+
+  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(call_type_indicator), r'[^A-Z0-9 ]', '')))
+    AS call_type_indicator_key,
+
+  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(dispatch_sector), r'[^A-Z0-9 ]', '')))
+    AS dispatch_sector_key,
+
+  UPPER(TRIM(REGEXP_REPLACE(ANY_VALUE(dispatch_beat), r'[^A-Z0-9 ]', '')))
+    AS dispatch_beat_key
+
+FROM spd_west.2023
+GROUP BY cad_event_number;
 ```
-
+## Distribution of Calls For Service
 ### Number of calls grouped by hour
 ``` SQL
 SELECT
