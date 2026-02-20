@@ -235,7 +235,7 @@ GROUP BY hour_of_day
 ORDER BY hour_of_day;
 ```
 
-### Number of calls grouped by day of the week
+### Number of calls  by Day of the Week
 ```SQL
 SELECT
   FORMAT_TIMESTAMP('%A', pacific_event_datetime) AS day_of_week,
@@ -246,7 +246,18 @@ WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
 GROUP BY day_of_week, day_number
 ORDER BY day_number;
 ```
-
+### Average Time Per Call by Day of the Week
+```SQL
+SELECT
+  EXTRACT(DAYOFWEEK FROM pacific_event_datetime) AS day_number,
+  FORMAT_TIMESTAMP('%A', pacific_event_datetime) AS day_of_week,
+  SUM(final_service_seconds)/3600 AS total_service_hours,
+  AVG(final_service_seconds)/60 AS avg_minutes_per_call
+FROM spd_west.2023_clean
+WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
+GROUP BY day_number, day_of_week
+ORDER BY day_number;
+```
 ### Number of calls grouped by Month
 ```SQL
 SELECT
