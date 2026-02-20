@@ -117,7 +117,7 @@ Analysis of total service hours by day of week shows significant variation. Frid
 
 Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
 These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
-<img src="visuals/cfs_counts_day.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_day_avg_calltime.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Month
 
