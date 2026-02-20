@@ -103,6 +103,19 @@ SELECT
 
 FROM spd_west.call_type_mapping;
 ```
+### Validation - Final Call Types Match
+```SQL
+SELECT
+  c.final_call_type,
+  COUNT(*) AS events
+FROM spd_west.2023_clean c
+LEFT JOIN spd_west.call_type_mapping_clean m
+  ON c.final_call_type_key = m.final_call_type_key
+WHERE m.final_call_type_key IS NULL
+GROUP BY c.final_call_type
+ORDER BY events DESC;
+```
+
 ## Distribution of Calls For Service
 ### Number of calls grouped by hour
 ``` SQL
