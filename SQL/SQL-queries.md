@@ -189,39 +189,6 @@ Reactive: 85.1%
 Organizational: 8.1%
 Proactive: 6.8%
 
-### Validation 
-```SQL
-
-```
-### Validation 
-```SQL
-
-```
-### Validation 
-```SQL
-
-```
-### Validation 
-```SQL
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Distribution of Calls For Service
 ### Count of CFS - Hourly
@@ -293,15 +260,6 @@ GROUP BY year_month
 ORDER BY year_month;
 ```
 
-### Creating call buckets
-```SQL
-
-```
-### Number of calls per time bucket, and total time spent in each bucket by month.
-```SQL
-
-```
-
 ### Total Hours Worked distributed by time of day
 ```SQL
 
@@ -323,78 +281,32 @@ WHERE final_service_seconds IS NOT NULL
   AND final_call_type != 'TIME OFF EMPLOYMENT';
 ```
 
-### Average time per bucket
-```SQL
-```
-
-### Top 50 Calls
-```SQL
-
-```
 ### What percentage of labor is spent on the top 10% of calls?
--- Break calls into 10 equal categories (NILE) using window functions.
 ```SQL
+WITH ranked AS (
+  SELECT
+    final_service_seconds,
+    NTILE(10) OVER (ORDER BY final_service_seconds) AS decile
+  FROM `police-staffing-spd-west.spd_west.2023_clean`
+  WHERE final_service_seconds IS NOT NULL
+    AND final_call_type != 'TIME OFF EMPLOYMENT'
+)
 
-
-
+SELECT
+  SUM(CASE WHEN decile = 10 THEN final_service_seconds ELSE 0 END)
+    / SUM(final_service_seconds) AS top_10_percent_share
+FROM ranked;
 ```
 
 ### Onview vs. Dispatch
 ```SQL
 
 ```
-
-### Creating policing type based on onview, dispatch, and non-patrol work.
--- Created mapping csv, joined with calls_base table to show policing type
--- Determining hours spent in each category
-```SQL
-SELECT 
-  policing_type, 
-  COUNT(*) AS event_count,
-  ROUND(SUM(final_service_seconds)/3600, 2) AS total_hours
-FROM (
-  SELECT
-    c.final_service_seconds, 
-    c.call_type_indicator, 
-    c.final_call_type, 
-    c.cad_event_number,
-    CASE
-      WHEN m.admin_tag = 'Non-Patrol' THEN 'Non-Patrol'
-      WHEN c.call_type_indicator = 'ONVIEW' THEN 'Onview'
-      WHEN c.call_type_indicator = 'DISPATCH' THEN 'Dispatch'
-      ELSE 'Unknown'
-    END AS policing_type
-  FROM `police-staffing-spd-west.spd_west.2023_calls_base` c
-  LEFT JOIN `police-staffing-spd-west.spd_west.call_type_mapping_clean` m
-    ON c.final_call_type = m.final_call_type
-)
-GROUP BY policing_type
-ORDER BY total_hours DESC;
-```
 ### Nature of Calls - Top 25 by Call Counts
 ```SQL
-SELECT
-  final_call_type,
-  COUNT(*) AS total_calls,
-  SUM(final_service_seconds)/3600 AS total_service_hours,
-FROM `police-staffing-spd-west.spd_west.2023_calls_base`
-WHERE final_call_type IS NOT NULL
-GROUP BY final_call_type
-ORDER BY total_calls DESC
-LIMIT 25;
+
 ```
 ### Nature of Calls - Top 25 by Aggregated Hours per Final Call Typee category
 ```SQL
-SELECT
-  final_call_type,
-  COUNT(*) AS total_calls,
-  SUM(final_service_seconds) AS total_service_seconds,
-  SUM(final_service_seconds)/3600 AS total_service_hours,
-  AVG(final_service_seconds) AS avg_service_seconds
-FROM `police-staffing-spd-west.spd_west.2023_calls_base`
-WHERE final_call_type IS NOT NULL
-  AND final_service_seconds IS NOT NULL
-GROUP BY final_call_type
-ORDER BY total_service_seconds DESC
-LIMIT 25;
+
 ```
