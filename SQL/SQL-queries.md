@@ -289,8 +289,53 @@ SELECT
     / SUM(final_service_seconds) AS top_10_percent_share
 FROM ranked;
 ```
+### Proactive vs. Reactive vs. Organizational Workload Only
+Make sure total hours from each workload category matches total workload hours when grouped by month in the following query if running both
+```SQL
+SELECT
+  CASE
+    WHEN m.workload_type = 'Organizational / Out-of-Service Workload' THEN 'Organizational'
+    WHEN c.call_type_indicator_key = 'DISPATCH' THEN 'Reactive'
+    WHEN c.call_type_indicator_key = 'ONVIEW' THEN 'Proactive'
+    ELSE 'Uncategorized'
+  END AS workload_category,
+  
+  COUNT(*) AS total_calls,
+  SUM(c.final_service_seconds) / 3600 AS total_hours
 
-### Onview vs. Dispatch vs. Organizational
+FROM `spd_west.2023_clean` c
+LEFT JOIN `spd_west.call_type_mapping_clean` m
+  ON c.final_call_type_key = m.final_call_type_key
+
+WHERE c.final_call_type_key != 'OFF DUTY EMPLOYMENT'
+
+GROUP BY workload_category
+ORDER BY total_calls DESC;
+```
+### Proactive vs. Reactive vs. Organizational Workload by Month
+```SQL
+SELECT
+  FORMAT_TIMESTAMP('%Y-%m', c.pacific_event_datetime) AS year_month,
+
+  CASE
+    WHEN m.workload_type = 'Organizational / Out-of-Service Workload' THEN 'Organizational'
+    WHEN c.call_type_indicator_key = 'DISPATCH' THEN 'Reactive'
+    WHEN c.call_type_indicator_key = 'ONVIEW' THEN 'Proactive'
+    ELSE 'Uncategorized'
+  END AS workload_category,
+
+  SUM(c.final_service_seconds) / 3600 AS total_hours
+
+FROM `police-staffing-spd-west.spd_west.2023_clean` c
+LEFT JOIN `police-staffing-spd-west.spd_west.call_type_mapping_clean` m
+  ON c.final_call_type_key = m.final_call_type_key
+
+WHERE c.final_call_type_key != 'OFF DUTY EMPLOYMENT'
+
+GROUP BY year_month, workload_category
+ORDER BY year_month, workload_category;
+```
+### Proactive vs. Reactive vs. Organizational Workload - Top 5 Call Types
 ```SQL
 -- First, remove all mapped organizational workload items. Then categorize the rest of calls based on dispatch or onview from CAD data.
 WITH categorized_calls AS (
@@ -346,7 +391,7 @@ ORDER BY workload_category, total_calls DESC;
 ```SQL
 
 ```
-### Nature of Calls - Top 25 by Aggregated Hours per Final Call Typee category
+### Nature of Calls - Top 25 by Aggregated Hours per Final Call Type category
 ```SQL
 
 ```
