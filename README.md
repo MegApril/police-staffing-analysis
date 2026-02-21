@@ -109,6 +109,8 @@ Additionally, proactive and reactive work together account for 92% of total work
 
 This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing level in 30 years[[5]](#5), prompting city leadership to prioritize rebuilding the department. The data suggests a near-constant tempo dominated by reactive patrol which is not sustainable and risks accelerating burnout.
 
+<img src="visuals/patrol_workload_hours_month.png" alt="Right aligned" style="float: center; width:60%; height:auto;"> 
+
 ## Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
 
