@@ -28,30 +28,14 @@ Staffing recommendations are derived from:
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
-  
-Determine total monthly workload hours using projected call volume and projected average service time:
-
-$$
-H_m = \frac{\bar{t}_m \times \bar{n}_m}{3600}
-$$
-
-Where:
-- $H_m$ = monthly allotted hours
-- $\bar{t}_m$ = average time per call in month $m$
-- $\bar{n}_m$ = average number of calls in month $m$
-
-
 
 **2. Allocate Workload Hours by Shift**  
 
-
 **3. Convert Monthly Shift Hours to Daily Requirements**  
-
 
 **4. Determine Required Officers per Shift**  
 
 **5. Convert Required Officers Needed in Accordance with the 'Rule of 60' Guidelines**  
-
 
 **6. Determine Required Officers per Shift**  
 
@@ -119,7 +103,11 @@ Service time is highly skewed, which is to be expected in emergency services. Th
 For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
 
 ### Proactive vs. Reactive vs. Organizational Workload
+In 2023, SPD West spent 182,276.8 hours responding to calls for service. Of that time, 62% was reactive (dispatch), 30% proactive (onview), and 8% organizational. Because CAD data includes downtime, follow-up, informational broadcasts, training, and court, this reflects the full workload—not just call response. Even with that broader scope, only 8% of time was allocated to organizational and foundational needs, which means the department is running in continuous triage or patrol mode without slack.
 
+Proactive and reactive work together account for 92% of total workload. That level is unusually high given necessary administrative, training, and reporting demands. Reporting currently falls under organizational workload, meaning core documentation and follow-up functions compete within that limited 8%.
+
+This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing level in 30 years, prompting city leadership to prioritize rebuilding the department. The data suggests a near-constant operational tempo dominated by reactive patrol—an approach that is difficult to sustain and risks accelerating burnout and attrition.
 ## Establishing Performance Objectives
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
 
