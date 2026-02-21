@@ -107,7 +107,7 @@ In 2023, SPD West spent 182,276.8 hours responding to calls for service. That ti
 
 Additionally, proactive and reactive work together account for 92% of total workload. That level is extremely high, given necessary administrative, training, and reporting demands. Reporting currently falls under organizational workload, meaning core documentation and follow-up functions compete within that limited 8%.
 
-This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing level in 30 years[[5]](#5), prompting city leadership to prioritize rebuilding the department. The data suggests a near-constant tempo dominated by reactive patrol which is not sustainable and risks accelerating burnout.
+This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing level in 30 years[[5]](#5), prompting city leadership to prioritize rebuilding the department. The data suggests a near-constant tempo dominated by reactive patrol which is not sustainable and risks officer burnout.
 
 <img src="visuals/patrol_workload_hours_month.png" alt="Right aligned" style="float: center; width:100%; height:auto;"> 
 
