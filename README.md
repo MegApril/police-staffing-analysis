@@ -113,8 +113,11 @@ Although monthly call volume fluctuates, average service time remains stable wit
 Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours.  
 
 For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
-<img src="visuals/cfs_hours_monthly_avg_calltime.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
+<p float="right">
+  <img src="visuals/cfs_hours_monthly_avg_calltime.png" width="49%" />
+  <img src="visuals/lorenz_curve.png" width="49%" />
+</p>
 ### Proactive vs. Reactive vs. Organizational Workload
 
 ## Establishing Performance Objectives
