@@ -236,15 +236,7 @@ WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
 GROUP BY month_number, month_name
 ORDER BY month_number;
 ```
-## Estimated Time Consumed By Department
-My objective here is to group calls by the total department time spent on the individual CAD event using the CAD event ID, and total service time. Calls will then be categorized based on how much total time the department allocated to the CAD event number in the following categories.
-1. 0-1800 seconds (30 minutes),
-2. 1800-3600 seconds (30 minutes - 1 hour),
-3. 3600-10800 seconds (1-3 hours),
-4. 10800-21600 seconds (3-6 hours),
-5. 21600+ seconds (6+ hours)
-With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
-
+## Time Consumed By Department for CFS
 ### Total Time Spent On Calls by Month
 ```SQL
 SELECT
@@ -298,9 +290,57 @@ SELECT
 FROM ranked;
 ```
 
-### Onview vs. Dispatch
+### Onview vs. Dispatch vs. Organizational
 ```SQL
+-- First, remove all mapped organizational workload items. Then categorize the rest of calls based on dispatch or onview from CAD data.
+WITH categorized_calls AS (
+  SELECT
+    CASE
+      WHEN m.workload_type = 'Organizational / Out-of-Service Workload' THEN 'Organizational'
+      WHEN c.call_type_indicator_key = 'DISPATCH' THEN 'Reactive'
+      WHEN c.call_type_indicator_key = 'ONVIEW' THEN 'Proactive'
+      ELSE 'Uncategorized'
+    END AS workload_category,
 
+    c.final_call_type_key,
+    c.final_service_seconds
+
+  FROM `spd_west.2023_clean` c
+  LEFT JOIN `spd_west.call_type_mapping_clean` m
+    ON c.final_call_type_key = m.final_call_type_key
+
+  WHERE c.final_call_type_key != 'OFF DUTY EMPLOYMENT'
+),
+
+-- Top call type in each workload category 
+aggregated AS (
+  SELECT
+    workload_category,
+    final_call_type_key,
+    COUNT(*) AS total_calls,
+    SUM(final_service_seconds) / 3600 AS total_hours
+  FROM categorized_calls
+  GROUP BY workload_category, final_call_type_key
+),
+
+ranked AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER (
+      PARTITION BY workload_category
+      ORDER BY total_calls DESC
+    ) AS rank_within_category
+  FROM aggregated
+)
+
+SELECT
+  workload_category,
+  final_call_type_key,
+  total_calls,
+  total_hours
+FROM ranked
+WHERE rank_within_category <= 5
+ORDER BY workload_category, total_calls DESC;
 ```
 ### Nature of Calls - Top 25 by Call Counts
 ```SQL
