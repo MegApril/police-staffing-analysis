@@ -13,7 +13,7 @@ This report has two purposes.
 
 The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
 - Temporal distribution of Calls for Service (hour, day, month)
-- Time spent by final call type
+- Time spent on CFS
 - Nature of calls
 - Geographic distribution of workload by beat
 
@@ -106,8 +106,14 @@ There is mild fluctuation seasonally, with an 18% difference between the highest
 <img src="" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Month
+SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with May representing the peak workload period.  
 
-<img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. This stability indicates that high-duration events are not rare anomalies but a consistent feature of patrol workload.  
+
+Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours.  
+
+For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
+<img src="" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### Proactive vs. Reactive vs. Organizational Workload
 
