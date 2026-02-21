@@ -224,7 +224,7 @@ Proactive: 6.8%
 
 
 ## Distribution of Calls For Service
-### Number of calls grouped by hour
+### Count of CFS - Hourly
 ``` SQL
 SELECT
   EXTRACT(HOUR FROM pacific_event_datetime) AS hour_of_day,
@@ -235,7 +235,7 @@ GROUP BY hour_of_day
 ORDER BY hour_of_day;
 ```
 
-### Number of calls  by Day of the Week
+### Count of CFS - Day of Week
 ```SQL
 SELECT
   FORMAT_TIMESTAMP('%A', pacific_event_datetime) AS day_of_week,
@@ -246,7 +246,7 @@ WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
 GROUP BY day_of_week, day_number
 ORDER BY day_number;
 ```
-### Average Time Per Call by Day of the Week
+### Average Time Per CFS - Day of Week
 ```SQL
 SELECT
   EXTRACT(DAYOFWEEK FROM pacific_event_datetime) AS day_number,
@@ -258,7 +258,7 @@ WHERE final_call_type != 'OFF DUTY EMPLOYMENT'
 GROUP BY day_number, day_of_week
 ORDER BY day_number;
 ```
-### Number of calls grouped by Month
+### Count of CFS - Monthly
 ```SQL
 SELECT
   EXTRACT(MONTH FROM pacific_event_datetime) AS month_number,
@@ -278,68 +278,49 @@ My objective here is to group calls by the total department time spent on the in
 5. 21600+ seconds (6+ hours)
 With all calls categorized into times, we can then determine the top call types for each category to link nature of calls to actual time spent.
 
-### Base Table and Data Cleaning
--- Create calls base table with unique cad events, total service time and the final call type. 
--- Adressing service time data type issue, trimming white space, stripping commas, while retaining unique CAD event.
-```SQL
-
-```
-### Creating call buckets
-```SQL
-CREATE OR REPLACE TABLE `spd_west.2023_calls_buckets` AS
-SELECT
-  cad_event_number,
-    DATETIME(cad_event_original_timestamp, 'America/Los_Angeles')
-  AS cad_event_original_pacific,
-  cad_event_original_timestamp,
-  final_call_type,
-  final_service_seconds,
-
-  CASE
-    WHEN final_service_seconds < 1800 THEN '0–30 min'
-    WHEN final_service_seconds < 3600 THEN '30–60 min'
-    WHEN final_service_seconds < 10800 THEN '1–3 hours'
-    WHEN final_service_seconds < 21600 THEN '3-6 hours'
-    ELSE '6+ hours'
-  END AS duration_bucket
-
-FROM `spd_west.2023_calls_base`
-WHERE final_service_seconds >= 0;
-```
-### Number of calls per time bucket, and total time spent in each bucket by month.
+### Total Time Spent On Calls by Month
 ```SQL
 SELECT
-  FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
-  duration_bucket,
-  COUNT(*) AS call_count,
-  SUM(final_service_seconds) AS total_service_seconds
-FROM `spd_west.2023_calls_buckets`
-GROUP BY year_month, duration_bucket
-ORDER BY year_month, duration_bucket;
-```
-### Total time spent on calls by month
-```SQL
-SELECT
-  FORMAT_DATE('%Y-%m', DATE(cad_event_original_pacific)) AS year_month,
+  FORMAT_DATE('%Y-%m', DATE(pacific_event_datetime)) AS year_month,
   COUNT(*) AS total_calls,
-  SUM(final_service_seconds) AS total_service_seconds
-FROM `spd_west.2023_calls_buckets`
+  SUM(final_service_seconds) / 3600 AS total_workload_hours,
+  AVG(final_service_seconds) / 60 AS avg_minutes_per_call
+FROM `police-staffing-spd-west.spd_west.2023_clean`
+WHERE 
+  final_service_seconds IS NOT NULL AND
+  final_call_type_key != 'OFF DUTY EMPLOYMENT'
 GROUP BY year_month
 ORDER BY year_month;
 ```
+
+### Creating call buckets
+```SQL
+
+```
+### Number of calls per time bucket, and total time spent in each bucket by month.
+```SQL
+
+```
+
 ### Total Hours Worked distributed by time of day
 ```SQL
-SELECT
-  EXTRACT(HOUR FROM DATETIME(cad_event_original_timestamp, "America/Los_Angeles")) AS hour_of_day,
-  COUNT(*) AS total_calls,
-  SUM(final_service_seconds) / 3600 AS total_hours
-FROM `police-staffing-spd-west.spd_west.2023_calls_base`
-GROUP BY hour_of_day
-ORDER BY hour_of_day;
+
 ```
 ### Quantiles
 ```SQL
+SELECT
+  MIN(final_service_seconds) / 60 AS min_minutes,
+  MAX(final_service_seconds) / 60 AS max_minutes,
+  AVG(final_service_seconds) / 60 AS mean_minutes,
 
+  APPROX_QUANTILES(final_service_seconds, 100)[OFFSET(25)] / 60 AS p25_minutes,
+  APPROX_QUANTILES(final_service_seconds, 100)[OFFSET(50)] / 60 AS median_minutes,
+  APPROX_QUANTILES(final_service_seconds, 100)[OFFSET(75)] / 60 AS p75_minutes,
+  APPROX_QUANTILES(final_service_seconds, 100)[OFFSET(95)] / 60 AS p95_minutes
+
+FROM `police-staffing-spd-west.spd_west.2023_clean`
+WHERE final_service_seconds IS NOT NULL
+  AND final_call_type != 'TIME OFF EMPLOYMENT';
 ```
 
 ### Average time per bucket
