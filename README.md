@@ -9,7 +9,7 @@ In 2023, SPD West responded to 96,383 unique calls for service, requiring 182,27
 ### Purpose
 This report has two purposes.
 1. Complete Workload Analysis
-2. Make Reccomendations to align workload with sustainable staffing practices.
+2. Give reccomendations to align workload with sustainable staffing practices.
 
 The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
 - Temporal distribution of Calls for Service (hour, day, month)
@@ -24,7 +24,7 @@ Staffing recommendations are derived from:
 - Rule of 60 principles
 
 ### Reccomendations for 'Rule of 60' Adherence
-*Currently Underway*
+
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
@@ -40,45 +40,21 @@ Where:
 - $\bar{t}_m$ = average time per call in month $m$
 - $\bar{n}_m$ = average number of calls in month $m$
 
-Year-over-year percent change adjustments can be applied to call volume, average service time, or total workload hours depending on forecasting strategy.
-Because administrative activities, court, training, proactive policing, and other internal obligations are recorded as CAD events, this calculation reflects total documented workload demand, not solely dispatched CFS.
+
 
 **2. Allocate Workload Hours by Shift**  
-Distribute total projected monthly hours using historical percentages of workload by shift.  
-Example (January 2024 projection at 5% increase in workload hours):
-Total projected hours: 16,147.76
-- 6AM–2PM (40%): 6,459.10 hours
-- 2PM–10PM (38%): 6,136.15 hours
-- 10PM–6AM (22%): 3,552.51 hours
+
 
 **3. Convert Monthly Shift Hours to Daily Requirements**  
-Divide monthly shift hours by the number of days in the month to determine average daily workload demand.  
-Example (31 days in January):
-- 6AM–2PM: 208.36 hours/day
-- 2PM–10PM: 197.94 hours/day
-- 10PM–6AM: 114.60 hours/day
+
 
 **4. Determine Required Officers per Shift**  
-Divide daily shift workload hours by 8 scheduled hours per officer.
-Because total workload calculations include administrative, court, training, and proactive CAD events, the full 8-hour shift is used rather than applying a separate availability factor.  
-Example:
-- 6AM–2PM: 26 officers
-- 2PM–10PM: 25 officers
-- 10PM–6AM: 15 officers
-
 
 **5. Convert Required Officers Needed in Accordance with the 'Rule of 60' Guidelines**  
-*Currently Underway*
+
 
 **6. Determine Required Officers per Shift**  
-Schedule officers by sector and beat based on:
-- Geographic workload distribution
-- Day-of-week variation
-- Seasonal patterns
-- Preplanned events
-- Station-specific operational requirements
 
-*This can be further refined based on day of the week. Additionally, if we instead find that going off of (number of calls * average time) spent on calls is a better adjustment that would change these numbers. Running numbers with a 5% increase in call volume (vs hours shown in the example) and the same average time spent on calls, gave a monthly allottment of 16,131.5 for January, which is remarkably close to the numbers above.*
 
 ## Future Analyses and Model Validation
 The current staffing framework is based on one year of data. To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
@@ -127,19 +103,10 @@ There is mild fluctuation seasonally, with an 18% difference between the highest
 
 ## Time Spent on Calls
 ### Hours Worked Distributed by Time of Day
-Given the similar distribution of hours worked, and number of calls - going off of either number will result in similar staffing models.
-- 6AM - 2PM contains 39% of hours worked  
-- 2PM - 10PM contains 38% of hours worked  
-- 10PM - 6AM contains 23% of hours worked
-
-<img src="visuals/hours-worked-houly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### By Month
-SPD West averages between 14,411 and 17,363 labor hours per month, with May representing the peak workload period.  
 
-The median service time per call is 31 minutes, while the mean service time is 120 minutes. This substantial gap reflects a highly skewed workload distribution: the top 10% of calls account for 53% of total labor hours. A relatively small number of highly time-intensive events significantly elevate the mean, while the median more accurately reflects a typical call.
-
-For staffing projections, the mean service time is recommended for calculating monthly workload allotments. Although it overstates the duration of a typical call, it more accurately captures total labor demand and provides a buffer for high-duration events that disproportionately consume resources. Using the median in this context would risk systematically underestimating required staffing levels.
 <img src="visuals/department-time-by-month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
 
 ### Proactive vs. Reactive vs. Organizational Workload
