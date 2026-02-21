@@ -85,7 +85,7 @@ The `final_call_type` titled 'Off Duty Employment' is excluded from this analysi
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs_counts_hourly.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_hourly.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
 
 ### By Day
 
@@ -93,31 +93,31 @@ Analysis of total service hours by day of week shows significant variation. Frid
 
 Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
 These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
-<img src="visuals/cfs_counts_day_avg_calltime.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_day_avg_calltime.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
 
 ### By Month
 
 There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring ot summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
 
-<img src="visuals/cfs_counts_month.png" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+<img src="visuals/cfs_counts_month.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
 
 ## Time Spent on Calls
 ### Hours Worked Distributed by Time of Day
-<img src="" alt="Right aligned" style="float: right; width:100%; height:auto;"> 
+
 
 ### By Month
 SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with May representing the peak workload period.  
 
 Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. This stability indicates that high-duration events are not rare anomalies but a consistent feature of patrol workload.  
 
+<img src="visuals/cfs_hours_monthly_avg_calltime.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
+
 Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours.  
+
+<img src="visuals/lorenz_curve.png" alt="Right aligned" style="float: center; width:60%; height:auto;"> 
 
 For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
 
-<p float="right">
-  <img src="visuals/cfs_hours_monthly_avg_calltime.png" width="49%" />
-  <img src="visuals/lorenz_curve.png" width="49%" />
-</p>
 ### Proactive vs. Reactive vs. Organizational Workload
 
 ## Establishing Performance Objectives
