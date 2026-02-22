@@ -26,24 +26,11 @@ The Rule of 60 principle has two aspects.
   - To get to benchmark numbers, the department should have a total of 279,080 annual working hours employing between 228 and 242 officers.
   - Officers assigned to patrol should be 137 - 146.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
-- Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400. 
-
-### Recommended Staffing Framework
-
-**1. Forecast Monthly Workload Hours**
-
-**2. Allocate Workload Hours by Shift**  
-
-**3. Convert Monthly Shift Hours to Daily Requirements**  
-
-**4. Determine Required Officers per Shift**  
-
-**5. Convert Required Officers Needed in Accordance with the 'Rule of 60' Guidelines**  
-
-**6. Determine Required Officers per Shift**  
+- Shift schedules should align with concentration of calls based on CFS data.
+  - For instance, Fridays are the busiest days and should be given 17% of the total hours for the week, 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
 
 
-## Future Analyses and Model Validation
+### Future Analyses and Model Validation
 Integrating crime data for counties within SPD West would give empirical data to establish a foundation on on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysiss, crime analysis and staffing benchmarks would provide a larger picture of how these variables simpact each other and show where goals should be focused.
 
 To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
