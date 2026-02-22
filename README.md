@@ -120,7 +120,16 @@ This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing 
 <img src="visuals/patrol_workload_hours_month.png" alt="Right aligned" style="float: center; width:100%; height:auto;"> 
 
 ## Establishing Performance Objectives
-The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
+The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). Each agency will have unique needs based on the demographics of the population the department is serving, geographical factors and distribution of the workforce by skill, rank, and seniority.  A few examples of possible benchmarks are provided, but would normally be dictated by department leaders, policy makers, and the community.
+
+### On-Duty Time Allocations
+- Patrol time should have 40% available for activities outside of CFS
+### Staffing Levels
+- The number of officers the department employs should allow for 60% of total workforce to be assigned to patrol, and for 60% of patrol time to be allocated to CFS.
+### Training
+- Each officer should complete 64.5 hours of training a year specific to the needs of the community. Some areas to consider might be language needs, special training based on geographical factors (harbor, mountainous regions, etc.), technological advances, among others.
+- There should be clear plans and training taking place to ensure smooth transitions when leadership retires or is promoted.
+
 
 ## Determining Agency Shift Relief Metric
 Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer recieves the following as part of their benefits package.
