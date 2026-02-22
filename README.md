@@ -23,11 +23,13 @@ The Rule of 60 principle has two aspects.
 
 ### Reccomendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
-  - To get to benchmark numbers, the department should have a total of 279,080 annual working hours. This equates to ~ 242 officers if relief factor is 1.8, or 228 offices if relief factor is at 1.69
+  - To get to benchmark numbers, the department should have a total of 279,080 annual working hours employing between 228 and 242 officers.
+  - Officers assigned to patrol should be 137 - 146.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400. 
 
 ### Recommended Staffing Framework
+
 **1. Forecast Monthly Workload Hours**
 
 **2. Allocate Workload Hours by Shift**  
@@ -194,7 +196,24 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be assigne
   
 All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from .csv to a .paraquet file. This proceess is found [here.](Python/cad_data_preprocessing.ipynb)
 
-### Calculations for Reccomendations
+### Calculations and Explanations for Reccomendations
+
+Currently, the departments total workload in hours is 182,276 and 92% is patrol work.
+Total Workload = 182,276 hours
+Patrol Workload = 167,448 hours
+
+Benchmark: Patrol Workload = 60%  of Total Workload
+Patrol Workload = 167,448 hours
+New Total Workload = 279,080 hours
+
+If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accomodatee agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
+
+If CFS distribution stays the same, staffing should aim to meet demand and estimatee 60% of time to be spent on CFS.
+Calculations for New Workload Hours per month were calculated using the same logic for the yearly calculations.
+
+<p align="center">
+  <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
+</p>
 
 The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
 - Temporal distribution of Calls for Service (hour, day, month)
