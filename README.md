@@ -1,30 +1,29 @@
 # Seattle Police Department West Precinct Staffing Analysis
-This project aims to inform future officer staffing needs based on historical data from Seattle Police Department's CAD database. 
+
+This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
 
 ## Executive Summary
-This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
 
 In 2023, SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
 
 ### Purpose
-This report has two purposes.
-1. Complete Workload Analysis
-2. Give reccomendations to align workload with sustainable staffing practices.
+To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making recommendations based on the data. The analysis followed a methodical process based on recent research by Jeremy M. Wilson and Alexander Weiss funded by The Department of Justice, and the industry standard of the Rule of 60.
 
-The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
-- Temporal distribution of Calls for Service (hour, day, month)
-- Time spent on CFS
-- Nature of calls
-- Geographic distribution of workload by beat
+The Rule of 60 principle has two aspects.
+1. 60% of all sworn officeres should be assigned to patrol and respond to routine incideents.
+2. 60% of officer patrol time should be committed to responding to the service demands of the community.
 
-Staffing recommendations are derived from:
-- Workload-based hour calculations
-- Agency shift relief assumptions 
-- Department performance objectives
-- Rule of 60 principles
-
-### Reccomendations for 'Rule of 60' Adherence
-
+### Insights
+- 92% of officer time is spent on patrol, responding to the needs of the community. 30% is proactive (onview) policing, and 62% is reactive (dispatch) policing.
+- 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
+- 46% of all sworn officers are assigned to patrol, showing demand for officers.
+- 
+### Reccomendations
+- SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
+  - In order for the 167,449 hours of patrol time to equal 60% of workload, there would need to be a total of 279,081 hours worked. This means there is a gap of 111,632 annual working hours.
+- SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
+- Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400.
+- 
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
@@ -95,8 +94,6 @@ There is mild fluctuation seasonally, with an 18% difference between the highest
 </p>
 
 ## Time Spent on Calls
-### Hours Worked Distributed by Time of Day
-
 
 ### By Month
 SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with May representing the peak workload period.  
@@ -184,6 +181,18 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be assigne
   
 All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from .csv to a .paraquet file, then exporting to a .csv. This proceess is found [here.](Python/cad_data_preprocessing.ipynb)
 
+The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
+- Temporal distribution of Calls for Service (hour, day, month)
+- Time spent on CFS
+- Nature of calls
+- Geographic distribution of workload by beat
+
+Staffing recommendations are derived from:
+- Workload-based hour calculations
+- Agency shift relief assumptions 
+- Department performance objectives
+- Rule of 60 principles
+- 
 ## Bibliography
 ### 1
 Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
