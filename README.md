@@ -172,16 +172,12 @@ Resulting in the following relief factors.
 This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
 ### Calculations and Explanations for Reccomendations
+|Current Allocation|Total Workload|Patrol Workload|
+|--|--|--|
+|Currently, the departments total workload in hours is 182,276 and 92% is patrol work.|Total Workload = 182,276 hours|Patrol Workload = 167,448 hours|
+|Benchmark: Patrol Workload = 60%  of Total Workload|Patrol Workload = 167,448 hours|New Total Workload = 279,080 hours|
 
-Currently, the departments total workload in hours is 182,276 and 92% is patrol work.
-Total Workload = 182,276 hours
-Patrol Workload = 167,448 hours
-
-Benchmark: Patrol Workload = 60%  of Total Workload
-Patrol Workload = 167,448 hours
-New Total Workload = 279,080 hours
-
-If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accomodatee agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
+If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accomodate agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
 
 If CFS distribution stays the same, staffing should aim to meet demand and estimatee 60% of time to be spent on CFS.
 Calculations for New Workload Hours per month were calculated using the same logic for the yearly calculations.
