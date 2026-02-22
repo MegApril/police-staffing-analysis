@@ -27,16 +27,14 @@ SELECT
     MAX(
       SAFE_CAST(
         NULLIF(
-          REGEXP_REPLACE(TRIM(spd_call_sign_total_service_time_in_seconds), r',', ''),
-          ''
+          REGEXP_REPLACE(TRIM(spd_call_sign_total_service_time_in_seconds), r',', ''), ''
         ) AS INT64
       )
     ),
     SUM(
       SAFE_CAST(
         NULLIF(
-          REGEXP_REPLACE(TRIM(call_sign_total_service_time_in_seconds), r',', ''),
-          ''
+          REGEXP_REPLACE(TRIM(call_sign_total_service_time_in_seconds), r',', '') ,''
         ) AS INT64
       )
     )
@@ -47,8 +45,7 @@ SELECT
     TRIM(
       REGEXP_REPLACE(
         REGEXP_REPLACE(ANY_VALUE(final_call_type), r'[^A-Z0-9]', ' '),
-        r'\s+',
-        ' '
+        r'\s+', ' '
       )
     )
   ) AS final_call_type_key,
@@ -57,8 +54,7 @@ SELECT
     TRIM(
       REGEXP_REPLACE(
         REGEXP_REPLACE(ANY_VALUE(call_type_indicator), r'[^A-Z0-9]', ' '),
-        r'\s+',
-        ' '
+        r'\s+', ' '
       )
     )
   ) AS call_type_indicator_key,
@@ -67,8 +63,7 @@ SELECT
     TRIM(
       REGEXP_REPLACE(
         REGEXP_REPLACE(ANY_VALUE(dispatch_sector), r'[^A-Z0-9]', ' '),
-        r'\s+',
-        ' '
+        r'\s+', ' '
       )
     )
   ) AS dispatch_sector_key,
@@ -77,8 +72,7 @@ SELECT
     TRIM(
       REGEXP_REPLACE(
         REGEXP_REPLACE(ANY_VALUE(dispatch_beat), r'[^A-Z0-9]', ' '),
-        r'\s+',
-        ' '
+        r'\s+', ' '
       )
     )
   ) AS dispatch_beat_key
@@ -104,7 +98,7 @@ SELECT
 FROM spd_west.call_type_mapping;
 ```
 ### Validation 1.0 - Final Call Types Match
-1.0 and 1.1 should return the same number of records
+1.0 and 1.1 should return the same number of records.
 ```SQL
 SELECT
   c.final_call_type,
@@ -124,7 +118,7 @@ JOIN spd_west.call_type_mapping_clean m
   ON c.final_call_type_key = m.final_call_type_key;
 ```
 ### Validation 2.0 - Distinct CAD numbers and Cleaned Events
-Distinct CAD numbers and Cleaned events should match
+Distinct CAD numbers and Cleaned events should match.
 ```SQL
 SELECT 
   COUNT(*) AS raw_rows,
@@ -137,14 +131,14 @@ SELECT COUNT(*) AS clean_rows
 FROM spd_west.2023_clean;
 ```
 ### Validation 3.0 - Null Service Time
-Verify no record has zero service time
+Verify no record has NULL service time.
 ```SQL
 SELECT COUNT(*) AS null_service_time_events
 FROM spd_west.2023_clean
 WHERE final_service_seconds IS NULL;
 ```
 ### Validation 4.0 - Pacific DATETIME NULL
-This should return 0 records
+Verify no record has NULL pacific time, which would indicate timeezone transformation issues.
 ```SQL
 SELECT COUNT(*) 
 FROM spd_west.2023_clean
@@ -252,10 +246,6 @@ GROUP BY year_month
 ORDER BY year_month;
 ```
 
-### Total Hours Worked distributed by time of day
-```SQL
-
-```
 ### Quantiles
 ```SQL
 SELECT
@@ -290,7 +280,7 @@ SELECT
 FROM ranked;
 ```
 ### Proactive vs. Reactive vs. Organizational Workload Only
-Make sure total hours from each workload category matches total workload hours when grouped by month in the following query if running both
+Make sure total hours from each workload category matches total workload hours when grouped by month in the following query (workload type by month) if running both.
 ```SQL
 SELECT
   CASE
