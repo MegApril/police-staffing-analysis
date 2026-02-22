@@ -10,17 +10,17 @@ In 2023, SPD West responded to 96,383 unique calls for service, requiring 182,27
 To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making recommendations based on the data. The analysis followed a methodical process based on recent research by Jeremy M. Wilson and Alexander Weiss funded by The Department of Justice, and the industry standard of the Rule of 60.
 
 The Rule of 60 principle has two aspects.
-1. 60% of all sworn officeres should be assigned to patrol and respond to routine incideents.
+1. 60% of all sworn officers should be assigned to patrol and respond to routine incidents.
 2. 60% of officer patrol time should be committed to responding to the service demands of the community.
 
 ### Insights
-- 92% of officer time is spent on patrol, responding to the needs of the community. 30% is proactive (onview) policing, and 62% is reactive (dispatch) policing.
+- 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview) policing, and 62% is reactive (dispatch) policing.
 - 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
 - 46% of all sworn officers are assigned to patrol, showing demand for officers.
 - 
 ### Reccomendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
-  - In order for the 167,449 hours of patrol time to equal 60% of workload, there would need to be a total of 279,081 hours worked. This means there is a gap of 111,632 annual working hours.
+  - In order for the 167,449 hours of patrol time to equal 60% of workload instead of 92%, there would need to be a total of 279,081 hours worked. This means there is a gap of 111,632 annual working hours.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400.
 - 
@@ -52,7 +52,6 @@ Further analysis should evaluate year-over-year trends in workload drivers to de
 
 Evaluating these factors using percent change adjustments will provide a stronger empirical foundation for budget planning, staffing projections, and performance benchmarking.
 
-
 # Workload Assessment
 ## Defining Workload
 Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions. For a complete list of how call types are mapped, refer [here.](data/call-type-mapping.csv)
@@ -76,7 +75,7 @@ The `final_call_type` titled 'Off Duty Employment' is excluded from this analysi
 
 ### By Day
 
-Analysis of total service hours by day of week shows significant variation. Fridays account for 16.5% of the total annual service hours, which is 30% more workload than Sundays (12.7%), the lowest demand day.
+Analysis of total CFS counts by day of week shows significant variation. Fridays account for 16.5% of the total annual call counts.
 
 Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
 These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
