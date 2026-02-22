@@ -32,21 +32,6 @@ The Rule of 60 principle has two aspects.
   - 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
 
 
-### Future Analyses and Model Validation
-Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
-
-To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
-Further analysis should evaluate year-over-year trends in workload, and criminal activity to determine whether observed changes represent stable patterns or are indicative of the department being under-staffed. Specifically:  
-- How does total call volume change year over year?
-- How does total labor time spent on CFS change year over year?
-- Are changes in call volume and labor hours consistent across multiple years?
-- What is the year-over-year population change within the service area?
-- Does population growth correlate with changes in call volume?
-- Does population growth correlate with changes in total labor hours?
-- How does crime change year over year? Does property crime, crime against the person, and crime against society increase/decrease at the same rates?
-
-Evaluating these factors using percent change adjustments will provide a strong foundation for budget planning, staffing projections, and performance benchmarking.
-
 # Workload Assessment
 ## Defining Workload
 Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions. For a complete list of how call types are mapped, refer [here.](data/call-type-mapping.csv)
@@ -186,6 +171,22 @@ Calculations for New Workload Hours per month were calculated using the same log
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
 </p>
 
+### Future Analyses and Model Validation
+Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
+
+To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
+Further analysis should evaluate year-over-year trends in workload, and criminal activity to determine whether observed changes represent stable patterns or are indicative of the department being under-staffed. Specifically:  
+- How does total call volume change year over year?
+- How does total labor time spent on CFS change year over year?
+- Are changes in call volume and labor hours consistent across multiple years?
+- What is the year-over-year population change within the service area?
+- Does population growth correlate with changes in call volume?
+- Does population growth correlate with changes in total labor hours?
+- How does crime change year over year? Does property crime, crime against the person, and crime against society increase/decrease at the same rates?
+
+Evaluating these factors using percent change adjustments will provide a strong foundation for budget planning, staffing projections, and performance benchmarking.
+
+---
 
 ## Bibliography
 ### 1 :
