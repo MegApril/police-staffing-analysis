@@ -171,7 +171,7 @@ Calculations for New Workload Hours per month were calculated using the same log
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
 </p>
 
-### Future Analyses and Model Validation
+# Future Analyses and Model Validation
 Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
 
 To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
