@@ -49,7 +49,8 @@ Further analysis should evaluate year-over-year trends in workload drivers to de
 - Are changes in call volume and labor hours consistent across multiple years?
 - What is the year-over-year population change within the service area?
 - Does population growth correlate with changes in call volume?
-- Does population growth correlate with changes in total labor hours?  
+- Does population growth correlate with changes in total labor hours?
+
 Evaluating these factors using percent change adjustments will provide a stronger empirical foundation for budget planning, staffing projections, and performance benchmarking.
 
 
@@ -69,7 +70,10 @@ The `final_call_type` titled 'Off Duty Employment' is excluded from this analysi
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
 - 10PM - 6AM contains 22% of calls
-<img src="visuals/cfs_counts_hourly.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
+
+<p align="center">
+  <img width=80% height="auto" src="visuals/cfs_counts_hourly.png">
+</p>
 
 ### By Day
 
@@ -77,13 +81,18 @@ Analysis of total service hours by day of week shows significant variation. Frid
 
 Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
 These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
-<img src="visuals/cfs_counts_day_avg_calltime.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
+
+<p align="center">
+  <img width=80% height="auto" src="visuals/cfs_counts_day_avg_calltime.png">
+</p>
 
 ### By Month
 
 There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring ot summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
 
-<img src="visuals/cfs_counts_month.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
+<p align="center">
+  <img width=80% height="auto" src="visuals/cfs_counts_month.png">
+</p>
 
 ## Time Spent on Calls
 ### Hours Worked Distributed by Time of Day
@@ -94,11 +103,15 @@ SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with 
 
 Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. This stability indicates that high-duration events are not rare anomalies but a consistent feature of patrol workload.  
 
-<img src="visuals/cfs_hours_monthly_avg_calltime.png" alt="Right aligned" style="float: center; width:75%; height:auto;"> 
+<p align="center">
+  <img width=80% height="auto" src="visuals/cfs_hours_monthly_avg_calltime.png">
+</p>
 
 Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours.  
 
-<img src="visuals/lorenz_curve.png" alt="Right aligned" style="float: center; width:60%; height:auto;"> 
+<p align="center">
+  <img width=80% height="auto" src="visuals/lorenz_curve.png">
+</p>
 
 For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
 
@@ -115,6 +128,48 @@ This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing 
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). 
 
 ## Determining Agency Shift Relief Metric
+Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer recieves the following as part of their benefits package.
+- 10 paid holidays
+- 16 hours additional holiday time
+- 12 days paid vacation (with accrual increasing as longevity grows)
+- 21 days paid military leave
+
+Other considerations:
+- Normal non-working days per week
+- Sick leave at 107 hours/year
+- Training
+
+Because military leave is not leave that every officer will have, there are 4 different relief equations used based on the following tables.
+Additional tables should be made accounting for vacation accrual for senior level officers.
+
+### Shifts with Military Leave
+<p align="center">
+  <img width="400" height="auto" src="visuals/eight_hour_w_ml.png" hspace = 25>
+   <img width="400" height="auto" src="visuals/ten_hour_w_ml.png" hspace = 25>
+</p>
+
+### Shifts without Military Leave
+<p align="center">
+  <img width="400" height="auto" src="visuals/eight_hour_wo_ml.png" hspace = 25>
+   <img width="400" height="auto" src="visuals/ten_hour_wo_ml.png" hspace = 25>
+</p>
+
+To calculate agency relief, the following equation is used.
+
+$$
+\frac{365 \times \text{Shift Length}}{(365 \times \text{Shift Length}) - \text{Total Time Off}}
+$$
+
+Resulting in the following relief factors. 
+
+|Shift Type|Relief Factor|
+|--|--|
+|8 Hour Shift with Military Leave|1.88|
+|8 Hour Shift without Military Leave|	1.69|
+|10 Hour Shift with Military Leave|	2.34|
+|10 Hour Shift without Military Leave|	2.11|
+
+This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
 ## Process
 ### Data Gathering
@@ -127,7 +182,8 @@ The way which agencies are directed to allocate their time determines how worklo
 4. 2023 Data (169,260 records)
    1. CAD Event Number - starts with - 2023 AND Dispatch Precinct is WEST
   
-All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from csv's to a .paraquet file. This is found [here.](Python/cad_data_preprocessing.ipynb)
+All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from .csv to a .paraquet file, then exporting to a .csv. This proceess is found [here.](Python/cad_data_preprocessing.ipynb)
+
 ## Bibliography
 ### 1
 Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
@@ -139,6 +195,8 @@ Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge
 Center for Public Safety Management, McCabe, J., & International City/County Managemenet Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
 ### 5
 lawenforcementtoday.com. (2024, April 9). Seattle police staffing levels at lowest in 30 years, with many officers eligible to retire and others looking to transfer. Lawenforcementtoday.Com. https://lawenforcementtoday.com/seattle-police-staffing
+### 6
+Police officer. (2025, August 18). Seattle PD. https://seattlepolicejobs.com/police-officer/
 
 
 
