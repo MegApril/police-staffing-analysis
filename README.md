@@ -11,18 +11,21 @@ The Rule of 60 principle has two aspects.
 1. 60% of all sworn officers should be assigned to patrol and respond to routine incidents.
 2. 60% of officer patrol time should be committed to responding to the service demands of the community.
 
+### Benchmarks
+- Patrol shifts should have enough officers staffed so that 60% of time is dedicated to estimated CFS obligations. Leaving 40% available for activities outside of CFS.
+- 60% of the department should be assigned to patrol.
+
 ### Insights
 - SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events.
-- 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview) policing, and 62% is reactive (dispatch) policing.
+- 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview/officer initiated) policing, and 62% is reactive (dispatch) policing.
 - 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
 - 46% of all sworn officers are assigned to patrol [^1], showing demand for officers.
-- 
+
 ### Reccomendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
   - In order for the 167,449 hours of patrol time to equal 60% of workload instead of 92%, there would need to be a total of 279,081 hours worked. This means there is a gap of 111,632 annual working hours.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
-- Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400.
-- 
+- Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400. 
 
 ### Recommended Staffing Framework
 **1. Forecast Monthly Workload Hours**
@@ -39,17 +42,19 @@ The Rule of 60 principle has two aspects.
 
 
 ## Future Analyses and Model Validation
-The current staffing framework is based on one year of data. To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
+Integrating crime data for counties within SPD West would give empirical data to establish a foundation on on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysiss, crime analysis and staffing benchmarks would provide a larger picture of how these variables simpact each other and show where goals should be focused.
 
-Further analysis should evaluate year-over-year trends in workload drivers to determine whether observed changes represent stable patterns or short-term variability. Specifically:  
+To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
+Further analysis should evaluate year-over-year trends in workload, and criminal activity to determine whether observed changes represent stable patterns or are indicative of the department being under-staffed. Specifically:  
 - How does total call volume change year over year?
 - How does total labor time spent on CFS change year over year?
 - Are changes in call volume and labor hours consistent across multiple years?
 - What is the year-over-year population change within the service area?
 - Does population growth correlate with changes in call volume?
 - Does population growth correlate with changes in total labor hours?
+- How does crime change year over year? Does property crime, crime against the person, and crime against society increase/decrease at the same rates?
 
-Evaluating these factors using percent change adjustments will provide a stronger empirical foundation for budget planning, staffing projections, and performance benchmarking.
+Evaluating these factors using percent change adjustments will provide a strong foundation for budget planning, staffing projections, and performance benchmarking.
 
 # Workload Assessment
 ## Defining Workload
