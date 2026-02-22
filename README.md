@@ -5,7 +5,7 @@ This analysis reviews the workload of SPD West to aid the department in determin
 ## Executive Summary
 ### Purpose
 To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making staffing recommendations based on findings. 
-The analysis followed a methodical process based on recent research completed through Michigan State University by Jeremy M. Wilson and Alexander Weiss with support from the Community Oriented Policing Services and funded by The Department of Justice. Benchmarks and staffing reccomendations are based on the industry standard of the Rule of 60.
+The analysis followed a methodical process based on recent research completed through Michigan State University by Jeremy M. Wilson and Alexander Weiss with support from the Community Oriented Policing Services and funded by The Department of Justice. Benchmarks and staffing recommendations are based on the industry standard of the Rule of 60.
 
 The Rule of 60 principle has two aspects.
 1. 60% of all sworn officers should be assigned to patrol and respond to routine incidents.
@@ -21,7 +21,7 @@ The Rule of 60 principle has two aspects.
 - 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
 - 46% of all sworn officers are assigned to patrol [^1], showing demand for officers.
 
-### Reccomendations
+### Recommendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
   - To get to benchmark numbers, the department should have a total of 279,080 annual working hours employing between 228 and 242 officers.
   - Officers assigned to patrol should be 137 - 146.
@@ -33,7 +33,7 @@ The Rule of 60 principle has two aspects.
 
 
 ### Future Analyses and Model Validation
-Integrating crime data for counties within SPD West would give empirical data to establish a foundation on on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysiss, crime analysis and staffing benchmarks would provide a larger picture of how these variables simpact each other and show where goals should be focused.
+Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
 
 To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
 Further analysis should evaluate year-over-year trends in workload, and criminal activity to determine whether observed changes represent stable patterns or are indicative of the department being under-staffed. Specifically:  
@@ -54,7 +54,7 @@ Following guidance from the International City/County Management Association (IC
 |--|--|--|--|
 |Reactive Patrol Demand |Demand-driven and time-sensitive calls. |Crime, Alarms, Warrants, Non-Officer initiated Calls, Dispatch Events||
 |Proactive / Community Patrol Activity |Officer initiated or capacity based calls.|Directed patrol activity, Officer Initiated Calls, School Visits, Special Events||
-|Organizational / Out-of-Service Workload|Work that removes officers from patrol availability.|Court, Training, Out At Range, Reports, Maintenance of Vehichles, Follow Up's||
+|Organizational / Out-of-Service Workload|Work that removes officers from patrol availability.|Court, Training, Out At Range, Reports, Maintenance of Vehicles, Follow Up's||
 
 The `final_call_type` titled 'Off Duty Employment' is excluded from this analysis because it will skew the analysis and will be addressed in the agency relief metric.
 
@@ -128,7 +128,7 @@ The way which agencies are directed to allocate their time determines how worklo
 
 
 ## Determining Agency Shift Relief Metric
-Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer recieves the following as part of their benefits package.
+Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer receives the following as part of their benefits package.
 - 10 paid holidays
 - 16 hours additional holiday time
 - 12 days paid vacation (with accrual increasing as longevity grows)
@@ -171,15 +171,15 @@ Resulting in the following relief factors.
 
 This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
-### Calculations and Explanations for Reccomendations
+### Calculations and Explanations for Recommendations
 |Current Allocation|Total Workload|Patrol Workload|
 |--|--|--|
-|Currently, the departments total workload in hours is 182,276 and 92% is patrol work.| Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
+|Currently, the department's total workload in hours is 182,276 and 92% is patrol work.| Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
 |Benchmark: Patrol Workload = 60%  of Total Workload|New Total Workload = 279,080 hours |Patrol Workload = 167,448 hours|
 
-If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accomodate agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
+If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accommodate agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
 
-If CFS distribution stays the same, staffing should aim to meet demand and estimatee 60% of time to be spent on CFS.
+If CFS distribution stays the same, staffing should aim to meet demand and estimated 60% of time to be spent on CFS.
 Calculations for New Workload Hours per month were calculated using the same logic for the yearly calculations.
 
 <p align="center">
@@ -191,11 +191,11 @@ Calculations for New Workload Hours per month were calculated using the same log
 ### 1 :
 Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
 ### 2
-Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
+Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
 ### 3
 Wilson, J. M., & Grammich, C. A. (2024). Reframing the police staffing challenge: A systems approach to workforce planning and managing workload demand. Policing: A Journal of Policy and Practice, 18. https://doi.org/10.1093/police/paae005
 ### 4
-Center for Public Safety Management, McCabe, J., & International City/County Managemenet Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
+Center for Public Safety Management, McCabe, J., & International City/County Management Association. (2013). An Analysis of Police Department Staffing: How many officers do you really need?
 ### 5
 lawenforcementtoday.com. (2024, April 9). Seattle police staffing levels at lowest in 30 years, with many officers eligible to retire and others looking to transfer. Lawenforcementtoday.Com. https://lawenforcementtoday.com/seattle-police-staffing
 ### 6
