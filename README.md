@@ -27,7 +27,9 @@ The Rule of 60 principle has two aspects.
   - Officers assigned to patrol should be 137 - 146.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls based on CFS data.
-  - For instance, Fridays are the busiest days and should be given 17% of the total hours for the week, 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
+  - Precinct monthly hours should be distributed among sector according to the percentage of calls that sector responds to.
+  - Fridays are the busiest days and should be given 17% of the total hours for the week.
+  - 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
 
 
 ### Future Analyses and Model Validation
@@ -188,17 +190,6 @@ Calculations for New Workload Hours per month were calculated using the same log
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
 </p>
 
-The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
-- Temporal distribution of Calls for Service (hour, day, month)
-- Time spent on CFS
-- Nature of calls
-- Geographic distribution of workload by beat
-
-Staffing recommendations are derived from:
-- Workload-based hour calculations
-- Agency shift relief assumptions 
-- Department performance objectives
-- Rule of 60 principles
 
 ## Bibliography
 ### 1 :
