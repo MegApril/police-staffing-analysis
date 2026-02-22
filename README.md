@@ -1,22 +1,21 @@
 # Seattle Police Department West Precinct Staffing Analysis
 
-This analysis quantifies the workload of the Seattle Police Department’s West Precinct and links documented labor demand to staffing requirements. The objective is to determine whether current workforce allocation aligns with reactive, proactive, and administrative responsibilities, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
+This analysis reviews the workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
 
 ## Executive Summary
-
-In 2023, SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events, reflecting the full scope of documented workload activity. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
-
 ### Purpose
-To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making recommendations based on the data. The analysis followed a methodical process based on recent research by Jeremy M. Wilson and Alexander Weiss funded by The Department of Justice, and the industry standard of the Rule of 60.
+To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making staffing recommendations based on findings. 
+The analysis followed a methodical process based on recent research completed through Michigan State University by Jeremy M. Wilson and Alexander Weiss with support from the Community Oriented Policing Services and funded by The Department of Justice. Benchmarks and staffing reccomendations are based on the industry standard of the Rule of 60.
 
 The Rule of 60 principle has two aspects.
 1. 60% of all sworn officers should be assigned to patrol and respond to routine incidents.
 2. 60% of officer patrol time should be committed to responding to the service demands of the community.
 
 ### Insights
+- SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events.
 - 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview) policing, and 62% is reactive (dispatch) policing.
 - 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
-- 46% of all sworn officers are assigned to patrol, showing demand for officers.
+- 46% of all sworn officers are assigned to patrol [^1], showing demand for officers.
 - 
 ### Reccomendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
@@ -167,6 +166,7 @@ Resulting in the following relief factors.
 
 This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
+
 ## Process
 ### Data Gathering
 1. 2025 Data (147,776 records)
@@ -191,9 +191,9 @@ Staffing recommendations are derived from:
 - Agency shift relief assumptions 
 - Department performance objectives
 - Rule of 60 principles
-- 
+
 ## Bibliography
-### 1
+### 1 :
 Aponte, C., Perez, A., & Carpenter, A. (2020, November 17). Analyzing Staffing as Cornerstone to Police Transformation. V2A. https://v2aconsulting.com/insights/analyzing-staffing-as-cornerstone-to-police-transformation/  
 ### 2
 Wilson, J., & Weiss, A. (2014). A PERFORMANCE-BASED APPROACH TO POLICE STAFFING AND ALLOCATION. Office of Community Oriented Policiing Policies, U.S. Department of Justice. https://portal.cops.usdoj.gov/resourcecenter/content.ashx/cops-p247-pub.pdf  
@@ -206,5 +206,4 @@ lawenforcementtoday.com. (2024, April 9). Seattle police staffing levels at lowe
 ### 6
 Police officer. (2025, August 18). Seattle PD. https://seattlepolicejobs.com/police-officer/
 
-
-
+[^1]: Data on the number of officers specific to SPD West could not be found for 2023. Therefore, patrol numbers are based on the percentages found for SPD as a whole in 2023. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
