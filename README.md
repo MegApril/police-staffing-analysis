@@ -23,7 +23,7 @@ The Rule of 60 principle has two aspects.
 
 ### Reccomendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
-  - In order for the 167,449 hours of patrol time to equal 60% of workload instead of 92%, there would need to be a total of 279,081 hours worked. This means there is a gap of 111,632 annual working hours.
+  - To get to benchmark numbers, the department should have a total of 279,080 annual working hours. This equates to ~ 242 officers if relief factor is 1.8, or 228 offices if relief factor is at 1.69
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls. 40% of allotted monthly hours should be scheduled from 0600 - 1400. 
 
@@ -192,7 +192,9 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be assigne
 4. 2023 Data (169,260 records)
    1. CAD Event Number - starts with - 2023 AND Dispatch Precinct is WEST
   
-All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from .csv to a .paraquet file, then exporting to a .csv. This proceess is found [here.](Python/cad_data_preprocessing.ipynb)
+All CSV's had to be pre-processed to load appropriately into BigQuery. This involved writing the files from .csv to a .paraquet file. This proceess is found [here.](Python/cad_data_preprocessing.ipynb)
+
+### Calculations for Reccomendations
 
 The analysis establishes a systematic method for evaluating operational demand based on several factors, and following research for a full-scope review of officer time. [[2]](#2)
 - Temporal distribution of Calls for Service (hour, day, month)
