@@ -9,11 +9,10 @@ The entire workload analysis can be found [here.](#workload-assessment) Code, da
 ## Executive Summary
 ### Purpose
 To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making staffing recommendations based on findings. 
-The analysis followed a methodical process based on recent research completed through Michigan State University by Jeremy M. Wilson and Alexander Weiss with support from the Community Oriented Policing Services and funded by The Department of Justice. Benchmarks and staffing recommendations are based on the industry standard of the Rule of 60.
 
 ### Benchmarks
 Benchmarks are derived from the Rule of 60, which has two aspects.
-- Patrol shifts should have enough officers staffed so that 60% of time is dedicated to estimated CFS obligations. Leaving 40% available for activities outside of CFS.
+- Patrol shifts should have enough officers staffed so that 60% of time is dedicated to estimated CFS (Calls For Service) obligations, leaving 40% available for activities outside of calls for service.
 - 60% of the department should be assigned to patrol.
 
 ### Insights
