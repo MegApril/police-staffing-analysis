@@ -115,6 +115,8 @@ The way which agencies are directed to allocate their time determines how worklo
 
 
 ## Determining Agency Shift Relief Metric
+Agency Shift Relief "shows the relationship between the maximum number of days that an officer can work and actually works[[2.]](#2)" It ensures the department has enoough officers on hand to accomodate CFS 24 hours a day, time off, vacations, and other leave.
+
 Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer receives the following as part of their benefits package.
 - 10 paid holidays
 - 16 hours additional holiday time
