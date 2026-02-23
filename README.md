@@ -80,13 +80,13 @@ There is mild fluctuation seasonally, with an 18% difference between the highest
 ### By Month
 SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with May representing the peak workload period.  
 
-Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. This stability indicates that high-duration events are not rare anomalies but a consistent feature of patrol workload.  
+Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. Because average service time remains stable despite the median service time being significantly lower, this indicates high-duration events (elevating the average, not the median) are not rare anomalies but a consistent feature of this patrols workload.  
 
 <p align="center">
   <img width=80% height="auto" src="visuals/cfs_hours_monthly_avg_calltime.png">
 </p>
 
-Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours.  
+Service time is highly skewed, which is to be expected in emergency services. The median call lasts approximately 45 minutes, while the mean is 116 minutes. This gap is a direct reflection of workload concentration, as the top 10% of calls account for 53% of total labor hours. 
 
 <p align="center">
   <img width=80% height="auto" src="visuals/lorenz_curve.png">
