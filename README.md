@@ -1,6 +1,7 @@
 # Seattle Police Department West Precinct Staffing Analysis
 
-This analysis reviews the workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. The entire workload analysis can be found [here.](#workload-assessment)
+This analysis reviews the 2023 workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. The data analyzed contained 169,260 rows where each record represented a CAD entry. These records are associated with 96,383 unique calls for service.
+The entire workload analysis can be found [here.](#workload-assessment)
 
 ## Executive Summary
 ### Purpose
@@ -27,9 +28,10 @@ The Rule of 60 principle has two aspects.
   - Officers assigned to patrol should be 137 - 146.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls based on CFS data.
-  - Precinct monthly hours should be distributed among sector according to the percentage of calls that sector responds to.
+  - Precinct monthly hours should be distributed among sector according to the percentage of calls that sector responds to out of the entire precinct.
   - Fridays are the busiest days and should be given 17% of the total hours for the week.
   - 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
+  - A [detailed example](#scheduling-example) using January is provided at the end of the analysis.
 
 
 # Workload Assessment
@@ -156,7 +158,8 @@ Resulting in the following relief factors.
 
 This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
-### Calculations and Explanations for Recommendations
+## Calculations and Explanations for Recommendations
+### Total Workload, Patrol Workload, and Precinct Full Time Officers Needed
 |Current Allocation|Total Workload|Patrol Workload|
 |--|--|--|
 |Currently, the department's total workload in hours is 182,276 and 92% is patrol work.| Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
@@ -169,6 +172,20 @@ Calculations for New Workload Hours per month were calculated using the same log
 
 <p align="center">
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
+</p>
+
+### Scheduling Example
+The following table gives a detailed example relying on the following benchmarks. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
+- January required 13,985 hours of labor to respond to CFS representing 60% of total workload making total workload = 23,309 hours.
+- Weekly allotment is 5,827 hours.
+- Daily allotment corresponds to the average percentage of weekly workload on that day.
+- Shift allotment corresponds to average percentage of CFS for that time of day.
+  - 06:00 - 14:00 at 40% of daily estimated call volume
+  - 14:00 - 22:00 at 38% of daily estimated call volume
+  - 22:00 - 06:00 at 22% of daily estimated call volume
+
+<p align="center">
+  <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
 
 # Future Analyses and Model Validation
