@@ -1,4 +1,4 @@
-# Colorss
+# Colors
 COLOR_Lorenz = "#38808c"
 COLOR_Equality = "#465360"
 COLOR_Shade = "#38808c"
