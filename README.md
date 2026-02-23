@@ -1,7 +1,8 @@
 # Seattle Police Department West Precinct Staffing Analysis
 
-This analysis reviews the 2023 workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. The data analyzed contained 169,260 rows where each record represented a CAD entry. These records are associated with 96,383 unique calls for service.
-The entire workload analysis can be found [here.](#workload-assessment)
+This analysis reviews the 2023 workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. 
+The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. These records are associated with 96,383 unique calls for service.
+The entire workload analysis can be found [here.](#workload-assessment) Code, data analysis processes and visualizations are all found in this repository.
 
 ## Executive Summary
 ### Purpose
@@ -115,7 +116,7 @@ The way which agencies are directed to allocate their time determines how worklo
 
 
 ## Determining Agency Shift Relief Metric
-Agency Shift Relief "shows the relationship between the maximum number of days that an officer can work and actually works[[2.]](#2)" It ensures the department has enoough officers on hand to accomodate CFS 24 hours a day, time off, vacations, and other leave.
+Agency Shift Relief "shows the relationship between the maximum number of days that an officer can work and actually works[[2.]](#2)" It ensures the department has enough officers on hand to accomodate CFS 24 hours a day, time off, vacations, and other leave.
 
 Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer receives the following as part of their benefits package.
 - 10 paid holidays
