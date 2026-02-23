@@ -27,14 +27,12 @@ The Rule of 60 principle has two aspects.
 
 ### Recommendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
-  - To get to benchmark numbers, the department should have a total of 279,080 annual working hours employing between 228 and 242 officers.
-  - Officers assigned to patrol should be 137 - 146.
+  - SPD West should plan to expend a total of 279,080 annual working hours, and employing between 228 and 242 officers.
+  - Officers assigned to patrol should be between 137 - 146.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
 - Shift schedules should align with concentration of calls based on CFS data.
-  - Precinct monthly hours should be distributed among sector according to the percentage of calls that sector responds to out of the entire precinct.
-  - Fridays are the busiest days and should be given 17% of the total hours for the week.
-  - 40% of allotted daily hours should be scheduled from 0600 - 1400, etc.
-  - A [detailed example](#scheduling-example) using January is provided at the end of the analysis.
+  - Precinct monthly hours should be distributed between sectors according to the percentage of CFS in which the sector responds to.
+  - A [detailed example](#scheduling-example) for scheduling using January data is provided at the end of the analysis.
 
 
 # Workload Assessment
