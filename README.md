@@ -4,7 +4,7 @@ This analysis reviews the 2023 workload of SPD West to aid the department in det
 
 The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. These records are associated with 96,383 unique calls for service.  
 
-The entire workload analysis can be found [here.](#workload-assessment) Code, data analysis processes and visualizations are all found in this repository.  
+The entire workload analysis can be found [here.](#workload-assessment) Code, data analysis processes, and visualizations are all found in this repository.  
 
 ## Executive Summary
 ### Purpose
@@ -111,7 +111,7 @@ The way which agencies are directed to allocate their time determines how worklo
 ### Staffing Levels
 - The number of officers the department employs should allow for 60% of total workforce to be assigned to patrol, and for 60% of patrol time to be allocated to CFS.
 ### Training
-- Each officer should complete 64.5 hours of training a year specific to the needs of the community. Some areas to consider might be language needs, special training based on geographical factors (harbor, mountainous regions, etc.), technological advances, among others.
+- Each officer should complete 64.5 hours of training a year specific to the needs of the community. Some areas to consider might be language needs, special training based on geographical factors, (harbor, mountainous regions, etc.), or technological advances.
 - There should be clear plans and training taking place to ensure smooth transitions when leadership retires or is promoted.
 
 
@@ -165,13 +165,13 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be assigne
 ### Total Workload, Patrol Workload, and Precinct Full Time Officers Needed
 |Current Allocation|Total Workload|Patrol Workload|
 |--|--|--|
-|Currently, the department's total workload in hours is 182,276 and 92% is patrol work.| Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
-|Benchmark: Patrol Workload = 60%  of Total Workload|New Total Workload = 279,080 hours |Patrol Workload = 167,448 hours|
+|Currently, SPD patrol calls account for 92% of work, at 182,276 hours. | Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
+|Benchmark Goal: Patrol Workload = 60%  of Total Workload|New Total Workload = 279,080 hours |Patrol Workload = 167,448 hours|
 
 If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accommodate agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
 
-If CFS distribution stays the same, staffing should aim to meet demand and estimated 60% of time to be spent on CFS.
-Calculations for New Workload Hours per month were calculated using the same logic for the yearly calculations.
+If CFS distribution stays the same, staffing measures should aim to meet demand and add additional working hours so that patrol work is only 60% of the total workload.
+Calculations for New Workload Hours per month (shown below) were calculated using the same logic for the yearly calculations.
 
 <p align="center">
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
@@ -179,14 +179,14 @@ Calculations for New Workload Hours per month were calculated using the same log
 
 ### Scheduling Example
 The following table gives a detailed example relying on the following benchmarks. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
-- January required 13,985 hours of labor to respond to CFS representing 60% of total workload making total workload = 23,309 hours.
+- January required 13,985 hours of labor to respond to CFS. For this to represent 60% of total workload, new workload must be 23,309 hours.
 - Weekly allotment is 5,827 hours.
-- Daily allotment corresponds to the average percentage of weekly workload on that day.
-- Shift allotment corresponds to average percentage of CFS for that time of day.
+- Daily allotment corresponds to the [average percentage of weekly workload](#by-day) on that day.
+- Shift allotment corresponds to [average percentage of CFS for that time of day](#by-hour).
   - 06:00 - 14:00 at 40% of daily estimated call volume
   - 14:00 - 22:00 at 38% of daily estimated call volume
   - 22:00 - 06:00 at 22% of daily estimated call volume
-
+- Shifts are asssumed to be 8 hours.
 <p align="center">
   <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
