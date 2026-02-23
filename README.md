@@ -1,7 +1,9 @@
 # Seattle Police Department West Precinct Staffing Analysis
 
 This analysis reviews the 2023 workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. 
+
 The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. These records are associated with 96,383 unique calls for service.
+
 The entire workload analysis can be found [here.](#workload-assessment) Code, data analysis processes and visualizations are all found in this repository.
 
 ## Executive Summary
