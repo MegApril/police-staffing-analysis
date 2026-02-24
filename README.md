@@ -40,6 +40,7 @@ Benchmarks are derived from the Rule of 60, which has two aspects.
 The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. A single call for service may have multiple CAD records for multiple reasons. 
 - Multiple officers being sent to a single event.
 - A call having more than one action assigned to it (like follow ups).
+
 These records are associated with 96,383 unique calls for service.
 
 The following terms are used regularly throughout this analysis.
