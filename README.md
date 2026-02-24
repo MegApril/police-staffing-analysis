@@ -4,7 +4,7 @@ This analysis reviews the 2023 workload of SPD West to aid the department in det
 
 The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. These records are associated with 96,383 unique calls for service.  
 
-The entire workload analysis can be found [here.](#workload-assessment) Code, data analysis processes, and visualizations are all found in this repository.  
+The entire workload analysis can be found [here.](#workload-assessment) Code ([SQL](SQL/SQL-queries.md), [Python](Python)), [data analysis processes](data), and [visualizations](visuals) are all found in this repository.  
 
 ## Executive Summary
 ### Purpose
