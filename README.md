@@ -126,7 +126,7 @@ This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing 
 <img src="visuals/patrol_workload_hours_month.png" alt="Right aligned" style="float: center; width:100%; height:auto;"> 
 
 ## Establishing Performance Objectives
-The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). Each agency will have unique needs based on the demographics of the population the department is serving, geographical factors and distribution of the workforce by skill, rank, and seniority.  A few examples of possible benchmarks are provided, but would normally be dictated by department leaders, policy makers, and the community.
+The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). Each agency will have unique needs based on the demographics of the population the department is serving, geographical factors, and distribution of the workforce by skill, rank, and seniority.  A few examples of possible benchmarks are provided, but would normally be dictated by department leaders, policy makers, and the community.
 
 ### On-Duty Time Allocations
 - Patrol time should have 40% available for activities outside of CFS
