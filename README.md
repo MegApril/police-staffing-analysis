@@ -175,7 +175,9 @@ Resulting in the following relief factors.
 |10 Hour Shift with Military Leave|	2.34|
 |10 Hour Shift without Military Leave|	2.11|
 
-This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
+This means for these various shifts, 1.7 - 2.3 officers would have to be an employee of the precinct to ensure 1 is working at any given time.
+
+---
 
 # Staffing Recommendations and Justification
 ## Total Workload, Patrol Workload, and Precinct Full Time Officers 
@@ -209,6 +211,8 @@ The following table gives a detailed example relying on the following benchmarks
 <p align="center">
   <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
+
+---
 
 # Limitations and Assumptions
 Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
