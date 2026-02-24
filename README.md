@@ -185,6 +185,7 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be an empl
 ---
 
 # Staffing Recommendations and Justification
+Ideally, adding more officers and working hours to the precinct will allow SPD West to sufficiently respond to CFS without being overburdened. However, recogonizing restraints like budgets, crime rates and turnover will also be addressed.
 ## Total Workload, Patrol Workload, and Precinct Full Time Officers 
 |Allocation|Patrol Workload|Total Workload| Total Officers | Patrol Officers |
 |--|--|--|--|--|
@@ -216,6 +217,10 @@ The following table gives a detailed example relying on the following benchmarks
 <p align="center">
   <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
+
+## Budget Restraints
+## Crime Rates
+## Turnover
 
 ---
 
