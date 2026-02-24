@@ -16,10 +16,10 @@ Benchmarks are derived from the Rule of 60, which has two aspects.
 - 60% of the department should be assigned to patrol.
 
 ### Insights
-- SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. A total of 169,260 CAD records were associated with these events.
-- 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview/officer initiated) policing, and 62% is reactive (dispatch) policing.
-- 40% of calls occur between the hours of 0600 - 1400, highlighting where labor should be concentrated.
-- 46% of all sworn officers are assigned to patrol [^1], showing demand for officers.
+- SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. 
+- 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview/officer initiated), and 62% is reactive (dispatch).
+- 40% of calls occur between the hours of 0600 - 1400.
+- 46% of all sworn officers are assigned to patrol [^1].
 
 ### Recommendations
 - SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
