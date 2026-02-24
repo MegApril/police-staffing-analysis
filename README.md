@@ -43,12 +43,14 @@ The data analyzed contained 169,260 rows where each record represented a CAD (Co
 
 These records are associated with 96,383 unique calls for service.
 
-The following terms are used regularly throughout this analysis.
+The following terms and abbreviations are used regularly throughout this analysis.
 |Term|Definition|
 |--|--|
 |CFS|Calls For Service. Calls for service could be a 911 call, a call to the station from a community member, or an incident an officer initiates (speeding ticket, etc.).|
 |Dispatch / Reactive|Dispatch calls are when an officer is sent to an incident. A 911 call where the dispatch specialist sends an officer to an invident is an example of a dispatch call.|
 |Onview / Proactive| Onview calls are incidents that the officer initiates. Looking into suspicious circumstances when the officer initiates it, or writing a speeding ticket are examples of onview calls.|
+|SPD | Seattle Police Department|
+
 
 ---
 
