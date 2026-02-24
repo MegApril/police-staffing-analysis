@@ -50,7 +50,7 @@ The following terms and abbreviations are used regularly throughout this analysi
 |Dispatch / Reactive|Dispatch calls are when an officer is sent to an incident. A 911 call where the dispatch specialist sends an officer to an invident is an example of a dispatch call.|
 |Onview / Proactive| Onview calls are incidents that the officer initiates. Looking into suspicious circumstances when the officer initiates it, or writing a speeding ticket are examples of onview calls.|
 |SPD | Seattle Police Department|
-|Precinct| Seattle Police Department is divided into 5 sesctors. This analysis forcuses on the West Precinct.|
+|Precinct| Seattle Police Department is divided into 5 precincts. This analysis forcuses on the West Precinct.|
 |Sector| Each precinct is further divided into sectors. SPD West is divded into sectors named King, Queen, David, and Mary.|
 |Beat| Each sector is further divided into 3 beats. K1 refers to Sector: King, Beat:1|
 
