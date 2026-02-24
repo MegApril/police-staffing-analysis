@@ -5,21 +5,21 @@ This analysis reviews the 2023 workload of SPD West to aid the department in det
 The entire workload analysis can be found [here.](#workload-assessment) Code ([SQL](SQL/SQL-queries.md), [Python](Python)), [data analysis processes](data), and [visualizations](visuals) are all found in this repository.  
 
 # Executive Summary
-## Purpose
+### Purpose
 To aid SPD West in determining suitable staffing levels, by providing a workload analysis and making staffing recommendations based on findings. 
 
-## Benchmarks
+### Benchmarks
 Benchmarks are derived from the Rule of 60, which has two aspects.
 - Patrol shifts should have enough officers staffed so that 60% of time is dedicated to estimated CFS (Calls For Service) obligations, leaving 40% available for activities outside of calls for service.
 - 60% of the department should be assigned to patrol.
 
-## Insights
+### Insights
 - SPD West responded to 96,383 unique calls for service, requiring 182,278 hours of recorded labor. 
 - 92% of officer time is spent responding to the needs of the community. 30% is proactive (onview/officer initiated), and 62% is reactive (dispatch).
 - 40% of calls occur between the hours of 0600 - 1400.
 - 46% of all sworn officers are assigned to patrol [^1].
 
-## Recommendations Summary
+### Recommendations Summary
 - SPD West should add additional officers to the workforce to reach industry standards of ~60% time dedicated to community obligations, and ~60% of officers assigned to patrol.
 - SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools.
 - Shift schedules should align with concentration of calls based on dispatching data.
@@ -53,7 +53,6 @@ The following terms and abbreviations are used regularly throughout this analysi
 |Precinct| Seattle Police Department is divided into 5 precincts. This analysis focuses on the West Precinct.|
 |Sector| Each precinct is further divided into sectors. SPD West is divded into 4 sectors named King, Queen, David, and Mary.|
 |Beat| Each sector is further divided into 3 beats. K1 refers to Sector: King, Beat:1|
-
 
 ---
 
