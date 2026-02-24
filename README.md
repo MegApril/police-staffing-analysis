@@ -2,8 +2,6 @@
 
 This analysis reviews the 2023 workload of SPD West to aid the department in determining sufficient staffing levels. The objective is to determine whether the number of sworn officers aligns with workload demand, and to provide a defensible framework for staffing decisions. 
 
-The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. These records are associated with 96,383 unique calls for service.  
-
 The entire workload analysis can be found [here.](#workload-assessment) Code ([SQL](SQL/SQL-queries.md), [Python](Python)), [data analysis processes](data), and [visualizations](visuals) are all found in this repository.  
 
 ## Executive Summary
@@ -21,15 +19,37 @@ Benchmarks are derived from the Rule of 60, which has two aspects.
 - 40% of calls occur between the hours of 0600 - 1400.
 - 46% of all sworn officers are assigned to patrol [^1].
 
-### Recommendations
-- SPD West should add additional officers to the workforce to reach levels needed to respond to CFS without risking officer burnout. As more officers are trained, every effort should be made to have ~60% of officers assigned to patrol.
-  - SPD West should plan to expend a total of 279,080 annual working hours, and employing between 228 and 242 officers.
-  - Officers assigned to patrol should be between 137 - 146.
-- SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools. 
-- Shift schedules should align with concentration of calls based on CFS data.
+### Recommendations Summary
+- SPD West should add additional officers to the workforce to reach industry standards of ~60% time dedicated to community obligations, and ~60% of officers assigned to patrol.
+- SPD West should continue adding more hours to community events, engaging with community members, and building relationships with businesses and schools.
+- Shift schedules should align with concentration of calls based on dispatching data.
   - Precinct monthly hours should be distributed between sectors according to the percentage of CFS in which the sector responds to.
-  - A [detailed example](#scheduling-example) for scheduling using January data is provided at the end of the analysis.
+---
+# Jump to Content
+1. [Data and Definitions](#data-and-definitions)
+2. [Workload Assessment](#workload-assessment)
+   - [Distribution of Calls for Service](#distribution-of-calls-for-service-by-counts)
+   - [Time Spent on Calls](#time-spent-on-calls)
+   - [Establishing Performance Objectives](#establishing-performance-objectives)
+   - [Determining Agency Shift Relief](#determining-agency-shift-relief-metric)
+3. [Staffing Recommendations and Justification](#staffing-recommendations-and-justification)
+4. [Limitations and Assumptions](#limitations-and-assumptions)
 
+---
+# Data and Definitions
+The data analyzed contained 169,260 rows where each record represented a CAD (Computer Aided Dispatch) entry. A single call for service may have multiple CAD records for multiple reasons. 
+- Multiple officers being sent to a single event.
+- A call having more than one action assigned to it (like follow ups).
+These records are associated with 96,383 unique calls for service.
+
+The following terms are used regularly throughout this analysis.
+|Term|Definition|
+|--|--|
+|CFS|Calls For Service. Calls for service could be a 911 call, a call to the station from a community member, or an incident an officer initiates (speeding ticket, etc.).|
+|Dispatch / Reactive|Dispatch calls are when an officer is sent to an incident. A 911 call where the dispatch specialist sends an officer to an invident is an example of a dispatch call.|
+|Onview / Proactive| Onview calls are incidents that the officer initiates. Looking into suspicious circumstances when the officer initiates it, or writing a speeding ticket are examples of onview calls.|
+
+---
 
 # Workload Assessment
 ## Defining Workload
@@ -42,7 +62,7 @@ Following guidance from the International City/County Management Association (IC
 
 The `final_call_type` titled 'Off Duty Employment' is excluded from this analysis because it will skew the analysis and will be addressed in the agency relief metric.
 
-## Distribution of Calls for Service
+## Distribution of Calls for Service by Counts
 ### By Hour
 - 6AM - 2PM contains 40% of calls  
 - 2PM - 10PM contains 38% of calls  
@@ -65,7 +85,7 @@ These findings indicate that workload is not evenly distributed across the week.
 
 ### By Month
 
-There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring ot summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
+There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring to summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
 
 <p align="center">
   <img width=80% height="auto" src="visuals/cfs_counts_month.png">
@@ -157,14 +177,14 @@ Resulting in the following relief factors.
 
 This means for these various shifts, 1.7 - 2.3 officers would have to be assigned to a shift to ensure 1 is working at any given time.
 
-## Calculations and Explanations for Recommendations
-### Total Workload, Patrol Workload, and Precinct Full Time Officers Needed
-|Current Allocation|Total Workload|Patrol Workload|
-|--|--|--|
-|Currently, SPD patrol calls account for 92% of work, at 182,276 hours. | Current Total Workload = 182,276 hours|Current Patrol Workload = 167,448 hours|
-|Benchmark Goal: Patrol Workload = 60%  of Total Workload|New Total Workload = 279,080 hours |Patrol Workload = 167,448 hours|
+# Staffing Recommendations and Justification
+## Total Workload, Patrol Workload, and Precinct Full Time Officers 
+|Allocation|Patrol Workload|Total Workload| Total Officers | Patrol Officers |
+|--|--|--|--|--|
+|Current: Patrol Workload = 92% of total workload| Patrol Workload = 167,448 hours |Current Total Workload = 182,276 hours| 183[^2] | 84[^2] |
+|Benchmark Goal: Patrol Workload = 60% of total workload| Patrol Workload = 167,448 hours |New Total Workload = 279,080 hours | 228 - 242  | 137 - 146 |
+|Benchmark Goal: Patrol Workload = 70% of total workload | Patrol Workload = 167,448 hours |New Total Workload = 239,211 hours | 194 - 207 | 116 - 124 |
 
-If every officer worked 40 hours/week every week, that would mean the department needs a total of 134.17 officers. To accommodate agency relief at 1.8, the department needs to employ 242 officers. If agency relief is at 1.69, the department needs to employ 228 officers.
 
 If CFS distribution stays the same, staffing measures should aim to meet demand and add additional working hours so that patrol work is only 60% of the total workload.
 Calculations for New Workload Hours per month (shown below) were calculated using the same logic for the yearly calculations.
@@ -173,7 +193,10 @@ Calculations for New Workload Hours per month (shown below) were calculated usin
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
 </p>
 
-### Scheduling Example
+SPD West should plan to expend a total of 239,211 - 279,080 annual working hours, and employing between 194 and 242 officers.
+Officers assigned to patrol should be between 116 - 146.
+
+## Scheduling Example
 The following table gives a detailed example relying on the following benchmarks. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
 - January required 13,985 hours of labor to respond to CFS. For this to represent 60% of total workload, new workload must be 23,309 hours.
 - Weekly allotment is 5,827 hours.
@@ -187,7 +210,7 @@ The following table gives a detailed example relying on the following benchmarks
   <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
 
-# Future Analyses and Model Validation
+# Limitations and Assumptions
 Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
 
 To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
@@ -219,3 +242,4 @@ lawenforcementtoday.com. (2024, April 9). Seattle police staffing levels at lowe
 Police officer. (2025, August 18). Seattle PD. https://seattlepolicejobs.com/police-officer/
 
 [^1]: Data on the number of officers specific to SPD West could not be found for 2023. Therefore, patrol numbers are based on the percentages found for SPD as a whole in 2023. According to Law Enforcement Today, "as of December 31, 2023, out of the 913 officers, SPD only has 424 police officers working patrol[[5]](#5)."
+[^2]: Because specific 2023 numbers for SPD West could not be found, these numbers rely on dividing 2023 SPD total numbers by 5 because 5 precincts make up SPD as a whole.
