@@ -33,7 +33,7 @@ Benchmarks are derived from the Rule of 60, which has two aspects.
    - [Establishing Performance Objectives](#establishing-performance-objectives)
    - [Determining Agency Shift Relief](#determining-agency-shift-relief-metric)
 3. [Staffing Recommendations and Justification](#staffing-recommendations-and-justification)
-4. [Limitations and Assumptions](#limitations-and-assumptions)
+4. [Further Analyses](#further-analyses)
 
 ---
 # Data and Definitions
@@ -224,7 +224,7 @@ The following table gives a detailed example relying on the following benchmarks
 
 ---
 
-# Limitations and Assumptions
+# Further Analyses
 Integrating crime data for counties within SPD West would give empirical data to establish a foundation on which department goals can be built upon. It would also show how crime changes over the years, and inform strategies for proactive policing. Combining the workload analysis, crime analysis and staffing benchmarks would provide a larger picture of how these variables impact each other and show where goals should be focused.
 
 To strengthen forecasting confidence for 2026 and beyond, additional historical data from 2024 and 2025 should be incorporated.
