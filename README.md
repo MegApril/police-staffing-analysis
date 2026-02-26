@@ -47,7 +47,7 @@ The following terms and abbreviations are used regularly throughout this analysi
 |Term|Definition|
 |--|--|
 |CFS|Calls For Service. Calls for service could be a 911 call, a call to the station from a community member, or an incident an officer initiates (speeding ticket, etc.).|
-|Dispatch / Reactive|Dispatch calls are when an officer is sent to an incident. A 911 call where the dispatch specialist sends an officer to an invident is an example of a dispatch call.|
+|Dispatch / Reactive|Dispatch calls are when an officer is sent to an incident. A 911 call where the dispatch specialist sends an officer to an incident is an example of a dispatch call.|
 |Onview / Proactive| Onview calls are incidents that the officer initiates. Looking into suspicious circumstances when the officer initiates it, or writing a speeding ticket are examples of onview calls.|
 |SPD | Seattle Police Department|
 |Precinct| Seattle Police Department is divided into 5 precincts. This analysis focuses on the West Precinct.|
@@ -61,11 +61,11 @@ The following terms and abbreviations are used regularly throughout this analysi
 Following guidance from the International City/County Management Association (ICMA)[[4]](#4), the “Rule of 60” recommends that approximately 60% of sworn personnel be assigned to patrol functions. This structure ensures sufficient capacity not only for responding to calls for service, but also for community engagement, training, retention planning, and specialized initiatives. To evaluate whether current staffing aligns with this principle, workload must be clearly defined. Distinguishing reactive, proactive, and organizational time is essential for determining whether patrol staffing supports both emergency response and community-oriented policing goals. Therefore, this analysis relies on the following definitions. For a complete list of how call types are mapped, refer [here.](data/call-type-mapping.csv)
 |Term |Definition|Call Types Included|
 |--|--|--|
-|Reactive Patrol Demand |Demand-driven and time-sensitive calls. |Crime, Alarms, Warrants, Non-Officer initiated Calls, Dispatch Events|
-|Proactive / Community Patrol Activity |Officer initiated or capacity based calls.|Directed patrol activity, Officer Initiated Calls, School Visits, Special Events|
+|Reactive Patrol Demand |Demand-driven and time-sensitive calls. |Crime, Alarms, Warrants, Non-Officer Initiated Calls, Dispatch Events|
+|Proactive / Community Patrol Activity |Officer initiated or capacity based calls.|Directed Patrol Activity, Officer Initiated Calls, School Visits, Special Events|
 |Organizational / Out-of-Service Workload|Work that removes officers from patrol availability.|Court, Training, Out At Range, Reports, Maintenance of Vehicles, Follow Up's|
 
-The `final_call_type` titled 'Off Duty Employment' is excluded from this analysis because it will skew the analysis and will be addressed in the agency relief metric.
+The `final_call_type` titled 'Off Duty Employment' is excluded from this analysis because it will skew the analysis. Because this analysis focuses on resource demand, including paid time off would not give an accurate representation of community demand for officers. Time off, and leave will be addressed in the agency relief metric section.
 
 ## Distribution of Calls for Service by Counts
 ### By Hour
@@ -82,7 +82,7 @@ The `final_call_type` titled 'Off Duty Employment' is excluded from this analysi
 Analysis of total CFS counts by day of week shows significant variation. Fridays account for 16.5% of the total annual call counts.
 
 Additionally, Friday has the longest average call duration (121.7 minutes per call), further compounding workload pressure. Saturday also shows elevated average call duration (118.2 minutes), suggesting increased call complexity on weekends.
-These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under resource higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
+These findings indicate that workload is not evenly distributed across the week. Staffing models that assume uniform daily demand may under staff higher demand days, particularly Fridays, while over allocating labor on days with lower demand.
 
 <p align="center">
   <img width=80% height="auto" src="visuals/cfs_counts_day_avg_calltime.png">
@@ -90,7 +90,7 @@ These findings indicate that workload is not evenly distributed across the week.
 
 ### By Month
 
-There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. Average monthly calls = 8,145. Looking at the year, demand ramps up from late spring to summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
+There is mild fluctuation seasonally, with an 18% difference between the highest and lowest months. On average, 2023 had a monthly call volume of 8,145. Looking at the year, demand ramps up from late spring to summer, and begins to dip in late fall. This is to be expected as the summer months bring more outdoor activity, more interactions, and more conflict.
 
 <p align="center">
   <img width=80% height="auto" src="visuals/cfs_counts_month.png">
@@ -101,7 +101,7 @@ There is mild fluctuation seasonally, with an 18% difference between the highest
 ### By Month
 SPD West expended between 13,649 and 16,662 labor hours per month in 2023, with May representing the peak workload period.  
 
-Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. Because average service time remains stable despite the median service time being significantly lower, this indicates high-duration events (elevating the average, not the median) are not rare anomalies but a consistent feature of this patrols workload.  
+Although monthly call volume fluctuates, average service time remains stable with values ranging from 104 minutes to 130 minutes. The average service time remains stable while the median service time is significantly lower, indicating that high-duration events which elevate the average are a consistent feature of this patrols workload.
 
 <p align="center">
   <img width=80% height="auto" src="visuals/cfs_hours_monthly_avg_calltime.png">
@@ -113,10 +113,10 @@ Service time is highly skewed, which is to be expected in emergency services. Th
   <img width=80% height="auto" src="visuals/lorenz_curve.png">
 </p>
 
-For staffing projections, total aggregated labor hours (reflected in the mean) most accurately capture resource demand. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers, and staffing models should therefore be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
+For staffing projections, the most accurate representation of resource demand is total aggregated labor hours, reflected in the mean. While the median describes a typical call, relying on it for staffing predictions would underestimate staffing needs where labor consuming events occur regularly. These events represent baseline operational demand rather than sporadic outliers. Staffing models should be grounded in total annual workload while accounting for the volatility introduced by a heavy-tailed distribution.
 
 ### Proactive vs. Reactive vs. Organizational Workload
-In 2023, SPD West spent 182,276.8 hours responding to calls for service. That time is divided with 62% being reactive (dispatch), 30% proactive (onview), and 8% organizational. Because the CAD data includes categories like downtime, follow-up, informational broadcasts, training, and court, this reflects the full workload—not just call response. Even with that broader scope, only 8% of time was spent on organizational and foundational needs. This means the department was running in continuous triage or patrol mode without slack.
+In 2023, SPD West spent 182,276.8 hours responding to calls for service. That time is divided with 62% being reactive (dispatch), 30% proactive (onview), and 8% organizational. The CAD data reflects the full workload and includes categories like downtime, follow-up, informational broadcasts, training, and court. Even with the full workload represented, only 8% of time was spent on organizational and foundational needs. This means the precinct was running in continuous triage or patrol mode without slack.
 
 Additionally, proactive and reactive work together account for 92% of total workload. That level is extremely high, given necessary administrative, training, and reporting demands. Reporting currently falls under organizational workload, meaning core documentation and follow-up functions compete within that limited 8%.
 
@@ -128,9 +128,9 @@ This imbalance aligns with broader context: 2023 marked SPD’s lowest staffing 
 The way which agencies are directed to allocate their time determines how workload metrics influence staffing hours[[2]](#2). Each agency will have unique needs based on the demographics of the population the department is serving, geographical factors, and distribution of the workforce by skill, rank, and seniority.  A few examples of possible benchmarks are provided, but would normally be dictated by department leaders, policy makers, and the community.
 
 ### On-Duty Time Allocations
-- Patrol time should have 40% available for activities outside of CFS
+- Patrol time should have ~60% of their time allocated for estimated CFS, leaving 40% of time available for use at the officers discretion.
 ### Staffing Levels
-- The number of officers the department employs should allow for 60% of total workforce to be assigned to patrol, and for 60% of patrol time to be allocated to CFS.
+- The number of officers the department employs should allow for 60% of the total workforce to be assigned to patrol.
 ### Training
 - Each officer should complete 64.5 hours of training a year specific to the needs of the community. Some areas to consider might be language needs, special training based on geographical factors, (harbor, mountainous regions, etc.), or technological advances.
 - There should be clear plans and training taking place to ensure smooth transitions when leadership retires or is promoted.
@@ -201,11 +201,10 @@ Calculations for New Workload Hours per month (shown below) were calculated usin
   <img width="auto" height=400% src="visuals/monthly_new_workload_distribution.png">
 </p>
 
-SPD West should plan to expend a total of 239,211 - 279,080 annual working hours, and employing between 194 and 242 officers.
-Officers assigned to patrol should be between 116 - 146.
+SPD West should plan to expend a total of 239,211 - 279,080 annual working hours, and employing between 194 and 242 officers. Between 116 and 146 of those officers should be assigned to patrol.
 
 ## Scheduling Example
-The following table gives a detailed example relying on the following benchmarks. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
+The following table gives a detailed example relying on CFS demand remaining at current levels, elevating hours scheduled for the precinct as a whole, and distributing labor according to the time periods where CFS demand is highest. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
 - January required 13,985 hours of labor to respond to CFS. For this to represent 60% of total workload, new workload must be 23,309 hours.
 - Weekly allotment is 5,827 hours.
 - Daily allotment corresponds to the [average percentage of weekly workload](#by-day) on that day.
