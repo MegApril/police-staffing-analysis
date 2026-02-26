@@ -31,7 +31,7 @@ Benchmarks are derived from the Rule of 60, which has two aspects.
    - [Distribution of Calls for Service](#distribution-of-calls-for-service-by-counts)
    - [Time Spent on Calls](#time-spent-on-calls)
    - [Establishing Performance Objectives](#establishing-performance-objectives)
-   - [Determining Agency Shift Relief](#determining-agency-shift-relief-metric)
+   - [Determining Agency Shift Relief](#determining-agency-shift-relief-metrics)
 3. [Staffing Recommendations and Justification](#staffing-recommendations-and-justification)
 4. [Further Analyses](#further-analyses)
 
@@ -136,7 +136,7 @@ The way which agencies are directed to allocate their time determines how worklo
 - There should be clear plans and training taking place to ensure smooth transitions when leadership retires or is promoted.
 
 
-## Determining Agency Shift Relief Metric
+## Determining Agency Shift Relief Metrics
 Agency Shift Relief "shows the relationship between the maximum number of days that an officer can work and actually works[[2.]](#2)" It ensures the department has enough officers on hand to accomodate CFS 24 hours a day, time off, vacations, and other leave.
 
 Investigating [Seattle Police Department Positions](https://seattlepolicejobs.com/police-officer/), an entry level officer receives the following as part of their benefits package.
