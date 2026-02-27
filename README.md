@@ -186,7 +186,7 @@ This means for these various shifts, 1.7 - 2.3 officers would have to be an empl
 
 # Staffing Recommendations and Justification
 Ideally, adding more officers and working hours to the precinct will allow SPD West to sufficiently respond to CFS without being overburdened. However, recogonizing restraints like budgets, crime rates and turnover will also be addressed.
-## Total Workload, Patrol Workload, and Precinct Full Time Officers 
+## Possible Solution: Total Workload, Patrol Workload, and Precinct Full Time Officers 
 |Allocation|Patrol Workload|Total Workload| Total Officers | Patrol Officers |
 |--|--|--|--|--|
 |Current: Patrol Workload = 92% of total workload| Patrol Workload = 167,448 hours |Current Total Workload = 182,276 hours| 183[^2] | 84[^2] |
@@ -203,7 +203,7 @@ Calculations for New Workload Hours per month (shown below) were calculated usin
 
 SPD West should plan to expend a total of 239,211 - 279,080 annual working hours, and employing between 194 and 242 officers. Between 116 and 146 of those officers should be assigned to patrol.
 
-## Scheduling Example
+### Scheduling Example
 The following table gives a detailed example relying on CFS demand remaining at current levels, elevating hours scheduled for the precinct as a whole, and distributing labor according to the time periods where CFS demand is highest. These hours and shifts would be divided among the 4 sectors collectively making up SPD west.
 - January required 13,985 hours of labor to respond to CFS. For this to represent 60% of total workload, new workload must be 23,309 hours.
 - Weekly allotment is 5,827 hours.
@@ -217,9 +217,11 @@ The following table gives a detailed example relying on CFS demand remaining at 
   <img width="auto" height=400% src="visuals/scheduling_example.png">
 </p>
 
-## Budget Restraints
-## Crime Rates
+## Possible Solution: Using Non-Sworn Staff
+Within the final call types, there are several tasks which could be completed by non-sworn staff. Issues with animals, abandoned vehicles that pose no threat, fireworks, and vehicle maintenance can all be handled by non-sworn staff. If an incident needs escalated, the non-sworn staff can escalate accordingly. Having these non-threatening incidents handled by non-sworn staff grants officers with more specialized training to be utilized where their training is put to use in better ways.
+
 ## Turnover
+It takes 1 year minimum to train an officer, while it takes 2 weeks to lose one. Therefore, efforts should be divided between retention and recruitment to mitigate turnover prior to being understaffed.
 
 ---
 
