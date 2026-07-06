@@ -51,7 +51,7 @@ The following terms and abbreviations are used regularly throughout this analysi
 |Onview / Proactive| Onview calls are incidents that the officer initiates. Looking into suspicious circumstances when the officer initiates it, or writing a speeding ticket are examples of onview calls.|
 |SPD | Seattle Police Department|
 |Precinct| Seattle Police Department is divided into 5 precincts. This analysis focuses on the West Precinct.|
-|Sector| Each precinct is further divided into sectors. SPD West is divded into 4 sectors named King, Queen, David, and Mary.|
+|Sector| Each precinct is further divided into sectors. SPD West is divided into 4 sectors named King, Queen, David, and Mary.|
 |Beat| Each sector is further divided into 3 beats. K1 refers to Sector: King, Beat:1|
 
 ---
